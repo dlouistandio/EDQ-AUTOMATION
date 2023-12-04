@@ -1,5 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Mon Dec 04 09:13:56 GMT 2023","Mon Dec 04 09:14:02 GMT 2023","5190","Suite","Login User","com.test.TestCases.LoginUser","com.test.TestCases.LoginUser","loginInvalidUser","Login invalid user","Login User with invalid email and password"
-"broken","Mon Dec 04 09:13:57 GMT 2023","Mon Dec 04 09:14:44 GMT 2023","47717","Suite","Create Course","com.test.TestCases.CreateCourse","com.test.TestCases.CreateCourse","createCourseEvent","Create Course Event","Create Course Event"
-"passed","Mon Dec 04 09:14:07 GMT 2023","Mon Dec 04 09:14:18 GMT 2023","11593","Suite","Login User","com.test.TestCases.LoginUser","com.test.TestCases.LoginUser","loginValidUser","Login valid user","Login User with valid email and password"
-"broken","Mon Dec 04 09:14:46 GMT 2023","Mon Dec 04 09:15:25 GMT 2023","39247","Suite","Create Course","com.test.TestCases.CreateCourse","com.test.TestCases.CreateCourse","createCourseSelfPaced","Create Course Event","Create Course Self Paced"
