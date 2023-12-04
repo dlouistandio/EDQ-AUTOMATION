@@ -42,4 +42,4 @@ mvn clean test / mvn clean test -Drunning-on-hub=true
 
 ## Report
  
-You can check the report [Here]()
+You can check the report [Here](https://dlouistandio.github.io/EDQ-AUTOMATION/)
