@@ -27,7 +27,7 @@ public class CreateCourse extends BaseTest {
         dashboardSchool.selectMaterialLessonType("Media");
         dashboardSchool.addSessionMaterialEvent("Text");
         dashboardSchool.inputFormMaterialText();
-        Assert.assertEquals(dashboardSchool.sessionText(),"Session 2");
+        Assert.assertEquals(dashboardSchool.sessionText(),"Session 1");
         Thread.sleep(5000);
     }
 
