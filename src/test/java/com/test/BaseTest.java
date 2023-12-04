@@ -47,7 +47,6 @@ public class BaseTest {
             caps.setCapability(CapabilityType.BROWSER_NAME, "firefox");
         }
         driver = new RemoteWebDriver(new URL("http://localhost:4444"), caps);
-        assert driver != null;
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get(webUrl);
