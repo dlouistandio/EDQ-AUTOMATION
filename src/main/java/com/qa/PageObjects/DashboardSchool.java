@@ -152,6 +152,7 @@ public class DashboardSchool extends GeneralObject {
     public void addSessionMaterialEvent(String material){
         String xPathSelectedMenu =  "//div[.='"+ material +"']";
         WebElement addMaterialButton = driver.findElement(By.xpath(xPathSelectedMenu));
+        waitElementsDisplay(addMaterialButton);
         addMaterialButton.click();
     }
 
