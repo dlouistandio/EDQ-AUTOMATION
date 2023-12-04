@@ -181,6 +181,7 @@ public class DashboardSchool extends GeneralObject {
         addMaterialSessionButton.click();
         String xPathSelectedMenu =  "//div[.='"+ type +"']";
         WebElement materialLessonType = driver.findElement(By.xpath(xPathSelectedMenu));
+        waitElementsDisplay(materialLessonType);
         materialLessonType.click();
     }
 
