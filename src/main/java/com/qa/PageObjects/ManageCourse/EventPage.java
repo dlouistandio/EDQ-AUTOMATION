@@ -1,6 +1,7 @@
 package com.qa.PageObjects.ManageCourse;
 
 import com.qa.Components.GeneralObject;
+import org.apache.logging.log4j.core.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -43,7 +44,7 @@ public class EventPage extends GeneralObject {
     }
 
 
-    public void inputFormOnsite(){
+    public void inputFormOnsite() throws InterruptedException {
         waitElementsDisplay(titleMaterial);
         titleMaterial.sendKeys("Onsite");
         descriptionField.click();
@@ -53,6 +54,11 @@ public class EventPage extends GeneralObject {
         mapSearchResult.click();
         durationField.sendKeys("1");
         saveMaterialButton.click();
+        Thread.sleep(5000);
+    }
+
+    public String fieldInputMap(){
+        return mapSearchInput.getText();
     }
 
 

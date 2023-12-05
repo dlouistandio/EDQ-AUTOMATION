@@ -39,7 +39,7 @@ public class CreateCourse extends BaseTest {
     @Story("Create Course Event")
     @Description("Create Course Event Onsite")
     @Test( description = "Create Course Event Onsite", groups = { "create course" })
-    public void createCourseEventOnsite(){
+    public void createCourseEventOnsite() throws InterruptedException {
         loginPage.loginUser("vendor01eduqat@gmail.com","P@ss4eduqat");
         dashboardVendor.goToSchool();
         changeTabDriver();
@@ -53,6 +53,7 @@ public class CreateCourse extends BaseTest {
         dashboardSchool.createNewCourse();
         Assert.assertEquals(manageMaterialCoursePage.getHeaderText(),"Event");
         eventPage.inputFormOnsite();
+        Assert.assertNotNull(eventPage.fieldInputMap());
         Assert.assertEquals(manageMaterialCoursePage.sessionText(),"Session 1");
     }
 
