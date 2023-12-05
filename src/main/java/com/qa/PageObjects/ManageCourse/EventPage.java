@@ -3,6 +3,7 @@ package com.qa.PageObjects.ManageCourse;
 import com.qa.Components.GeneralObject;
 import org.apache.logging.log4j.core.util.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,17 +24,9 @@ public class EventPage extends GeneralObject {
     @FindBy(css = "[placeholder='Search location']")
     private WebElement mapSearchInput;
 
-    @FindBy(css = ".search-result > div:nth-of-type(1)")
+    @FindBy(css = ".search-result > div:nth-of-type(1) > .item-detail")
     private WebElement mapSearchResult;
 
-    @FindBy(css = "[placeholder='City']")
-    private WebElement cityField;
-
-    @FindBy(css = "[placeholder='Country']")
-    private WebElement countryField;
-
-    @FindBy(css = "textarea")
-    private WebElement addressField;
 
     public void addSessionMaterialEvent(String material){
         String xPathSelectedMenu =  "//div[.='"+ material +"']";
@@ -59,13 +52,11 @@ public class EventPage extends GeneralObject {
         titleMaterial.sendKeys("Onsite");
         descriptionField.click();
         descriptionFieldInput.sendKeys("123");
-        mapSearchInput.sendKeys("Plaza Indonesia, Jalan M.H. Thamrin, Gondangdia, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta, Indonesia");
-        countryField.sendKeys("Indonesia");
-        addressField.sendKeys("Plaza Indonesia, Jalan M.H. Thamrin, Gondangdia, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta, Indonesia");
-        cityField.sendKeys(" Kota Jakarta Pusat");
+        mapSearchInput.sendKeys("Jakarta");
+        waitElementsDisplay(mapSearchResult);
         mapSearchResult.click();
+        waitElementsNotDisplay(mapSearchResult);
         durationField.sendKeys("1");
         saveMaterialButton.click();
-        Thread.sleep(5000);
     }
 }
