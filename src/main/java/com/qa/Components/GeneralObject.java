@@ -69,6 +69,6 @@ public class GeneralObject extends LogUtils {
     }
 
     public void moveMapPinpoint(){
-        new Actions(driver).moveToElement(mapContainer, 0, 0).clickAndHold().moveByOffset(300, 0).release().build().perform();
+        new Actions(driver).moveToElement(mapContainer, 5, 5).clickAndHold().moveByOffset(300, 0).release().build().perform();
     }
 }
