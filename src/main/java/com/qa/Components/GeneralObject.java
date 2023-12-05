@@ -50,8 +50,6 @@ public class GeneralObject extends LogUtils {
     @FindBy(xpath = "//div[@class='left-header__text']")
     public WebElement headerCourseText;
 
-    @FindBy(css = ".maps-section__maps")
-    public WebElement mapContainer;
 
     public GeneralObject(WebDriver driver) {
         this.driver = driver;
@@ -66,9 +64,5 @@ public class GeneralObject extends LogUtils {
     public void waitElementsNotDisplay(WebElement findBy){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         wait.until(ExpectedConditions.invisibilityOf(findBy));
-    }
-
-    public void moveMapPinpoint(){
-        new Actions(driver).moveToElement(mapContainer, 5, 5).clickAndHold().moveByOffset(300, 0).release().build().perform();
     }
 }

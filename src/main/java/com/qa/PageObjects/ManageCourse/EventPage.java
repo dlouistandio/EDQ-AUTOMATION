@@ -19,7 +19,11 @@ public class EventPage extends GeneralObject {
     @FindBy(xpath = "//div[@class='form-group']/input[@placeholder='Insert your webinar link here..']")
     private WebElement linkWebinar;
 
+    @FindBy(css = "[placeholder='Search location']")
+    private WebElement mapSearchInput;
 
+    @FindBy(css = ".search-result > div:nth-of-type(1)")
+    private WebElement mapSearchResult;
 
     public void addSessionMaterialEvent(String material){
         String xPathSelectedMenu =  "//div[.='"+ material +"']";
@@ -39,16 +43,16 @@ public class EventPage extends GeneralObject {
     }
 
 
-    public void inputFormOnsite() throws InterruptedException {
+    public void inputFormOnsite(){
         waitElementsDisplay(titleMaterial);
         titleMaterial.sendKeys("Onsite");
         descriptionField.click();
         descriptionFieldInput.sendKeys("123");
-        waitElementsDisplay(mapContainer);
-        moveMapPinpoint();
+        mapSearchInput.sendKeys("Plaza Indonesia, Jalan M.H. Thamrin, Gondangdia, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta, Indonesia");
+        waitElementsDisplay(mapSearchResult);
+        mapSearchResult.click();
         durationField.sendKeys("1");
         saveMaterialButton.click();
-        Thread.sleep(5000);
     }
 
 

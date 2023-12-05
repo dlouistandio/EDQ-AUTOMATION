@@ -87,11 +87,10 @@ public class DashboardSchool extends GeneralObject {
         nextButton.click();
     }
 
-    public void clickOnsiteEventButton() throws InterruptedException {
+    public void clickOnsiteEventButton(){
         waitElementsDisplay(onsiteEventButton);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", onsiteEventButton);
-        Thread.sleep(5000);
         onsiteEventButton.click();
     }
 }

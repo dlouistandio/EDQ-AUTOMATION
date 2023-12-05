@@ -39,7 +39,7 @@ public class CreateCourse extends BaseTest {
     @Story("Create Course Event")
     @Description("Create Course Event Onsite")
     @Test( description = "Create Course Event Onsite", groups = { "create course" })
-    public void createCourseEventOnsite() throws InterruptedException {
+    public void createCourseEventOnsite(){
         loginPage.loginUser("vendor01eduqat@gmail.com","P@ss4eduqat");
         dashboardVendor.goToSchool();
         changeTabDriver();
