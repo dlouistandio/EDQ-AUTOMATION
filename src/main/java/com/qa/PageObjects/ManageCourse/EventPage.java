@@ -63,6 +63,7 @@ public class EventPage extends GeneralObject {
         countryField.sendKeys("Indonesia");
         addressField.sendKeys("Plaza Indonesia, Jalan M.H. Thamrin, Gondangdia, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta, Indonesia");
         cityField.sendKeys(" Kota Jakarta Pusat");
+        mapSearchResult.click();
         durationField.sendKeys("1");
         saveMaterialButton.click();
         Thread.sleep(5000);
