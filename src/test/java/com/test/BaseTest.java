@@ -1,12 +1,15 @@
 package com.test;
 
-import com.qa.PageObjects.DashboardSchool;
-import com.qa.PageObjects.DashboardVendor;
-import com.qa.PageObjects.LoginPage;
+import com.qa.PageObjects.DashboardSchool.DashboardSchool;
+import com.qa.PageObjects.ManageCourse.CohortPage;
+import com.qa.PageObjects.ManageCourse.EventPage;
+import com.qa.PageObjects.ManageCourse.ManageMaterialCoursePage;
+import com.qa.PageObjects.ManageCourse.SelfPacedPage;
+import com.qa.PageObjects.DashboardVendor.DashboardVendor;
+import com.qa.PageObjects.SSOPage.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -18,6 +21,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Properties;
+import java.util.Random;
 import java.util.Set;
 
 public class BaseTest {
@@ -25,6 +29,11 @@ public class BaseTest {
     public LoginPage loginPage;
     public DashboardVendor dashboardVendor;
     public DashboardSchool dashboardSchool;
+    public EventPage eventPage;
+    public CohortPage cohortPage;
+    public SelfPacedPage selfPacedPage;
+    public ManageMaterialCoursePage manageMaterialCoursePage;
+
 
     public WebDriver initDriver() throws IOException {
         Properties props = new Properties();
@@ -63,12 +72,29 @@ public class BaseTest {
         }
     }
 
+    public String generateRandomString(){
+        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < 18) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+            salt.append(SALTCHARS.charAt(index));
+        }
+        String saltStr = salt.toString();
+        return saltStr;
+    }
+
     @BeforeMethod(alwaysRun = true)
     public void launchApp() throws IOException {
         driver = initDriver();
         loginPage = new LoginPage(driver);
         dashboardVendor = new DashboardVendor(driver);
         dashboardSchool = new DashboardSchool(driver);
+        selfPacedPage = new SelfPacedPage(driver);
+        eventPage = new EventPage(driver);
+        cohortPage = new CohortPage(driver);
+        manageMaterialCoursePage = new ManageMaterialCoursePage(driver);
+
      }
 
     @AfterMethod(alwaysRun = true)

@@ -1,4 +1,4 @@
-package com.qa.PageObjects;
+package com.qa.PageObjects.SSOPage;
 
 import com.qa.Components.GeneralObject;
 import io.qameta.allure.Step;

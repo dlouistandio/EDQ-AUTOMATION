@@ -3,7 +3,7 @@ package com.test.TestCases;
 import com.test.BaseTest;
 import io.qameta.allure.*;
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.Set;
 
@@ -13,39 +13,63 @@ import java.util.Set;
 @TmsLink("TMS Link")
 public class CreateCourse extends BaseTest {
 
+
     @Story("Create Course Event")
     @Description("Create Course Event")
     @Test( description = "Create Course Event", groups = { "create course" })
-    public void createCourseEvent() throws InterruptedException {
+    public void createCourseEvent() {
         loginPage.loginUser("vendor01eduqat@gmail.com","P@ss4eduqat");
         dashboardVendor.goToSchool();
         changeTabDriver();
         dashboardSchool.chooseMenu("/manage/classes");
-        dashboardSchool.createCourseEvent("Nama Course 6q5");
-        Assert.assertEquals(dashboardSchool.eventText(),"Event");
-        dashboardSchool.inputFormWebinar();
-        dashboardSchool.selectMaterialLessonType("Media");
-        dashboardSchool.addSessionMaterialEvent("Text");
-        dashboardSchool.inputFormMaterialText();
-        Assert.assertEquals(dashboardSchool.sessionText(),"Session 1");
-        Thread.sleep(5000);
+        dashboardSchool.clickNewProductButton();
+        Assert.assertEquals(dashboardSchool.createNewProductText(),"Create New Product");
+        dashboardSchool.setTitleCourse(generateRandomString());
+        dashboardSchool.chooseCourseType("1");
+        dashboardSchool.setDateEvent();
+        dashboardSchool.createNewCourse();
+        Assert.assertEquals(manageMaterialCoursePage.getHeaderText(),"Event");
+        eventPage.inputFormWebinar();
+        manageMaterialCoursePage.selectMaterialLessonType("Media");
+        eventPage.addSessionMaterialEvent("Text");
+        manageMaterialCoursePage.inputFormMaterialText();
+        Assert.assertEquals(manageMaterialCoursePage.sessionText(),"Session 1");
     }
 
     @Story("Create Course Self Paced")
     @Description("Create Course Self Paced")
-    @Test( description = "Create Course Event", groups = { "create course" })
-    public void createCourseSelfPaced() throws InterruptedException {
+    @Test( description = "Create Self Paced", groups = { "create course" })
+    public void createCourseSelfPaced() {
         loginPage.loginUser("vendor01eduqat@gmail.com","P@ss4eduqat");
         dashboardVendor.goToSchool();
         changeTabDriver();
         dashboardSchool.chooseMenu("/manage/classes");
-        dashboardSchool.createCourseSelfPaced("Nama course w7");
+        dashboardSchool.clickNewProductButton();
         Assert.assertEquals(dashboardSchool.createNewProductText(),"Create New Product");
+        dashboardSchool.setTitleCourse(generateRandomString());
+        dashboardSchool.chooseCourseType("2");
+        dashboardSchool.createNewCourse();
         dashboardSchool.modalNewProcuctMenu();
-        dashboardSchool.addSessionMaterialSelfPaced("Text");
-        dashboardSchool.inputFormMaterialText();
-        Assert.assertEquals(dashboardSchool.successAddMaterialText(),"Successfully saved the text material");
-        Assert.assertEquals(dashboardSchool.sessionText(),"Session 1");
-        Thread.sleep(5000);
+        Assert.assertEquals(manageMaterialCoursePage.getHeaderText(),"Self Paced");
+        manageMaterialCoursePage.addSessionMaterialSelfPaced("Text");
+        manageMaterialCoursePage.inputFormMaterialText();
+        Assert.assertEquals(manageMaterialCoursePage.successAddMaterialText(),"Successfully saved the text material");
+        Assert.assertEquals(manageMaterialCoursePage.sessionText(),"Session 1");
+    }
+
+    @Story("Create Course Cohort")
+    @Description("Create Course Cohort")
+    @Test( description = "Create Cohort", groups = { "create course" })
+    public void createCourseCohort() {
+        loginPage.loginUser("vendor01eduqat@gmail.com","P@ss4eduqat");
+        dashboardVendor.goToSchool();
+        changeTabDriver();
+        dashboardSchool.chooseMenu("/manage/classes");
+        dashboardSchool.clickNewProductButton();
+        Assert.assertEquals(dashboardSchool.createNewProductText(),"Create New Product");
+        dashboardSchool.setTitleCourse(generateRandomString());
+        dashboardSchool.chooseCourseType("3");
+        dashboardSchool.createNewCourse();
+        Assert.assertEquals(manageMaterialCoursePage.getHeaderText(),"Cohort");
     }
 }

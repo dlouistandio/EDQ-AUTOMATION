@@ -1,4 +1,4 @@
-package com.qa.PageObjects;
+package com.qa.PageObjects.DashboardVendor;
 
 import com.qa.Components.GeneralObject;
 import org.openqa.selenium.WebDriver;
