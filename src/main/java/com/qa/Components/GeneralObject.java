@@ -3,6 +3,7 @@ package com.qa.Components;
 import com.qa.Log4j2.LogUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -49,6 +50,9 @@ public class GeneralObject extends LogUtils {
     @FindBy(xpath = "//div[@class='left-header__text']")
     public WebElement headerCourseText;
 
+    @FindBy(css = ".maps-section__maps")
+    public WebElement mapContainer;
+
     public GeneralObject(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
@@ -62,5 +66,9 @@ public class GeneralObject extends LogUtils {
     public void waitElementsNotDisplay(WebElement findBy){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         wait.until(ExpectedConditions.invisibilityOf(findBy));
+    }
+
+    public void moveMapPinpoint(){
+        new Actions(driver).moveToElement(mapContainer, 0, 0).clickAndHold().moveByOffset(300, 0).release().build().perform();
     }
 }

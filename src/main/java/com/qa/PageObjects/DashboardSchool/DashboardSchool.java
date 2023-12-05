@@ -2,6 +2,7 @@ package com.qa.PageObjects.DashboardSchool;
 
 import com.qa.Components.GeneralObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,9 +35,11 @@ public class DashboardSchool extends GeneralObject {
     @FindBy(css = "[placeholder='Select date']")
     private WebElement dateField;
 
-
     @FindBy(xpath = "//div[@class='ant-col ant-col-xs-12 ant-col-sm-12']/button[@class='sc-qRumB gyLfCK btn btn-primary']")
     private WebElement buttonCreate;
+
+    @FindBy(xpath = "//div[@class='addmaterial-content']/div[2]")
+    private WebElement onsiteEventButton;
 
     public String createNewProductText(){
         return createNewProductText.getText();
@@ -82,5 +85,13 @@ public class DashboardSchool extends GeneralObject {
         waitElementsDisplay(createNewProductText);
         createBlankProductButton.click();
         nextButton.click();
+    }
+
+    public void clickOnsiteEventButton() throws InterruptedException {
+        waitElementsDisplay(onsiteEventButton);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", onsiteEventButton);
+        Thread.sleep(5000);
+        onsiteEventButton.click();
     }
 }

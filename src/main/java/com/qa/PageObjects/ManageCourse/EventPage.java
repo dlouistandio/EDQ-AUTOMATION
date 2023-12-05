@@ -19,6 +19,8 @@ public class EventPage extends GeneralObject {
     @FindBy(xpath = "//div[@class='form-group']/input[@placeholder='Insert your webinar link here..']")
     private WebElement linkWebinar;
 
+
+
     public void addSessionMaterialEvent(String material){
         String xPathSelectedMenu =  "//div[.='"+ material +"']";
         WebElement addMaterialButton = driver.findElement(By.xpath(xPathSelectedMenu));
@@ -34,6 +36,19 @@ public class EventPage extends GeneralObject {
         descriptionFieldInput.sendKeys("123");
         durationField.sendKeys("1");
         saveMaterialButton.click();
+    }
+
+
+    public void inputFormOnsite() throws InterruptedException {
+        waitElementsDisplay(titleMaterial);
+        titleMaterial.sendKeys("Onsite");
+        descriptionField.click();
+        descriptionFieldInput.sendKeys("123");
+        waitElementsDisplay(mapContainer);
+        moveMapPinpoint();
+        durationField.sendKeys("1");
+        saveMaterialButton.click();
+        Thread.sleep(5000);
     }
 
 

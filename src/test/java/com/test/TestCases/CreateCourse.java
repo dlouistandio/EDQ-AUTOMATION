@@ -15,9 +15,9 @@ public class CreateCourse extends BaseTest {
 
 
     @Story("Create Course Event")
-    @Description("Create Course Event")
-    @Test( description = "Create Course Event", groups = { "create course" })
-    public void createCourseEvent() {
+    @Description("Create Course Webinar")
+    @Test( description = "Create Course Webinar", groups = { "create course" })
+    public void createCourseEventWebinar() {
         loginPage.loginUser("vendor01eduqat@gmail.com","P@ss4eduqat");
         dashboardVendor.goToSchool();
         changeTabDriver();
@@ -36,6 +36,26 @@ public class CreateCourse extends BaseTest {
         Assert.assertEquals(manageMaterialCoursePage.sessionText(),"Session 1");
     }
 
+    @Story("Create Course Event")
+    @Description("Create Course Event Onsite")
+    @Test( description = "Create Course Event Onsite", groups = { "create course" })
+    public void createCourseEventOnsite() throws InterruptedException {
+        loginPage.loginUser("vendor01eduqat@gmail.com","P@ss4eduqat");
+        dashboardVendor.goToSchool();
+        changeTabDriver();
+        dashboardSchool.chooseMenu("/manage/classes");
+        dashboardSchool.clickNewProductButton();
+        Assert.assertEquals(dashboardSchool.createNewProductText(),"Create New Product");
+        dashboardSchool.setTitleCourse(generateRandomString());
+        dashboardSchool.chooseCourseType("1");
+        dashboardSchool.setDateEvent();
+        dashboardSchool.clickOnsiteEventButton();
+        dashboardSchool.createNewCourse();
+        Assert.assertEquals(manageMaterialCoursePage.getHeaderText(),"Event");
+        eventPage.inputFormOnsite();
+        Assert.assertEquals(manageMaterialCoursePage.sessionText(),"Session 1");
+    }
+
     @Story("Create Course Self Paced")
     @Description("Create Course Self Paced")
     @Test( description = "Create Self Paced", groups = { "create course" })
@@ -50,7 +70,7 @@ public class CreateCourse extends BaseTest {
         dashboardSchool.chooseCourseType("2");
         dashboardSchool.createNewCourse();
         dashboardSchool.modalNewProcuctMenu();
-        Assert.assertEquals(manageMaterialCoursePage.getHeaderText(),"Self Paced");
+        Assert.assertEquals(manageMaterialCoursePage.getHeaderText(),"Self-Paced");
         manageMaterialCoursePage.addSessionMaterialSelfPaced("Text");
         manageMaterialCoursePage.inputFormMaterialText();
         Assert.assertEquals(manageMaterialCoursePage.successAddMaterialText(),"Successfully saved the text material");
