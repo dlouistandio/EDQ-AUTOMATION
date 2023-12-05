@@ -29,6 +29,12 @@ public class EventPage extends GeneralObject {
     @FindBy(css = "[placeholder='City']")
     private WebElement cityField;
 
+    @FindBy(css = "[placeholder='Country']")
+    private WebElement countryField;
+
+    @FindBy(css = "textarea")
+    private WebElement addressField;
+
     public void addSessionMaterialEvent(String material){
         String xPathSelectedMenu =  "//div[.='"+ material +"']";
         WebElement addMaterialButton = driver.findElement(By.xpath(xPathSelectedMenu));
@@ -48,14 +54,15 @@ public class EventPage extends GeneralObject {
 
 
     public void inputFormOnsite() throws InterruptedException {
+        Thread.sleep(5000);
         waitElementsDisplay(titleMaterial);
         titleMaterial.sendKeys("Onsite");
         descriptionField.click();
         descriptionFieldInput.sendKeys("123");
         mapSearchInput.sendKeys("Plaza Indonesia, Jalan M.H. Thamrin, Gondangdia, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta, Indonesia");
-        waitElementsDisplay(mapSearchResult);
-        mapSearchResult.click();
-        cityField.click();
+        countryField.sendKeys("Indonesia");
+        addressField.sendKeys("Plaza Indonesia, Jalan M.H. Thamrin, Gondangdia, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta, Indonesia");
+        cityField.sendKeys(" Kota Jakarta Pusat");
         durationField.sendKeys("1");
         saveMaterialButton.click();
         Thread.sleep(5000);
