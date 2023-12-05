@@ -26,6 +26,9 @@ public class EventPage extends GeneralObject {
     @FindBy(css = ".search-result > div:nth-of-type(1)")
     private WebElement mapSearchResult;
 
+    @FindBy(css = "[placeholder='City']")
+    private WebElement cityField;
+
     public void addSessionMaterialEvent(String material){
         String xPathSelectedMenu =  "//div[.='"+ material +"']";
         WebElement addMaterialButton = driver.findElement(By.xpath(xPathSelectedMenu));
@@ -52,14 +55,9 @@ public class EventPage extends GeneralObject {
         mapSearchInput.sendKeys("Plaza Indonesia, Jalan M.H. Thamrin, Gondangdia, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta, Indonesia");
         waitElementsDisplay(mapSearchResult);
         mapSearchResult.click();
+        cityField.click();
         durationField.sendKeys("1");
         saveMaterialButton.click();
         Thread.sleep(5000);
     }
-
-    public String fieldInputMap(){
-        return mapSearchInput.getText();
-    }
-
-
 }

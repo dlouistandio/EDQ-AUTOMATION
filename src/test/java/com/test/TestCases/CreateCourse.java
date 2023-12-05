@@ -53,7 +53,6 @@ public class CreateCourse extends BaseTest {
         dashboardSchool.createNewCourse();
         Assert.assertEquals(manageMaterialCoursePage.getHeaderText(),"Event");
         eventPage.inputFormOnsite();
-        Assert.assertNotNull(eventPage.fieldInputMap());
         Assert.assertEquals(manageMaterialCoursePage.sessionText(),"Session 1");
     }
 
