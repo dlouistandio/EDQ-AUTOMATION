@@ -109,7 +109,7 @@ public class CreateSchoolPage extends GeneralObject {
     }
 
     public void clickTimezoneOption(){
-        waitElementsDisplay(timezoneOption;
+        waitElementsDisplay(timezoneOption);
         timezoneOption.click();
     }
 
