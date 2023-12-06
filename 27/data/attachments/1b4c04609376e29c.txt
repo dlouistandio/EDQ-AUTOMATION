@@ -1,0 +1,1 @@
+createCourseEventOnsite failed and screenshot taken!
