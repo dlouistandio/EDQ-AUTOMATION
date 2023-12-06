@@ -1,0 +1,8 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"Login User SSO","Login","Login invalid user","0","0","1","0","0"
+"Create Course","Create Course","Create Course Event","0","0","2","0","0"
+"Login User School","Login","Login valid user","0","0","1","0","0"
+"Login User SSO","Login","Login valid user","0","0","1","0","0"
+"Create Course","Create Course","Create Course Cohort","0","0","1","0","0"
+"","","Create School","0","1","0","0","0"
+"Create Course","Create Course","Create Course Self Paced","0","0","1","0","0"
