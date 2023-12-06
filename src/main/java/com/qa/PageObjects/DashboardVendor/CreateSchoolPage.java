@@ -94,6 +94,7 @@ public class CreateSchoolPage extends GeneralObject {
     }
 
     public void inputCountryOption(String country){
+        countryOption.click();
         countryOption.sendKeys(country, Keys.ENTER);
     }
 
