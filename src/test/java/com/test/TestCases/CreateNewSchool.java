@@ -5,10 +5,11 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class CreateNewSchool extends BaseTestVendor {
-    @BeforeMethod
+    @BeforeTest
     public void loginUser() {
         loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
         dashboardVendor.goToSchool();
