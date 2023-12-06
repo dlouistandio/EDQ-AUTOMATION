@@ -13,7 +13,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.test.TestCases.LoginUser"/>
+            <class name="com.test.TestCases.LoginUserSSO"/>
         </classes>
     </test>
 
@@ -28,10 +28,21 @@
         </classes>
     </test>
 
+    <test name="Create School" >
+        <groups>
+            <run>
+                <include name="create school"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.CreateNewSchool"/>
+        </classes>
+    </test>
+
     <test name="Login web school" >
         <groups>
             <run>
-                <include name="Login school"></include>
+                <include name="login school"></include>
             </run>
         </groups>
         <classes>

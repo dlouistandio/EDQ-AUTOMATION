@@ -11,7 +11,7 @@ public class LoginUserSchool extends BaseTestSchool {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Login User with valid email and password")
-    @Test( description = "Login valid user", groups = { "login" })
+    @Test( description = "Login valid user", groups = { "login school" })
     public void loginValidUserSchool() {
         homePage.clickLoginButton();
     }

@@ -22,6 +22,8 @@ public class DashboardSchool extends GeneralObject {
     @FindBy(xpath = "//h1[@class='title']")
     private WebElement dashboardText;
 
+    @FindBy(xpath = " //div[@class='user-name']")
+    private WebElement userText;
 
     @FindBy(xpath = "//div[@class='section-header__title']")
     private WebElement createNewProductText;
@@ -43,6 +45,11 @@ public class DashboardSchool extends GeneralObject {
 
     public String createNewProductText(){
         return createNewProductText.getText();
+    }
+
+    public String getUsernameDashboardText(){
+        waitElementsDisplay(userText);
+        return userText.getText();
     }
 
     public void chooseMenu(String menu) {

@@ -10,9 +10,9 @@ import java.time.Duration;
 
 public class GeneralObjectSchool {
     WebDriver driver;
-    public GeneralObjectSchool(WebDriver driver2) {
-        this.driver = driver2;
-        PageFactory.initElements(driver2,this);
+    public GeneralObjectSchool(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver,this);
     }
 
     public void waitElementsDisplay(WebElement findBy){

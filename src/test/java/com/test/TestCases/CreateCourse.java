@@ -10,15 +10,17 @@ import org.testng.annotations.*;
 @Link(name = "allure", type = "mylink")
 @TmsLink("TMS Link")
 public class CreateCourse extends BaseTestVendor {
-
+    @BeforeMethod
+    public void loginUser() {
+        loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
+        dashboardVendor.goToSchool();
+        changeTabDriver();
+    }
 
     @Story("Create Course Event")
     @Description("Create Course Webinar")
     @Test( description = "Create Course Webinar", groups = { "create course" })
     public void createCourseEventWebinar() {
-        loginPage.loginUser("vendor01eduqat@gmail.com","P@ss4eduqat");
-        dashboardVendor.goToSchool();
-        changeTabDriver();
         dashboardSchool.chooseMenu("/manage/classes");
         dashboardSchool.clickNewProductButton();
         Assert.assertEquals(dashboardSchool.createNewProductText(),"Create New Product");
@@ -37,10 +39,7 @@ public class CreateCourse extends BaseTestVendor {
     @Story("Create Course Event")
     @Description("Create Course Event Onsite")
     @Test( description = "Create Course Event Onsite", groups = { "create course" })
-    public void createCourseEventOnsite() throws InterruptedException {
-        loginPage.loginUser("vendor01eduqat@gmail.com","P@ss4eduqat");
-        dashboardVendor.goToSchool();
-        changeTabDriver();
+    public void createCourseEventOnsite() {
         dashboardSchool.chooseMenu("/manage/classes");
         dashboardSchool.clickNewProductButton();
         Assert.assertEquals(dashboardSchool.createNewProductText(),"Create New Product");
@@ -58,9 +57,6 @@ public class CreateCourse extends BaseTestVendor {
     @Description("Create Course Self Paced")
     @Test( description = "Create Self Paced", groups = { "create course" })
     public void createCourseSelfPaced() {
-        loginPage.loginUser("vendor01eduqat@gmail.com","P@ss4eduqat");
-        dashboardVendor.goToSchool();
-        changeTabDriver();
         dashboardSchool.chooseMenu("/manage/classes");
         dashboardSchool.clickNewProductButton();
         Assert.assertEquals(dashboardSchool.createNewProductText(),"Create New Product");
@@ -79,9 +75,6 @@ public class CreateCourse extends BaseTestVendor {
     @Description("Create Course Cohort")
     @Test( description = "Create Cohort", groups = { "create course" })
     public void createCourseCohort() {
-        loginPage.loginUser("vendor01eduqat@gmail.com","P@ss4eduqat");
-        dashboardVendor.goToSchool();
-        changeTabDriver();
         dashboardSchool.chooseMenu("/manage/classes");
         dashboardSchool.clickNewProductButton();
         Assert.assertEquals(dashboardSchool.createNewProductText(),"Create New Product");

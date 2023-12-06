@@ -1,6 +1,7 @@
 package com.test;
 
 import com.qa.PageObjects.DashboardSchool.DashboardSchool;
+import com.qa.PageObjects.DashboardVendor.CreateSchoolPage;
 import com.qa.PageObjects.ManageCourse.CohortPage;
 import com.qa.PageObjects.ManageCourse.EventPage;
 import com.qa.PageObjects.ManageCourse.ManageMaterialCoursePage;
@@ -8,6 +9,7 @@ import com.qa.PageObjects.ManageCourse.SelfPacedPage;
 import com.qa.PageObjects.DashboardVendor.DashboardVendor;
 import com.qa.PageObjects.SSOPage.LoginPage;
 import com.qa.PageObjects.SchoolWebPage.HomePage;
+import com.test.TestCases.CreateNewSchool;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -35,7 +37,7 @@ public class BaseTestVendor {
     public SelfPacedPage selfPacedPage;
     public ManageMaterialCoursePage manageMaterialCoursePage;
     public HomePage homePage;
-
+    public CreateSchoolPage createSchoolPage;
 
     public WebDriver initDriver() throws IOException {
         Properties props = new Properties();
@@ -98,6 +100,7 @@ public class BaseTestVendor {
         cohortPage = new CohortPage(driver);
         manageMaterialCoursePage = new ManageMaterialCoursePage(driver);
         homePage = new HomePage(driver);
+        createSchoolPage = new CreateSchoolPage(driver);
      }
 
     @AfterMethod(alwaysRun = true)

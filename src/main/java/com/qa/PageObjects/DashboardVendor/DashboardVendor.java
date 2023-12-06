@@ -27,7 +27,7 @@ public class DashboardVendor extends GeneralObject {
     @FindBy(xpath = "//a[.='Settings']")
     private WebElement btnSetting;
 
-    @FindBy(css = "a:nth-of-type(2)")
+    @FindBy(css = "a:nth-of-type(1)")
     private WebElement cardSchool;
 
     public String getMySchoolText(){
@@ -38,5 +38,10 @@ public class DashboardVendor extends GeneralObject {
     public void goToSchool(){
         waitElementsDisplay(cardSchool);
         cardSchool.click();
+    }
+
+    public void clickCreateNewSchool(){
+        waitElementsDisplay(btnNewSchool);
+        btnNewSchool.click();
     }
 }

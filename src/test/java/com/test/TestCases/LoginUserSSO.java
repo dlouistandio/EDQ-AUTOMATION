@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 @Epic("Login User SSO")
 @Feature("Login")
-public class LoginUser extends BaseTestVendor {
+public class LoginUserSSO extends BaseTestVendor {
 
     @Story("Login valid user")
     @Link(name = "allure", type = "mylink")
@@ -15,7 +15,7 @@ public class LoginUser extends BaseTestVendor {
     @Description("Login User with valid email and password")
     @Test( description = "Login valid user", groups = { "login" })
     public void loginValidUser() {
-            loginPage.loginUser("vendor01eduqat@gmail.com","P@ss4eduqat");
+            loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
             String mySchoolText = dashboardVendor.getMySchoolText();
             Assert.assertEquals(mySchoolText, "My Schools");
     }
@@ -26,7 +26,7 @@ public class LoginUser extends BaseTestVendor {
     @Description("Login User with invalid email and password")
     @Test( description = "Login invalid user", groups = { "login" })
     public void loginInvalidUser() {
-        loginPage.loginUser("vendor01@gmail.com","Pss4eduqat");
+        loginPage.loginUser("eduqatautomationtest@gmail.com","Pss4eduqat");
         String alertText = loginPage.getAlertText();
         Assert.assertEquals(alertText, "Incorrect username or password.");
     }
