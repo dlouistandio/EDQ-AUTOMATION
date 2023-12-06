@@ -29,7 +29,7 @@ public class CreateSchoolPage extends GeneralObject {
     @FindBy(xpath = "//div[@class='ant-space-item']/div[contains(text(),'Tell us about yourself')]")
     private WebElement formNewSchoolHeaderText;
 
-    @FindBy(xpath = "//div[@class='ant-space-item']/div[contains(text(),'Tell us about yourself')]")
+    @FindBy(css = ".text-2xl")
     private WebElement getStartedWithEduqatText;
 
     @FindBy(xpath = "//input[@id='basic_jobTitle']")

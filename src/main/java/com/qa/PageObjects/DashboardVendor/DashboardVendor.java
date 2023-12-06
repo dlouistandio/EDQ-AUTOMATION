@@ -27,7 +27,7 @@ public class DashboardVendor extends GeneralObject {
     @FindBy(xpath = "//a[.='Settings']")
     private WebElement btnSetting;
 
-    @FindBy(css = "a:nth-of-type(1)")
+    @FindBy(css = ".grid > a:nth-of-type(1)")
     private WebElement cardSchool;
 
     public String getMySchoolText(){

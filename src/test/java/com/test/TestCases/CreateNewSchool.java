@@ -13,7 +13,6 @@ public class CreateNewSchool extends BaseTestVendor {
     public void loginUser() {
         loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
         dashboardVendor.goToSchool();
-        changeTabDriver();
     }
 
     @Story("Create School")
