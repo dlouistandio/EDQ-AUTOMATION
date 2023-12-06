@@ -2,6 +2,8 @@ package com.qa.PageObjects.DashboardVendor;
 
 import com.qa.Components.GeneralObject;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -124,12 +126,12 @@ public class CreateSchoolPage extends GeneralObject {
     }
 
 
-    public void selectTimezoneDefault(){
-        String cssSelectedTimezone =  ".ant-slide-up-leave div:nth-of-type(1) > .ant-select-item-option-content";
-        WebElement selectedTimezone = driver.findElement(By.cssSelector(cssSelectedTimezone));
+    public void selectTimezone(String timezone){
+        String cssSelectedTimezone =  ".//div[contains(text(), '"+timezone+"')]";
+        WebElement selectedTimezone = driver.findElement(By.xpath(cssSelectedTimezone));
         waitElementsDisplay(selectedTimezone);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", selectedTimezone);
+        js.executeScript("arguments[0].removeAttribute('unselectable'); return arguments[0];", selectedTimezone);
         selectedTimezone.click();
     }
 
