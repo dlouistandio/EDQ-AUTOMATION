@@ -12,7 +12,6 @@ public class CreateNewSchool extends BaseTestVendor {
     @BeforeMethod(groups = { "create school" })
     public void loginUser() {
         loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
-        dashboardVendor.goToSchool();
     }
 
     @Story("Create School")
