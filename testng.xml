@@ -3,6 +3,7 @@
 <suite name="Suite" parallel="tests" thread-count="2">
     <listeners>
         <listener class-name="com.test.Utils.Listeners.Listeners"/>
+        <listener class-name="com.test.Utils.Listeners.RetryListeners"/>
     </listeners>
 
     <test name="Login User" >
