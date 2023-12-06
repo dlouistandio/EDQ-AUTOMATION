@@ -13,11 +13,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.time.Duration;
 import java.util.Properties;
 import java.util.Random;
@@ -48,14 +50,14 @@ public class BaseTestVendor {
         if (browserName.equalsIgnoreCase("chrome")){
             caps.setCapability(CapabilityType.BROWSER_NAME, "chrome");
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+//            driver = new ChromeDriver();
         }
         if (browserName.equalsIgnoreCase("firefox")){
             WebDriverManager.firefoxdriver().setup();
 //            driver = new FirefoxDriver();
             caps.setCapability(CapabilityType.BROWSER_NAME, "firefox");
         }
-//        driver = new RemoteWebDriver(new URL("http://localhost:4444"), caps);
+        driver = new RemoteWebDriver(new URL("http://localhost:4444"), caps);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get(webUrl);
