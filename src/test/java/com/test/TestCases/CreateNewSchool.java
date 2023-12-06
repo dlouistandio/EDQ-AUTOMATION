@@ -36,6 +36,6 @@ public class CreateNewSchool extends BaseTestVendor {
         createSchoolPage.clickTimezoneOption();
         createSchoolPage.selectTimezone("Western Indonesian Time");
         createSchoolPage.clickSaveInformation();
-        Assert.assertEquals(dashboardSchool.getUsernameDashboardText(),"Automation Test");
+        Assert.assertEquals(dashboardSchool.getUsernameDashboardText()," Automation Test");
     }
 }
