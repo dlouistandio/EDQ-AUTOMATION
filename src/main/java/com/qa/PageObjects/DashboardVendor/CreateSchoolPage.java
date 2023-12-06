@@ -73,6 +73,7 @@ public class CreateSchoolPage extends GeneralObject {
     }
 
     public String getStartedWithEduqatText(){
+        waitElementsDisplay(getStartedWithEduqatText);
         return getStartedWithEduqatText.getText();
     }
 
