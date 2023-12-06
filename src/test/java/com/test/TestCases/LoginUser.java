@@ -1,13 +1,13 @@
 package com.test.TestCases;
 
-import com.test.BaseTest;
+import com.test.BaseTestVendor;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 @Epic("Login User SSO")
 @Feature("Login")
-public class LoginUser extends BaseTest {
+public class LoginUser extends BaseTestVendor {
 
     @Story("Login valid user")
     @Link(name = "allure", type = "mylink")

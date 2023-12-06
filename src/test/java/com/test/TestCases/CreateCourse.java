@@ -1,17 +1,15 @@
 package com.test.TestCases;
 
-import com.test.BaseTest;
+import com.test.BaseTestVendor;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
-import java.util.Set;
 
 @Epic("Create Course")
 @Feature("Create Course")
 @Link(name = "allure", type = "mylink")
 @TmsLink("TMS Link")
-public class CreateCourse extends BaseTest {
+public class CreateCourse extends BaseTestVendor {
 
 
     @Story("Create Course Event")

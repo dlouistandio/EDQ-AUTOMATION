@@ -46,8 +46,7 @@ public class EventPage extends GeneralObject {
     }
 
 
-    public void inputFormOnsite() throws InterruptedException {
-        Thread.sleep(5000);
+    public void inputFormOnsite() {
         waitElementsDisplay(titleMaterial);
         titleMaterial.sendKeys("Onsite");
         descriptionField.click();
@@ -59,4 +58,6 @@ public class EventPage extends GeneralObject {
         durationField.sendKeys("1");
         saveMaterialButton.click();
     }
+
+
 }
