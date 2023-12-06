@@ -1,7 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Tue Dec 05 08:25:11 GMT 2023","Tue Dec 05 08:25:27 GMT 2023","16173","Suite","Login User","com.test.TestCases.LoginUser","com.test.TestCases.LoginUser","loginValidUser","Login valid user","Login User with valid email and password"
-"failed","Tue Dec 05 08:26:40 GMT 2023","Tue Dec 05 08:27:15 GMT 2023","34540","Suite","Create Course","com.test.TestCases.CreateCourse","com.test.TestCases.CreateCourse","createCourseSelfPaced","Create Self Paced","Create Course Self Paced"
-"passed","Tue Dec 05 08:25:04 GMT 2023","Tue Dec 05 08:25:09 GMT 2023","5073","Suite","Login User","com.test.TestCases.LoginUser","com.test.TestCases.LoginUser","loginInvalidUser","Login invalid user","Login User with invalid email and password"
-"broken","Tue Dec 05 05:12:08 GMT 2023","Tue Dec 05 05:12:08 GMT 2023","13","Default Suite","EDUQAT-AUTOMATIONTEST","com.test.TestCases.CreateCourse","com.test.TestCases.CreateCourse","loginUser","loginUser",""
-"passed","Tue Dec 05 08:25:58 GMT 2023","Tue Dec 05 08:26:39 GMT 2023","40717","Suite","Create Course","com.test.TestCases.CreateCourse","com.test.TestCases.CreateCourse","createCourseEvent","Create Course Event","Create Course Event"
-"passed","Tue Dec 05 08:25:08 GMT 2023","Tue Dec 05 08:25:55 GMT 2023","46979","Suite","Create Course","com.test.TestCases.CreateCourse","com.test.TestCases.CreateCourse","createCourseCohort","Create Cohort","Create Course Cohort"
