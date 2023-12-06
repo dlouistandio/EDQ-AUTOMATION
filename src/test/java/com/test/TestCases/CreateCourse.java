@@ -10,7 +10,7 @@ import org.testng.annotations.*;
 @Link(name = "allure", type = "mylink")
 @TmsLink("TMS Link")
 public class CreateCourse extends BaseTestVendor {
-    @BeforeTest
+    @BeforeMethod(groups = { "create course" })
     public void loginUser() {
         loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
         dashboardVendor.goToSchool();

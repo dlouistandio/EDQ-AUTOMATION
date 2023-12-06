@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class CreateNewSchool extends BaseTestVendor {
-    @BeforeTest
+    @BeforeMethod(groups = { "create school" })
     public void loginUser() {
         loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
         dashboardVendor.goToSchool();
