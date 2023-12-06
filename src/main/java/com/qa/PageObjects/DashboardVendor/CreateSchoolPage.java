@@ -78,31 +78,38 @@ public class CreateSchoolPage extends GeneralObject {
     }
 
     public void clickJobsOption(){
+        waitElementsDisplay(jobOption);
         jobOption.click();
     }
 
     public void clickHaveTeachOption(){
+        waitElementsDisplay(haveTeachOption);
         haveTeachOption.click();
     }
 
     public void clickCourseRevenueOption(){
+        waitElementsDisplay(courseRevenueOption);
         courseRevenueOption.click();
     }
 
     public void clickAudienceSizeOption(){
+        waitElementsDisplay(audienceSizeOption);
         audienceSizeOption.click();
     }
 
     public void inputCountryOption(String country){
+        waitElementsDisplay(countryOption);
         countryOption.click();
         countryOption.sendKeys(country, Keys.ENTER);
     }
 
     public void clickCurrencyOption(){
+        waitElementsDisplay(currencyOption);
         currencyOption.click();
     }
 
     public void clickTimezoneOption(){
+        waitElementsDisplay(timezoneOption;
         timezoneOption.click();
     }
 
