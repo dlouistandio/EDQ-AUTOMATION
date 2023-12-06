@@ -31,9 +31,10 @@ public class CreateNewSchool extends BaseTestVendor {
         createSchoolPage.selectOption("Never sold an online course before");
         createSchoolPage.clickAudienceSizeOption();
         createSchoolPage.selectOption("500 - 1.000 people");
-        createSchoolPage.inputCountryOption("indonesia");
+        createSchoolPage.clickCountryOption();
+        createSchoolPage.selectCountry("Indonesia");
         createSchoolPage.clickTimezoneOption();
-        createSchoolPage.selectTimezone("1");
+        createSchoolPage.selectTimezoneDefault();
         createSchoolPage.clickSaveInformation();
         Assert.assertEquals(dashboardSchool.getUsernameDashboardText(),"Automation Testing");
     }

@@ -1,10 +1,7 @@
 package com.qa.PageObjects.DashboardVendor;
 
 import com.qa.Components.GeneralObject;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -44,7 +41,7 @@ public class CreateSchoolPage extends GeneralObject {
     @FindBy(xpath = "//input[@id='basic_audienceSize']")
     private WebElement audienceSizeOption;
 
-    @FindBy(xpath = "//input[@id='basic_countryCode']")
+    @FindBy(css = "#basic_countryCode")
     private WebElement countryOption;
 
     @FindBy(xpath = "//input[@id='basic_currency']")
@@ -78,38 +75,30 @@ public class CreateSchoolPage extends GeneralObject {
     }
 
     public void clickJobsOption(){
-        waitElementsDisplay(jobOption);
         jobOption.click();
     }
 
     public void clickHaveTeachOption(){
-        waitElementsDisplay(haveTeachOption);
         haveTeachOption.click();
     }
 
     public void clickCourseRevenueOption(){
-        waitElementsDisplay(courseRevenueOption);
         courseRevenueOption.click();
     }
 
     public void clickAudienceSizeOption(){
-        waitElementsDisplay(audienceSizeOption);
         audienceSizeOption.click();
     }
 
-    public void inputCountryOption(String country){
-        waitElementsDisplay(countryOption);
+    public void clickCountryOption(){
         countryOption.click();
-        countryOption.sendKeys(country, Keys.ENTER);
     }
 
     public void clickCurrencyOption(){
-        waitElementsDisplay(currencyOption);
         currencyOption.click();
     }
 
     public void clickTimezoneOption(){
-        waitElementsDisplay(timezoneOption);
         timezoneOption.click();
     }
 
@@ -117,6 +106,13 @@ public class CreateSchoolPage extends GeneralObject {
         String cssSelectedOption =  "[title='"+option+"'] > .ant-select-item-option-content";
         WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
         waitElementsDisplay(selectedOption);
+        selectedOption.click();
+    }
+
+    public void selectCountry(String option){
+        countryOption.sendKeys(option);
+        String cssSelectedOption =  "[title='"+option+"'] > .ant-select-item-option-content";
+        WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
         selectedOption.click();
     }
 
@@ -128,10 +124,12 @@ public class CreateSchoolPage extends GeneralObject {
     }
 
 
-    public void selectTimezone(String option){
-        String cssSelectedTimezone =  ".ant-slide-up-leave div:nth-of-type("+option+") > .ant-select-item-option-content";
+    public void selectTimezoneDefault(){
+        String cssSelectedTimezone =  ".ant-slide-up-leave div:nth-of-type(1) > .ant-select-item-option-content";
         WebElement selectedTimezone = driver.findElement(By.cssSelector(cssSelectedTimezone));
         waitElementsDisplay(selectedTimezone);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", selectedTimezone);
         selectedTimezone.click();
     }
 
