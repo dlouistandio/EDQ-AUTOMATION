@@ -45,8 +45,8 @@ public class LoginUserSSO extends BaseTestVendor {
     @Story("Login user")
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
-    @Description("Login User with empty email")
-    @Test( description = "Login User with empty email", groups = { "login" })
+    @Description("Login User with empty password")
+    @Test( description = "Login User with empty password", groups = { "login" })
     public void loginUserEmptyPassword() {
         loginPage.loginUser("eduqatautomationtest@gmail.com","");
         loginPage.clickSignInButton();
