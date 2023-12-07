@@ -68,7 +68,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.test.TestCases.LoginUserSchool"/>
+            <class name="com.test.TestCases.LogOutUserSchool"/>
         </classes>
     </test>
 </suite>
