@@ -60,4 +60,15 @@
             <class name="com.test.TestCases.LoginUserSchool"/>
         </classes>
     </test>
+
+    <test name="Logout web school" >
+        <groups>
+            <run>
+                <include name="logout school"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.LoginUserSchool"/>
+        </classes>
+    </test>
 </suite>
