@@ -28,7 +28,7 @@ public class LogOutUserSSO extends BaseTestVendor {
     public void logoutUserWithDropdownButton() {
         loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
         loginPage.clickSignInButton();
-        dashboardVendor.clickLogoutButtonDashboard();
+        dashboardVendor.clickLogoutButtonDropdown();
         Assert.assertEquals(loginPage.getLoginFormText(),"Sign in with your email and password");
     }
 
