@@ -50,4 +50,24 @@ public class Listeners extends BaseTestVendor implements ITestListener {
         // Save a log on allure.
         saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");
     }
+
+    @Override
+    public void onTestSuccess(ITestResult iTestResult) {
+        System.out.println("Succes Test Case" + getTestMethodName(iTestResult));
+
+        WebDriver driver = null;
+        try {
+            driver = (WebDriver) iTestResult.getTestClass().getRealClass().getField("driver")
+                    .get(iTestResult.getInstance());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        // Allure ScreenShotRobot and SaveTestLog
+        if (driver instanceof WebDriver) {
+            System.out.println("Screenshot captured for test case:" + getTestMethodName(iTestResult));
+            saveScreenshotPNG(driver);
+        }
+        // Save a log on allure.
+        saveTextLog(getTestMethodName(iTestResult) + " success and screenshot taken!");
+    }
 }
