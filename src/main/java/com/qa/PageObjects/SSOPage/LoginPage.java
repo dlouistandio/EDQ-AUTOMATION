@@ -2,6 +2,8 @@ package com.qa.PageObjects.SSOPage;
 
 import com.qa.Components.GeneralObject;
 import io.qameta.allure.Step;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,9 +30,24 @@ public class LoginPage extends GeneralObject {
     @FindBy(css = ".visible-md #loginErrorMessage")
     private WebElement alertText;
 
+    @FindBy(css = ".visible-md .textDescription-customizable")
+    private WebElement loginFormText;
+
+
+    @Step
     public String getAlertText (){
         waitElementsDisplay(alertText);
         return alertText.getText();
+    }
+    @Step
+    public String getValidationEmailText(){
+        String message = emailField.getAttribute("validationMessage");
+        return message;
+    }
+    @Step
+    public String getValidationPasswordText(){
+        String message = passwordField.getAttribute("validationMessage");
+        return message;
     }
     @Step
     public void loginUser(String user, String pass){
@@ -38,15 +55,15 @@ public class LoginPage extends GeneralObject {
         emailField.sendKeys(user);
         log().info("Password Is " + pass);
         passwordField.sendKeys(pass);
+    }
+    @Step
+    public void clickSignInButton(){
         buttonSignIn.click();
     }
 
     @Step
-    public void loginInvalidUser(String user, String pass){
-        log().info("Username Is " + user);
-        emailField.sendKeys(user);
-        log().info("Password Is " + pass);
-        passwordField.sendKeys(pass);
-        buttonSignIn.click();
+    public String getLoginFormText(){
+        waitElementsDisplay(loginFormText);
+        return loginFormText.getText();
     }
 }

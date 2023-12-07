@@ -13,6 +13,7 @@ public class CreateCourse extends BaseTestVendor {
     @BeforeMethod(groups = { "create course" })
     public void loginUser() {
         loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
+        loginPage.clickSignInButton();
         dashboardVendor.goToSchool();
         changeTabDriver();
     }

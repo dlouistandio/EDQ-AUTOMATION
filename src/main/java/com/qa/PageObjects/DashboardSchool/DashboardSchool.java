@@ -1,6 +1,7 @@
 package com.qa.PageObjects.DashboardSchool;
 
 import com.qa.Components.GeneralObject;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -43,38 +44,39 @@ public class DashboardSchool extends GeneralObject {
     @FindBy(xpath = "//div[@class='addmaterial-content']/div[2]")
     private WebElement onsiteEventButton;
 
+    @Step
     public String createNewProductText(){
         return createNewProductText.getText();
     }
-
+    @Step
     public String getUsernameDashboardText(){
         waitElementsDisplay(userText);
         return userText.getText();
     }
-
+    @Step
     public void chooseMenu(String menu) {
         waitElementsDisplay(dashboardText);
         String xPathSelectedMenu =  "//a[@href='"+menu+"']";
         WebElement menuContent = driver.findElement(By.xpath(xPathSelectedMenu));
         menuContent.click();
     }
-
+    @Step
     public void chooseCourseType(String menu) {
         String xPathSelectedMenu =  "//div[@class='course-type__form']//div["+menu+"]/label[@class='radio-group']";
         WebElement menuContent = driver.findElement(By.xpath(xPathSelectedMenu));
         menuContent.click();
     }
-
+    @Step
     public void clickNewProductButton(){
         waitElementsDisplay(buttonCreate);
         buttonCreate.click();
     }
-
+    @Step
     public void setTitleCourse(String nameCourse){
         waitElementsDisplay(titleField);
         titleField.sendKeys(nameCourse);
     }
-
+    @Step
     public void setDateEvent(){
         dateField.click();
         String xPathSelectedMenu =  "//tr[3]//div[.='15']";
@@ -83,17 +85,17 @@ public class DashboardSchool extends GeneralObject {
         datePicker.click();
         dateOkButton.click();
     }
-
+    @Step
     public void createNewCourse(){
         createProductButton.click();
     }
-
+    @Step
     public void modalNewProcuctMenu(){
         waitElementsDisplay(createNewProductText);
         createBlankProductButton.click();
         nextButton.click();
     }
-
+    @Step
     public void clickOnsiteEventButton(){
         waitElementsDisplay(onsiteEventButton);
         JavascriptExecutor js = (JavascriptExecutor) driver;

@@ -10,6 +10,7 @@ import com.qa.PageObjects.DashboardVendor.DashboardVendor;
 import com.qa.PageObjects.SSOPage.LoginPage;
 import com.qa.PageObjects.SchoolWebPage.HomePage;
 import com.test.TestCases.CreateNewSchool;
+import com.test.TestCases.LogOutUserSSO;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

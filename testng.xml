@@ -28,6 +28,17 @@
         </classes>
     </test>
 
+    <test name="Logout User" >
+        <groups>
+            <run>
+                <include name="logout"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.LogOutUserSSO"/>
+        </classes>
+    </test>
+
     <test name="Create School" >
         <groups>
             <run>

@@ -1,6 +1,7 @@
 package com.qa.PageObjects.ManageCourse;
 
 import com.qa.Components.GeneralObject;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,22 +31,27 @@ public class GeneralObjectManageCourse extends GeneralObject {
     @FindBy(xpath = "//div[@class='preview-tab']/a[.='Publish']")
     private WebElement tabPublish;
 
+    @Step
     public void clickTabCurriculum(){
         tabCurriculum.click();
     }
 
+    @Step
     public void clickTabPrice(){
         tabPrice.click();
     }
 
+    @Step
     public void clickTabCourseInformation(){
         tabCourseInformation.click();
     }
 
+    @Step
     public void clickTabAdvancedSetting(){
         tabAdvancedSetting.click();
     }
 
+    @Step
     public void clickTabPublish(){
         tabPublish.click();
     }

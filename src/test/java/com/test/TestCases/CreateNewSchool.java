@@ -5,19 +5,19 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class CreateNewSchool extends BaseTestVendor {
     @BeforeMethod(groups = { "create school" })
     public void loginUser() {
         loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
+        loginPage.clickSignInButton();
     }
 
     @Story("Create School")
     @Description("Create School")
     @Test( description = "Create School", groups = { "create school" })
-    public void createCourseEventWebinar() {
+    public void createSchool() {
         dashboardVendor.clickCreateNewSchool();
         Assert.assertEquals(createSchoolPage.getStartedWithEduqatText(),"Get started with Eduqat");
         createSchoolPage.inputSchoolName(generateRandomString());

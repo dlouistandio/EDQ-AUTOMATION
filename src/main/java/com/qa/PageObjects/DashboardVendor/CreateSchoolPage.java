@@ -1,6 +1,7 @@
 package com.qa.PageObjects.DashboardVendor;
 
 import com.qa.Components.GeneralObject;
+import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -76,34 +77,42 @@ public class CreateSchoolPage extends GeneralObject {
         return getStartedWithEduqatText.getText();
     }
 
+    @Step
     public void clickJobsOption(){
         jobOption.click();
     }
 
+    @Step
     public void clickHaveTeachOption(){
         haveTeachOption.click();
     }
 
+    @Step
     public void clickCourseRevenueOption(){
         courseRevenueOption.click();
     }
 
+    @Step
     public void clickAudienceSizeOption(){
         audienceSizeOption.click();
     }
 
+    @Step
     public void clickCountryOption(){
         countryOption.click();
     }
 
+    @Step
     public void clickCurrencyOption(){
         currencyOption.click();
     }
 
+    @Step
     public void clickTimezoneOption(){
         timezoneOption.click();
     }
 
+    @Step
     public void selectOption(String option){
         String cssSelectedOption =  "[title='"+option+"'] > .ant-select-item-option-content";
         WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
@@ -111,6 +120,7 @@ public class CreateSchoolPage extends GeneralObject {
         selectedOption.click();
     }
 
+    @Step
     public void selectCountry(String option){
         countryOption.sendKeys(option);
         String cssSelectedOption =  "[title='"+option+"'] > .ant-select-item-option-content";
@@ -118,6 +128,7 @@ public class CreateSchoolPage extends GeneralObject {
         selectedOption.click();
     }
 
+    @Step
     public void selectLanguage(String option){
         String cssSelectedLanguage =  ".ant-space-horizontal > div:nth-of-type("+option+") .eduqate-radio__checkmark";
         WebElement selectedLanguage = driver.findElement(By.cssSelector(cssSelectedLanguage));
@@ -125,7 +136,7 @@ public class CreateSchoolPage extends GeneralObject {
         selectedLanguage.click();
     }
 
-
+    @Step
     public void selectTimezone(String timezone){
         String cssSelectedTimezone =  ".//div[contains(text(), '"+timezone+"')]";
         WebElement selectedTimezone = driver.findElement(By.xpath(cssSelectedTimezone));

@@ -1,5 +1,6 @@
 package com.qa.PageObjects.ManageCourse;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,10 +24,12 @@ public class PricingCoursePage extends GeneralObjectManageCourse{
     @FindBy(xpath = " //div[@class='ant-space-item']/button")
     private WebElement addPricingButton;
 
+    @Step
     public String getPricingText(){
         return pricingText.getText();
     }
 
+    @Step
     public void SetPricingCourse(){
         clickTabPrice();
         waitElementsDisplay(pricingText);

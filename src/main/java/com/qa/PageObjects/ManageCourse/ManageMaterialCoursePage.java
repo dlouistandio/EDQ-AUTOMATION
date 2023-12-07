@@ -1,6 +1,7 @@
 package com.qa.PageObjects.ManageCourse;
 
 import com.qa.Components.GeneralObject;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,19 +26,23 @@ public class ManageMaterialCoursePage extends GeneralObject {
     @FindBy(xpath = "//h3[.='Session 1']")
     private WebElement sessionText;
 
+    @Step
     public String successAddMaterialText(){
         return successAddMaterialAlert.getText();
     }
 
+    @Step
     public String getHeaderText(){
         waitElementsDisplay(headerCourseText);
         return headerCourseText.getText();
     }
 
+    @Step
     public String sessionText(){
         return sessionText.getText();
     }
 
+    @Step
     public void inputFormMaterialText(){
         waitElementsDisplay(titleMaterial);
         titleMaterial.sendKeys("Ini Text");
@@ -49,6 +54,7 @@ public class ManageMaterialCoursePage extends GeneralObject {
     }
 
     //Select material lesson Exam, Media
+    @Step
     public void selectMaterialLessonType(String type){
         waitElementsDisplay(addMaterialSessionButton);
         addMaterialSessionButton.click();
@@ -58,6 +64,7 @@ public class ManageMaterialCoursePage extends GeneralObject {
         materialLessonType.click();
     }
 
+    @Step
     public void addSessionMaterialSelfPaced(String material){
         waitElementsDisplay(headerCourseText);
         addLessonButton.click();

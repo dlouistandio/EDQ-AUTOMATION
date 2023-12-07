@@ -1,6 +1,8 @@
 package com.qa.PageObjects.DashboardVendor;
 
 import com.qa.Components.GeneralObject;
+import io.qameta.allure.Step;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,21 +29,49 @@ public class DashboardVendor extends GeneralObject {
     @FindBy(xpath = "//a[.='Settings']")
     private WebElement btnSetting;
 
+    @FindBy(xpath = "//a[.='Logout']")
+    private WebElement btnLogout;
+
     @FindBy(css = ".grid > a:nth-of-type(1)")
     private WebElement cardSchool;
 
+    @FindBy(css = "[aria-haspopup='menu']")
+    private WebElement userProfile;
+
+    @FindBy(css = ".block[href='/logout']")
+    private WebElement logoutDropdownButton;
+
+
+    @Step
     public String getMySchoolText(){
         waitElementsDisplay(mySchoolText);
         return mySchoolText.getText();
     }
 
+    @Step
     public void goToSchool(){
         waitElementsDisplay(cardSchool);
         cardSchool.click();
     }
 
+    @Step
     public void clickCreateNewSchool(){
         waitElementsDisplay(btnNewSchool);
         btnNewSchool.click();
     }
+
+    @Step
+    public void clickLogoutButtonDashboard(){
+        waitElementsDisplay(btnLogout);
+        btnLogout.click();
+    }
+
+    @Step
+    public void clickLogoutButtonDropdown(){
+        waitElementsDisplay(userProfile);
+        userProfile.click();
+        waitElementsDisplay(logoutDropdownButton);
+        logoutDropdownButton.click();
+    }
+
 }

@@ -1,6 +1,7 @@
 package com.qa.PageObjects.ManageCourse;
 
 import com.qa.Components.GeneralObject;
+import io.qameta.allure.Step;
 import org.apache.logging.log4j.core.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -28,6 +29,7 @@ public class EventPage extends GeneralObject {
     private WebElement mapSearchResult;
 
 
+    @Step
     public void addSessionMaterialEvent(String material){
         String xPathSelectedMenu =  "//div[.='"+ material +"']";
         WebElement addMaterialButton = driver.findElement(By.xpath(xPathSelectedMenu));
@@ -35,6 +37,7 @@ public class EventPage extends GeneralObject {
         addMaterialButton.click();
     }
 
+    @Step
     public void inputFormWebinar(){
         waitElementsDisplay(titleMaterial);
         titleMaterial.sendKeys("Zoom");
@@ -45,7 +48,7 @@ public class EventPage extends GeneralObject {
         saveMaterialButton.click();
     }
 
-
+    @Step
     public void inputFormOnsite() {
         waitElementsDisplay(titleMaterial);
         titleMaterial.sendKeys("Onsite");

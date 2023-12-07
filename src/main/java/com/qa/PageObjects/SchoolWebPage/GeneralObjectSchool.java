@@ -1,5 +1,6 @@
 package com.qa.PageObjects.SchoolWebPage;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -15,11 +16,13 @@ public class GeneralObjectSchool {
         PageFactory.initElements(driver,this);
     }
 
+    @Step
     public void waitElementsDisplay(WebElement findBy){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         wait.until(ExpectedConditions.visibilityOf(findBy));
     }
 
+    @Step
     public void waitElementsNotDisplay(WebElement findBy){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         wait.until(ExpectedConditions.invisibilityOf(findBy));

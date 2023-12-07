@@ -1,4 +1,26 @@
 package com.test.TestCases;
 
-public class LogOutUserSchool {
+import com.test.BaseTestSchool;
+import io.qameta.allure.*;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+@Epic("Logout User School")
+@Feature("Logout School")
+public class LogOutUserSchool extends BaseTestSchool {
+    @Story("Logout user school")
+    @Link(name = "allure", type = "mylink")
+    @TmsLink("TMS Link")
+    @Description("Logout user school")
+    @Test( description = "Login valid user", groups = { "login school" })
+    public void loginValidUserSchool() {
+        homePage.clickLoginButton();
+        Assert.assertEquals(homePage.getFormLoginText(),"Welcome back");
+        homePage.inputEmailNPassword("woofpuffy@gmail.com","P@ss4eduqat");
+        homePage.clickSigninButton();
+        Assert.assertEquals(homePage.getHeaderWeb(),"untukautomationtest");
+        homePage.moveToProfile();
+        homePage.clickSignOutButton();
+        Assert.assertEquals(homePage.getLoginButtonText(),"Log in");
+    }
 }
