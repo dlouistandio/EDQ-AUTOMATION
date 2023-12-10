@@ -20,7 +20,7 @@ public class LoginUserSSO extends BaseTestVendor {
         Assert.assertEquals(dashboardVendor.getMySchoolText(), "My Schools");
     }
 
-    @Story("Login user")
+    @Story("Login SSO")
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Login User with invalid email and password")
@@ -31,7 +31,7 @@ public class LoginUserSSO extends BaseTestVendor {
         Assert.assertEquals(loginPage.getAlertText(), "Incorrect username or password.");
     }
 
-    @Story("Login user")
+    @Story("Login SSO")
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Login User with empty email")
@@ -42,7 +42,7 @@ public class LoginUserSSO extends BaseTestVendor {
         Assert.assertEquals(loginPage.getValidationEmailText(), "Please fill out this field.");
     }
 
-    @Story("Login user")
+    @Story("Login SSO")
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Login User with empty password")
@@ -53,7 +53,7 @@ public class LoginUserSSO extends BaseTestVendor {
         Assert.assertEquals(loginPage.getValidationPasswordText(), "Please fill out this field.");
     }
 
-    @Story("Login user")
+    @Story("Login SSO")
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Login User with empty email and password")

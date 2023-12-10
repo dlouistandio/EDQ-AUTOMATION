@@ -33,6 +33,21 @@ public class LoginPage extends GeneralObject {
     @FindBy(css = ".visible-md .textDescription-customizable")
     private WebElement loginFormText;
 
+    @FindBy(xpath = "//div[@class='modal-content background-customizable modal-content-mobile visible-md visible-lg']//a[.='Sign up']")
+    private WebElement signUpButton;
+
+    @FindBy(css = ".visible-md [name='username']")
+    private WebElement signUpEmailField;
+
+    @FindBy(css = ".visible-md [name='requiredAttributes[name]']")
+    private WebElement signUpNameField;
+
+    @FindBy(css = ".visible-md [name='password']")
+    private WebElement signUpPasswordField;
+
+    @FindBy(css = ".visible-md [name='signUpButton']")
+    private WebElement signUpButtonForm;
+
 
     @Step
     public String getAlertText (){
@@ -66,4 +81,27 @@ public class LoginPage extends GeneralObject {
         waitElementsDisplay(loginFormText);
         return loginFormText.getText();
     }
+
+    @Step
+    public void clickSignUpButton(){
+        signUpButton.click();
+    }
+
+
+    @Step
+    public void signUpUser(String user,String name, String pass){
+        waitElementsDisplay(signUpEmailField);
+        log().info("Username Is " + user);
+        signUpEmailField.sendKeys(user);
+        log().info("Password Is " + pass);
+        signUpNameField.sendKeys(name);
+        signUpPasswordField.sendKeys(pass);
+    }
+
+    @Step
+    public void clickSignUpButtonForm(){
+        signUpButtonForm.click();
+    }
+
+
 }

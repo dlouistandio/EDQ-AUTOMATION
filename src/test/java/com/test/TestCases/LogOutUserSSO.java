@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 @Epic("Logout User SSO")
 @Feature("Logout")
 public class LogOutUserSSO extends BaseTestVendor {
-    @Story("Logout user")
+    @Story("Logout SSO")
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Logout user with button in dashboard")
@@ -20,7 +20,7 @@ public class LogOutUserSSO extends BaseTestVendor {
         Assert.assertEquals(loginPage.getLoginFormText(),"Sign in with your email and password");
     }
 
-    @Story("Logout user")
+    @Story("Logout SSO")
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Logout user with dropdown button")

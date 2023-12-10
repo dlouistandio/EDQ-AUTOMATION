@@ -51,7 +51,6 @@ public class HomePage extends GeneralObjectSchool {
     private WebElement profileMenu;
 
 
-
     @Step
     public void clickLoginButton(){
         waitElementsDisplay(loginButton);
