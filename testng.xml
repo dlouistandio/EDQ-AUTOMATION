@@ -6,7 +6,7 @@
         <listener class-name="com.test.Utils.Listeners.RetryListeners"/>
     </listeners>
 
-    <test name="Login User" >
+    <test name="Login SSO" >
         <groups>
             <run>
                 <include name="login"></include>
@@ -28,7 +28,7 @@
         </classes>
     </test>
 
-    <test name="Logout User" >
+    <test name="Logout SSO" >
         <groups>
             <run>
                 <include name="logout"></include>
