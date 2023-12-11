@@ -66,7 +66,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     public void forgotPasswordUserSchoolEmptyCodeField() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
-        forgotPasswordSchoolPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
+        forgotPasswordSchoolPage.inputEmailField("cvnbcf23@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
         forgotPasswordSchoolPage.inputCodeForgotEmailField("");
         forgotPasswordSchoolPage.inputNewPasswordField("testing123");
@@ -83,7 +83,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     public void forgotPasswordUserSchoolEmptyPasswordField() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
-        forgotPasswordSchoolPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
+        forgotPasswordSchoolPage.inputEmailField("asdasdasfas@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
         forgotPasswordSchoolPage.inputCodeForgotEmailField("123914");
         forgotPasswordSchoolPage.inputNewPasswordField("");
@@ -100,7 +100,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     public void forgotPasswordUserSchoolEmptyReEnterPasswordField() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
-        forgotPasswordSchoolPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
+        forgotPasswordSchoolPage.inputEmailField("123axczzxc@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
         forgotPasswordSchoolPage.inputCodeForgotEmailField("123914");
         forgotPasswordSchoolPage.inputNewPasswordField("testing123");
@@ -117,7 +117,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     public void forgotPasswordUserSchoolWithWrongCode() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
-        forgotPasswordSchoolPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
+        forgotPasswordSchoolPage.inputEmailField("vasaseqw@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
         forgotPasswordSchoolPage.inputCodeForgotEmailField("123914");
         forgotPasswordSchoolPage.inputNewPasswordField("testing123");

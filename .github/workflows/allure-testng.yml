@@ -27,7 +27,7 @@ jobs:
 
           docker version
 
-          docker-compose -f docker-compose.yml up -d --scale chrome=3
+          docker-compose -f docker-compose.yml up -d --scale chrome=2
           
           IP_HUB=`docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' selenium-hub`
           

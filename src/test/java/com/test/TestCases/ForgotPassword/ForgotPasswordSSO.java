@@ -97,7 +97,7 @@ public class ForgotPasswordSSO extends BaseTestVendor {
     @Test( description = "Forgot Password SSO with wrong code", groups = { "forgot password" })
     public void forgotPasswordUserSSOWrongCode() {
         forgotPasswordPage.clickGoToForgotPassword();
-        forgotPasswordPage.inputEmailField("adasdas@mailsac.com");
+        forgotPasswordPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
         forgotPasswordPage.clickResetButton();
         forgotPasswordPage.inputCodeForgotEmailField("21414324");
         forgotPasswordPage.inputNewPasswordField("testing123");
@@ -113,7 +113,7 @@ public class ForgotPasswordSSO extends BaseTestVendor {
     @Test( description = "Forgot Password SSO with different password", groups = { "forgot password" })
     public void forgotPasswordUserSSOWithDiffPass() {
         forgotPasswordPage.clickGoToForgotPassword();
-        forgotPasswordPage.inputEmailField("adasdas@mailsac.com");
+        forgotPasswordPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
         forgotPasswordPage.clickResetButton();
         forgotPasswordPage.inputCodeForgotEmailField("21414324");
         forgotPasswordPage.inputNewPasswordField("testing123");
@@ -128,7 +128,7 @@ public class ForgotPasswordSSO extends BaseTestVendor {
     @Test( description = "Forgot Password SSO with password under 6 character", groups = { "forgot password" })
     public void forgotPasswordUserSSOWithUnderSixChar() {
         forgotPasswordPage.clickGoToForgotPassword();
-        forgotPasswordPage.inputEmailField("adasdas@mailsac.com");
+        forgotPasswordPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
         forgotPasswordPage.clickResetButton();
         forgotPasswordPage.inputCodeForgotEmailField("21414324");
         forgotPasswordPage.inputNewPasswordField("t823");
