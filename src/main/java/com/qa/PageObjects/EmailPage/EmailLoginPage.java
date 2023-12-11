@@ -1,6 +1,7 @@
 package com.qa.PageObjects.EmailPage;
 
 import com.qa.Components.GeneralObject;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,9 +28,28 @@ public class EmailLoginPage extends GeneralObject {
     @FindBy(xpath = "//button[@class='btn btn-primary']")
     private WebElement signInButtonForm;
 
-    @FindBy(css = "[placeholder='anything']")
-    private WebElement toEmailInboxField;
 
-    @FindBy(xpath = "//button[@class='btn btn-primary btn-block btn btn-primary']")
-    private WebElement checkEmailButton;
+    @Step
+    public void inputEmailField (){
+        waitElementsDisplay(usernameField);
+        usernameField.sendKeys("eduqatautomationtest@gmail.com");
+    }
+
+    @Step
+    public void inputPasswordField (){
+        waitElementsDisplay(passwordField);
+        passwordField.sendKeys("woof123puffy");
+    }
+
+    @Step
+    public void clickLoginButton (){
+        waitElementsDisplay(signInButtonForm);
+        signInButtonForm.click();
+    }
+
+    @Step
+    public void goToLoginPage (){
+        waitElementsDisplay(signInButton);
+        signInButton.click();
+    }
 }

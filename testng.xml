@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Suite" parallel="tests" thread-count="3">
+<suite name="Suite" parallel="tests" thread-count="4">
     <listeners>
         <listener class-name="com.test.Utils.Listeners.Listeners"/>
         <listener class-name="com.test.Utils.Listeners.RetryListeners"/>
@@ -13,7 +13,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.test.TestCases.LoginUserSSO"/>
+            <class name="com.test.TestCases.Login.LoginUserSSO"/>
         </classes>
     </test>
 
@@ -35,7 +35,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.test.TestCases.LogOutUserSSO"/>
+            <class name="com.test.TestCases.Logout.LogOutUserSSO"/>
         </classes>
     </test>
 
@@ -57,7 +57,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.test.TestCases.LoginUserSchool"/>
+            <class name="com.test.TestCases.Login.LoginUserSchool"/>
         </classes>
     </test>
 
@@ -68,7 +68,48 @@
             </run>
         </groups>
         <classes>
-            <class name="com.test.TestCases.LogOutUserSchool"/>
+            <class name="com.test.TestCases.Logout.LogOutUserSchool"/>
+        </classes>
+    </test>
+
+    <test name="Register user school" >
+        <groups>
+            <run>
+                <include name="register"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.Register.RegisterUserSchool"/>
+        </classes>
+    </test>
+    <test name="Register user SSO" >
+        <groups>
+            <run>
+                <include name="register"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.Register.RegisterUserSSO"/>
+        </classes>
+    </test>
+    <test name="Forgot password SSO" >
+        <groups>
+            <run>
+                <include name="forgot password"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.ForgotPassword.ForgotPasswordSSO"/>
+        </classes>
+    </test>
+    <test name="Forgot password School" >
+        <groups>
+            <run>
+                <include name="forgot password"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.ForgotPassword.ForgotPasswordSchool"/>
         </classes>
     </test>
 </suite>

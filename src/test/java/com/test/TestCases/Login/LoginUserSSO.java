@@ -1,4 +1,4 @@
-package com.test.TestCases;
+package com.test.TestCases.Login;
 
 import com.test.BaseTestVendor;
 import io.qameta.allure.*;

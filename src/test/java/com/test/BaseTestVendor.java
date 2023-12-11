@@ -2,15 +2,17 @@ package com.test;
 
 import com.qa.PageObjects.DashboardSchool.DashboardSchool;
 import com.qa.PageObjects.DashboardVendor.CreateSchoolPage;
+import com.qa.PageObjects.EmailPage.EmailInbox;
+import com.qa.PageObjects.EmailPage.EmailLoginPage;
 import com.qa.PageObjects.ManageCourse.CohortPage;
 import com.qa.PageObjects.ManageCourse.EventPage;
 import com.qa.PageObjects.ManageCourse.ManageMaterialCoursePage;
 import com.qa.PageObjects.ManageCourse.SelfPacedPage;
 import com.qa.PageObjects.DashboardVendor.DashboardVendor;
+import com.qa.PageObjects.SSOPage.ForgotPasswordPage;
 import com.qa.PageObjects.SSOPage.LoginPage;
+import com.qa.PageObjects.SSOPage.SignUpPage;
 import com.qa.PageObjects.SchoolWebPage.HomePage;
-import com.test.TestCases.CreateNewSchool;
-import com.test.TestCases.LogOutUserSSO;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,12 +23,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Properties;
 import java.util.Random;
 import java.util.Set;
+import java.util.UUID;
 
 public class BaseTestVendor {
     public WebDriver driver;
@@ -39,6 +43,10 @@ public class BaseTestVendor {
     public ManageMaterialCoursePage manageMaterialCoursePage;
     public HomePage homePage;
     public CreateSchoolPage createSchoolPage;
+    public SignUpPage signUpPage;
+    public EmailLoginPage emailLoginPage;
+    public EmailInbox emailInbox;
+    public ForgotPasswordPage forgotPasswordPage;
 
     public WebDriver initDriver() throws IOException {
         Properties props = new Properties();
@@ -78,6 +86,25 @@ public class BaseTestVendor {
         }
     }
 
+    public String emailProperties() throws IOException {
+            // Load properties from file
+            Properties props = new Properties();
+            FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/main/resources/GlobalData.properties");
+            props.load(fis);
+
+            // Generate a random string
+            String randomString = UUID.randomUUID().toString();
+
+            // Replace the placeholder in the properties file
+            props.setProperty("email_register", randomString + "@mailsac.com");
+
+            // Save the updated properties to file
+            props.store(new FileOutputStream("GlobalData.properties"), null);
+            String email = props.getProperty("email_register");
+            return email;
+
+    }
+
     public String generateRandomString(){
         String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         StringBuilder salt = new StringBuilder();
@@ -102,6 +129,10 @@ public class BaseTestVendor {
         manageMaterialCoursePage = new ManageMaterialCoursePage(driver);
         homePage = new HomePage(driver);
         createSchoolPage = new CreateSchoolPage(driver);
+        signUpPage = new SignUpPage(driver);
+        emailLoginPage = new EmailLoginPage(driver);
+        emailInbox = new EmailInbox(driver);
+        forgotPasswordPage = new ForgotPasswordPage(driver);
      }
 
     @AfterMethod(alwaysRun = true)
