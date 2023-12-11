@@ -53,10 +53,6 @@ public class CreateSchoolPage extends GeneralObject {
     @FindBy(xpath = "//input[@id='basic_timezone']")
     private WebElement timezoneOption;
 
-    @FindBy(css = ".ant-select-item-option-content")
-    private WebElement selectOptionContainer;
-
-
 
     public void inputSchoolName(String name){
         waitElementsDisplay(schoolNameField);
@@ -118,7 +114,6 @@ public class CreateSchoolPage extends GeneralObject {
 
     @Step
     public void selectOption(String option){
-        waitElementsDisplay(selectOptionContainer);
         String cssSelectedOption =  "[title='"+option+"'] > .ant-select-item-option-content";
         WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
         waitElementsDisplay(selectedOption);

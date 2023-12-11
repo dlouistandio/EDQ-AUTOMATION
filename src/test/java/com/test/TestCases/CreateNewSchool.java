@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class CreateNewSchool extends BaseTestVendor {
     @BeforeMethod(groups = { "create school" })
     public void loginUser() {
-        loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
+        loginPage.loginUser("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com","test123");
         loginPage.clickSignInButton();
     }
 
@@ -36,6 +36,6 @@ public class CreateNewSchool extends BaseTestVendor {
         createSchoolPage.clickTimezoneOption();
         createSchoolPage.selectTimezone("Western Indonesian Time");
         createSchoolPage.clickSaveInformation();
-        Assert.assertEquals(dashboardSchool.getUsernameDashboardText()," Automation Test");
+        Assert.assertEquals(dashboardSchool.getUsernameDashboardText(),"Testing");
     }
 }
