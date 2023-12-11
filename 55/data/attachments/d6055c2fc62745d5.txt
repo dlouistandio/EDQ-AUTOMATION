@@ -1,0 +1,1 @@
+forgotPasswordUserSchoolEmptyReEnterPasswordField failed and screenshot taken!
