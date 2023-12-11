@@ -45,6 +45,9 @@ public class ForgotPasswordSchoolPage extends GeneralObjectSchool{
     @FindBy(xpath = "//div[@class='ant-alert-message']")
     private WebElement wrongAlert;
 
+    @FindBy(xpath = "//h2[contains(text(),'Reset Password')]")
+    private WebElement resetPasswordText;
+
 
     @Step
     public String getFieldAlert(){
@@ -98,6 +101,7 @@ public class ForgotPasswordSchoolPage extends GeneralObjectSchool{
     public void clickConfirmReset(){
         waitElementsDisplay(confirmChangePasswordButton);
         confirmChangePasswordButton.click();
+        waitElementsNotDisplay(resetPasswordText);
     }
 
     @Step

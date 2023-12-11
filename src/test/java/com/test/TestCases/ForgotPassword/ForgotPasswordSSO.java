@@ -64,7 +64,7 @@ public class ForgotPasswordSSO extends BaseTestVendor {
     @Test( description = "Forgot Password SSO with empty code", groups = { "forgot password" })
     public void forgotPasswordUserSSOEmptyCode() {
         forgotPasswordPage.clickGoToForgotPassword();
-        forgotPasswordPage.inputEmailField("");
+        forgotPasswordPage.inputEmailField("adasdas@mailsac.com");
         forgotPasswordPage.clickResetButton();
         forgotPasswordPage.inputCodeForgotEmailField("");
         forgotPasswordPage.inputNewPasswordField("testing123");
@@ -77,10 +77,10 @@ public class ForgotPasswordSSO extends BaseTestVendor {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password SSO with empty new password")
-    @Test( description = "Forgot Password SSO with empty code", groups = { "forgot password" })
+    @Test( description = "Forgot Password SSO with empty new password", groups = { "forgot password" })
     public void forgotPasswordUserSSOEmptyNewPassword() {
         forgotPasswordPage.clickGoToForgotPassword();
-        forgotPasswordPage.inputEmailField("");
+        forgotPasswordPage.inputEmailField("adasdas@mailsac.com");
         forgotPasswordPage.clickResetButton();
         forgotPasswordPage.inputCodeForgotEmailField("123432432");
         forgotPasswordPage.inputNewPasswordField("");
@@ -103,7 +103,7 @@ public class ForgotPasswordSSO extends BaseTestVendor {
         forgotPasswordPage.inputNewPasswordField("testing123");
         forgotPasswordPage.inputReEnterNewPasswordField("testing123");
         forgotPasswordPage.clickConfirmReset();
-        Assert.assertEquals(forgotPasswordPage.getWrongCodeAlert(), "Invalid verification code provided, please try again. ");
+        Assert.assertEquals(forgotPasswordPage.getWrongCodeAlert(), "Invalid verification code provided, please try again.");
     }
 
     @Story("Forgot Password SSO")

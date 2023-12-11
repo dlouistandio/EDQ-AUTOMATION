@@ -68,7 +68,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
         forgotPasswordSchoolPage.clickGoToForgotPassword();
         forgotPasswordSchoolPage.inputEmailField("adasdas@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
-        forgotPasswordSchoolPage.inputCodeForgotEmailField("123914");
+        forgotPasswordSchoolPage.inputCodeForgotEmailField("");
         forgotPasswordSchoolPage.inputNewPasswordField("testing123");
         forgotPasswordSchoolPage.inputReEnterNewPasswordField("testing123");
         forgotPasswordSchoolPage.clickConfirmReset();

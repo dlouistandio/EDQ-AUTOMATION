@@ -12,7 +12,7 @@ public class LoginUserSchool extends BaseTestSchool {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Login User with valid email and password")
-    @Test( description = "Login valid user", groups = { "login school" })
+    @Test( description = "Login valid valid email and password", groups = { "login school" })
     public void loginValidUserSchool() {
         homePage.clickLoginButton();
         Assert.assertEquals(homePage.getFormLoginText(),"Welcome back");
