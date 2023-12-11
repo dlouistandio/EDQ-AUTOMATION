@@ -1,0 +1,1 @@
+registerUserWithEmptyPassword success and screenshot taken!
