@@ -39,6 +39,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
         forgotPasswordSchoolPage.inputNewPasswordField("testing123");
         forgotPasswordSchoolPage.inputReEnterNewPasswordField("testing123");
         forgotPasswordSchoolPage.clickConfirmReset();
+        forgotPasswordSchoolPage.resetPasswordTextInvisible();
         Assert.assertEquals(homePage.getFormLoginText(),"Welcome back");
         homePage.inputEmailNPassword("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com","testing123");
         homePage.clickSigninButton();

@@ -101,8 +101,13 @@ public class ForgotPasswordSchoolPage extends GeneralObjectSchool{
     public void clickConfirmReset(){
         waitElementsDisplay(confirmChangePasswordButton);
         confirmChangePasswordButton.click();
+    }
+
+    @Step
+    public void resetPasswordTextInvisible(){
         waitElementsNotDisplay(resetPasswordText);
     }
+
 
     @Step
     public void clickLoginButton(){
