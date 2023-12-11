@@ -15,6 +15,9 @@ public class ForgotPasswordSchoolPage extends GeneralObjectSchool{
         PageFactory.initElements(driver, this);
     }
 
+    @FindBy(xpath = "//a[.='Log in']")
+    private WebElement loginButton;
+
     @FindBy(xpath = "//a[.='Forgot Password?']")
     private WebElement goToForgotPasswordButton;
 
@@ -97,4 +100,9 @@ public class ForgotPasswordSchoolPage extends GeneralObjectSchool{
         confirmChangePasswordButton.click();
     }
 
+    @Step
+    public void clickLoginButton(){
+        waitElementsDisplay(loginButton);
+        loginButton.click();
+    }
 }

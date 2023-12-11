@@ -66,6 +66,12 @@ public class SignUpPage extends GeneralObject {
     }
 
     @Step
+    public String getNameAlert(){
+        String message = nameField.getAttribute("validationMessage");
+        return message;
+    }
+
+    @Step
     public String getSuccessVerifyText(){
         return successVerifyText.getText();
     }

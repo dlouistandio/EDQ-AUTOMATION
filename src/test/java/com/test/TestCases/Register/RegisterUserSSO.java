@@ -68,7 +68,8 @@ public class RegisterUserSSO extends BaseTestVendor {
         signUpPage.inputUsernameField("asdad@mailsac.com");
         signUpPage.inputNameField("");
         signUpPage.inputPasswordField("test123");
-        Assert.assertFalse(signUpPage.checkButtonDisabled());
+        signUpPage.clickSignUpButton();
+        Assert.assertEquals(signUpPage.getNameAlert(), "Please fill out this field.");
     }
 
     @Story("Register user")
@@ -108,6 +109,6 @@ public class RegisterUserSSO extends BaseTestVendor {
         signUpPage.inputNameField("test");
         signUpPage.inputPasswordField("sd");
         signUpPage.clickSignUpButton();
-        Assert.assertEquals(signUpPage.getEmailAlert(), "please include an '@' in the email address. 'asdadasd' is missing an '@'.");
+        Assert.assertEquals(signUpPage.getEmailAlert(), "Please include an '@' in the email address. 'asdadasd' is missing an '@'.");
     }
 }

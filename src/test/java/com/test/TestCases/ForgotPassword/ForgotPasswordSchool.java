@@ -17,6 +17,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Description("Forgot Password School")
     @Test( description = "Forgot Password School", groups = { "forgot password" })
     public void forgotPasswordSchool() {
+        forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
         forgotPasswordSchoolPage.inputEmailField("adasdas@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
@@ -50,6 +51,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Description("Forgot Password School with empty email")
     @Test( description = "Forgot Password School with empty email", groups = { "forgot password" })
     public void forgotPasswordUserSchoolEmptyEmail() {
+        forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
         forgotPasswordSchoolPage.inputEmailField("");
         forgotPasswordSchoolPage.clickResetButton();
@@ -62,6 +64,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Description("Forgot Password School with empty code field")
     @Test( description = "Forgot Password School with empty code field", groups = { "forgot password" })
     public void forgotPasswordUserSchoolEmptyCodeField() {
+        forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
         forgotPasswordSchoolPage.inputEmailField("adasdas@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
@@ -78,6 +81,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Description("Forgot Password School with empty password field")
     @Test( description = "Forgot Password School with empty password field", groups = { "forgot password" })
     public void forgotPasswordUserSchoolEmptyPasswordField() {
+        forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
         forgotPasswordSchoolPage.inputEmailField("adasdas@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
@@ -94,6 +98,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Description("Forgot Password School with empty re-enter password field")
     @Test( description = "Forgot Password School with empty re-enter password field", groups = { "forgot password" })
     public void forgotPasswordUserSchoolEmptyReEnterPasswordField() {
+        forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
         forgotPasswordSchoolPage.inputEmailField("adasdas@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
@@ -110,6 +115,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Description("Forgot Password School")
     @Test( description = "Forgot Password School with wrong code", groups = { "forgot password" })
     public void forgotPasswordUserSchoolWithWrongCode() {
+        forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
         forgotPasswordSchoolPage.inputEmailField("adasdas@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
@@ -126,6 +132,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Description("Forgot Password School with different password input")
     @Test( description = "Forgot Password School with different password input", groups = { "forgot password" })
     public void forgotPasswordUserSchoolWithDifferentPass() {
+        forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
         forgotPasswordSchoolPage.inputEmailField("adasdas@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();

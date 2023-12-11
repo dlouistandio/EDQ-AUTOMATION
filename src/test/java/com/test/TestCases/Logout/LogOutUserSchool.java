@@ -16,7 +16,7 @@ public class LogOutUserSchool extends BaseTestSchool {
     public void loginValidUserSchool() {
         homePage.clickLoginButton();
         Assert.assertEquals(homePage.getFormLoginText(),"Welcome back");
-        homePage.inputEmailNPassword("woofpuffy@gmail.com","P@ss4eduqat");
+        homePage.inputEmailNPassword("adasdas@mailsac.com","testing123");
         homePage.clickSigninButton();
         Assert.assertEquals(homePage.getHeaderWeb(),"untukautomationtest");
         homePage.moveToProfile();
