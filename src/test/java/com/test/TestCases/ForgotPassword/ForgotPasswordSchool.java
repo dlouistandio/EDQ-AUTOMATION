@@ -19,7 +19,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     public void forgotPasswordSchool() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
-        forgotPasswordSchoolPage.inputEmailField("adasdas@mailsac.com");
+        forgotPasswordSchoolPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
         ((JavascriptExecutor) driver).executeScript("window.open('https://mailsac.com/')");
         changeTabDriver();
@@ -27,7 +27,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
         emailLoginPage.inputEmailField();
         emailLoginPage.inputPasswordField();
         emailLoginPage.clickLoginButton();
-        emailInbox.inputEmailInboxField("adasdas");
+        emailInbox.inputEmailInboxField("6cf50761-8146-406b-b01d-fb0ba16fbaf3");
         emailInbox.clickCheckEmailButton();
         emailInbox.clickEmail();
         emailInbox.clickUnblockLinkButton();
@@ -40,7 +40,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
         forgotPasswordSchoolPage.inputReEnterNewPasswordField("testing123");
         forgotPasswordSchoolPage.clickConfirmReset();
         Assert.assertEquals(homePage.getFormLoginText(),"Welcome back");
-        homePage.inputEmailNPassword("adasdas@mailsac.com","testing123");
+        homePage.inputEmailNPassword("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com","testing123");
         homePage.clickSigninButton();
         Assert.assertEquals(homePage.getHeaderWeb(),"untukautomationtest");
     }
@@ -66,7 +66,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     public void forgotPasswordUserSchoolEmptyCodeField() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
-        forgotPasswordSchoolPage.inputEmailField("adasdas@mailsac.com");
+        forgotPasswordSchoolPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
         forgotPasswordSchoolPage.inputCodeForgotEmailField("");
         forgotPasswordSchoolPage.inputNewPasswordField("testing123");
@@ -83,7 +83,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     public void forgotPasswordUserSchoolEmptyPasswordField() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
-        forgotPasswordSchoolPage.inputEmailField("adasdas@mailsac.com");
+        forgotPasswordSchoolPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
         forgotPasswordSchoolPage.inputCodeForgotEmailField("123914");
         forgotPasswordSchoolPage.inputNewPasswordField("");
@@ -100,7 +100,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     public void forgotPasswordUserSchoolEmptyReEnterPasswordField() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
-        forgotPasswordSchoolPage.inputEmailField("adasdas@mailsac.com");
+        forgotPasswordSchoolPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
         forgotPasswordSchoolPage.inputCodeForgotEmailField("123914");
         forgotPasswordSchoolPage.inputNewPasswordField("testing123");
@@ -112,12 +112,12 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Story("Forgot Password School")
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
-    @Description("Forgot Password School")
+    @Description("Forgot Password School with wrong code")
     @Test( description = "Forgot Password School with wrong code", groups = { "forgot password" })
     public void forgotPasswordUserSchoolWithWrongCode() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
-        forgotPasswordSchoolPage.inputEmailField("adasdas@mailsac.com");
+        forgotPasswordSchoolPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
         forgotPasswordSchoolPage.inputCodeForgotEmailField("123914");
         forgotPasswordSchoolPage.inputNewPasswordField("testing123");
@@ -134,7 +134,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     public void forgotPasswordUserSchoolWithDifferentPass() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
-        forgotPasswordSchoolPage.inputEmailField("adasdas@mailsac.com");
+        forgotPasswordSchoolPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
         ((JavascriptExecutor) driver).executeScript("window.open('https://mailsac.com/')");
         changeTabDriver();
