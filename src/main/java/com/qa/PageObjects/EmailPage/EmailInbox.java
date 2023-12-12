@@ -43,6 +43,12 @@ public class EmailInbox extends GeneralObject {
     @FindBy(css = " .max-w-2xl")
     private WebElement invitionPageText;
 
+    @FindBy(css = "[placeholder='mailbox']")
+    private WebElement mailboxFieldInHome;
+
+    @FindBy(css = "button")
+    private WebElement checkEmailInHome;
+
     @Step
     public String getCodeVerifyForgotPasswordText(){
         waitElementsDisplay(codeVerifyForgotPasswordText);
@@ -58,6 +64,17 @@ public class EmailInbox extends GeneralObject {
     public void inputEmailInboxField(String email){
         waitElementsDisplay(toEmailInboxField);
         toEmailInboxField.sendKeys(email);
+    }
+
+    @Step
+    public void inputEmailFieldOnHome (String email){
+        waitElementsDisplay(mailboxFieldInHome);
+        mailboxFieldInHome.sendKeys(email);
+    }
+
+    @Step
+    public void clickCheckEmailOnHome (){
+        checkEmailInHome.click();
     }
 
     @Step

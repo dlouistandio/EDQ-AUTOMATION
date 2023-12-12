@@ -43,7 +43,7 @@ public class RegisterUserSchool extends BaseTest {
         ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
         driver.switchTo().window(tabs.get(0));
         registerPage.inputOtpCodeField(code);
-       Assert.assertEquals(registerPage.getMyCoursesText(),"My Courses");
+        Assert.assertEquals(registerPage.getMyCoursesText(),"My Courses");
     }
 
     @Story("Register user school")

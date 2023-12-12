@@ -16,9 +16,9 @@ import java.util.ArrayList;
 public class AcceptInvitationUser extends BaseTest {
     @Story("Accept Invitation User")
     @Description("Accept Invitation User Admin")
-    @Parameters(value = "emailAdm")
+    @Parameters({ "emailAdm", "emailAdm2" })
     @Test( description = "Accept Invitation User Admin", groups = { "accept invitation admin" },priority = 3)
-    public void acceptUserAdmin(String emailAdm) {
+    public void acceptUserAdmin(String emailAdm, String emailAdm2) {
         emailLoginPage.goToLoginPage();
         emailLoginPage.inputEmailField();
         emailLoginPage.inputPasswordField();
@@ -38,14 +38,28 @@ public class AcceptInvitationUser extends BaseTest {
         registerPage.clickAgrementSaas();
         registerPage.clickSignUpButton();
         registerPage.clickEnterOTPCodeButton();
-
+        Assert.assertEquals(registerPage.getOtpLabelText(),"Enter OTP Code");
+        ((JavascriptExecutor) driver).executeScript("window.open('https://mailsac.com/')");
+        changeTabDriver();
+        emailInbox.inputEmailFieldOnHome(emailAdm2);
+        emailInbox.clickCheckEmailOnHome();
+        emailInbox.clickEmail();
+        emailInbox.clickUnblockLinkButton();
+        changeTabDriver();
+        String code = emailInbox.getCodeVerifyRegisterSchool();
+        ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
+        Assert.assertEquals(registerPage.getOtpLabelText(),"Enter OTP Code");
+        registerPage.inputOtpCodeField(code);
+        invitationUserPage.getAddingAdminLoadText();
+        Assert.assertEquals(dashboardSchool.getSchoolText(),"untukautomationtest");
     }
 
     @Story("Accept Invitation User")
     @Description("Accept Invitation User Educator")
-    @Parameters(value = "emailEdu")
+    @Parameters({ "emailEdu", "emailEdu2" })
     @Test( description = "Accept Invitation User Educator", groups = { "accept invitation educator" },priority = 2)
-    public void acceptUserEducator(String emailEdu) {
+    public void acceptUserEducator(String emailEdu, String emailEdu2) {
         emailLoginPage.goToLoginPage();
         emailLoginPage.inputEmailField();
         emailLoginPage.inputPasswordField();
@@ -65,6 +79,20 @@ public class AcceptInvitationUser extends BaseTest {
         registerPage.clickAgrementSaas();
         registerPage.clickSignUpButton();
         registerPage.clickEnterOTPCodeButton();
-
+        Assert.assertEquals(registerPage.getOtpLabelText(),"Enter OTP Code");
+        ((JavascriptExecutor) driver).executeScript("window.open('https://mailsac.com/')");
+        changeTabDriver();
+        emailInbox.inputEmailFieldOnHome(emailEdu2);
+        emailInbox.clickCheckEmailOnHome();
+        emailInbox.clickEmail();
+        emailInbox.clickUnblockLinkButton();
+        changeTabDriver();
+        String code = emailInbox.getCodeVerifyRegisterSchool();
+        ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
+        Assert.assertEquals(registerPage.getOtpLabelText(),"Enter OTP Code");
+        registerPage.inputOtpCodeField(code);
+        invitationUserPage.getAddingEducatorLoadText();
+        Assert.assertEquals(dashboardSchool.getSchoolText(),"untukautomationtest");
     }
 }

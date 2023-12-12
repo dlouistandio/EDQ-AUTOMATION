@@ -28,7 +28,6 @@ public class EmailLoginPage extends GeneralObject {
     @FindBy(xpath = "//button[@class='btn btn-primary']")
     private WebElement signInButtonForm;
 
-
     @Step
     public void inputEmailField (){
         waitElementsDisplay(usernameField);

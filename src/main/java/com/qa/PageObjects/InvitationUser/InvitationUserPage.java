@@ -46,6 +46,13 @@ public class InvitationUserPage extends DashboardSchool {
     @FindBy(xpath = "//Button[contains(text(),'Register')]")
     private WebElement registerEmailButton;
 
+    @FindBy(xpath = "//h1[.='Adding you as admin at untukautomationtest...']")
+    private WebElement addingAdminLoadText;
+
+    @FindBy(xpath = "//h1[.='Adding you as educator at untukautomationtest...']")
+    private WebElement addingEduLoadText;
+
+
     @Step
     public void clickNewUserButton(){
         waitElementsDisplay(tableText);
@@ -82,6 +89,18 @@ public class InvitationUserPage extends DashboardSchool {
     public String getAlertMessage(){
         waitElementsDisplay(alertMessage);
         return alertMessage.getText();
+    }
+
+    @Step
+    public void getAddingAdminLoadText(){
+        waitElementsDisplay(addingAdminLoadText);
+        waitElementsNotDisplay(addingAdminLoadText);
+    }
+
+    @Step
+    public void getAddingEducatorLoadText(){
+        waitElementsDisplay(addingEduLoadText);
+        waitElementsNotDisplay(addingEduLoadText);
     }
 
     @Step

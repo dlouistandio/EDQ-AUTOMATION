@@ -41,7 +41,6 @@ public class DashboardVendor extends GeneralObject {
     @FindBy(css = ".block[href='/logout']")
     private WebElement logoutDropdownButton;
 
-
     @Step
     public String getMySchoolText(){
         waitElementsDisplay(mySchoolText);
@@ -73,5 +72,6 @@ public class DashboardVendor extends GeneralObject {
         waitElementsDisplay(logoutDropdownButton);
         logoutDropdownButton.click();
     }
+
 
 }

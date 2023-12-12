@@ -53,6 +53,9 @@ public class DashboardSchool extends GeneralObject {
     @FindBy(xpath = "//h1[@class='title']")
     public WebElement schoolNameText;
 
+    @FindBy(xpath = "//h1[@class='title']")
+    private WebElement mySchoolText;
+
     @Step
     public String createNewProductText(){
         return createNewProductText.getText();
@@ -115,5 +118,11 @@ public class DashboardSchool extends GeneralObject {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", onsiteEventButton);
         onsiteEventButton.click();
+    }
+
+    @Step
+    public String getSchoolText(){
+        waitElementsDisplay(mySchoolText);
+        return mySchoolText.getText();
     }
 }

@@ -59,6 +59,7 @@ public class RegisterPage extends GeneralObjectSchool{
     @FindBy(xpath = "//h2[@class='label']")
     private WebElement registerPageText;
 
+
     @Step
     public String getOtpLabelText(){
         waitElementsDisplay(otpLabelText);
