@@ -124,7 +124,7 @@
     </test>
     <test name="Invitation User Admin" >
         <parameter name="url" value="https://sso.eduqat.com"/>
-        <parameter name="emailAdm" value="90s14oadhas@mailsac.com"/>
+        <parameter name="emailAdm" value="0hohasbd69142@mailsac.com"/>
         <groups>
             <run>
                 <include name="invitation user admin"></include>
@@ -136,7 +136,7 @@
     </test>
     <test name="Invitation User Educator" >
         <parameter name="url" value="https://sso.eduqat.com"/>
-        <parameter name="emailEdu" value="abfnaobfu1846@mailsac.com"/>
+        <parameter name="emailEdu" value="0870124hobakdx@mailsac.com"/>
         <groups>
             <run>
                 <include name="invitation user educator"></include>
@@ -159,7 +159,7 @@
     </test>
     <test name="Accept Invitation Admin" >
         <parameter name="url" value="https://mailsac.com/"/>
-        <parameter name="emailAdm" value="90s14oadhas@mailsac.com"/>
+        <parameter name="emailAdm" value="0hohasbd69142@mailsac.com"/>
         <groups>
             <run>
                 <include name="accept invitation admin"></include>
@@ -171,7 +171,7 @@
     </test>
     <test name="Accept Invitation Educator" >
         <parameter name="url" value="https://mailsac.com/"/>
-        <parameter name="emailEdu" value="abfnaobfu1846@mailsac.com"/>
+        <parameter name="emailEdu" value="0870124hobakdx@mailsac.com"/>
         <groups>
             <run>
                 <include name="accept invitation educator"></include>
