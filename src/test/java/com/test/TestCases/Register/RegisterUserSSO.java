@@ -1,23 +1,21 @@
 package com.test.TestCases.Register;
 
-import com.test.BaseTestVendor;
+import com.test.BaseTest;
 import io.qameta.allure.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 
 @Epic("Register User SSO")
 @Feature("Register")
-public class RegisterUserSSO extends BaseTestVendor {
+public class RegisterUserSSO extends BaseTest {
     @Story("Register user")
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Register user with valid input")
-    @Test( description = "Register user with valid input", groups = { "register" })
+    @Test( description = "Register user with valid input", groups = { "register" },priority = 0)
     public void registerUserWithValidInput() throws IOException {
         String email = emailProperties();
         signUpPage.clickGoToSignUpForm();
@@ -49,7 +47,7 @@ public class RegisterUserSSO extends BaseTestVendor {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Register user with empty email")
-    @Test( description = "Register user with empty email", groups = { "register" })
+    @Test( description = "Register user with empty email", groups = { "register" },priority = 1)
     public void registerUserWithEmptyEmail(){
         signUpPage.clickGoToSignUpForm();
         signUpPage.inputUsernameField("");
@@ -62,7 +60,7 @@ public class RegisterUserSSO extends BaseTestVendor {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Register user with empty name")
-    @Test( description = "Register user with empty name", groups = { "register" })
+    @Test( description = "Register user with empty name", groups = { "register" },priority = 2)
     public void registerUserWithEmptyName(){
         signUpPage.clickGoToSignUpForm();
         signUpPage.inputUsernameField("asdad@mailsac.com");
@@ -76,7 +74,7 @@ public class RegisterUserSSO extends BaseTestVendor {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Register user with empty password")
-    @Test( description = "Register user with empty password", groups = { "register" })
+    @Test( description = "Register user with empty password", groups = { "register" },priority = 2)
     public void registerUserWithEmptyPassword(){
         signUpPage.clickGoToSignUpForm();
         signUpPage.inputUsernameField("asdad@mailsac.com");
@@ -89,7 +87,7 @@ public class RegisterUserSSO extends BaseTestVendor {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Register user with under 6 character password")
-    @Test( description = "Register user with under 6 character password", groups = { "register" })
+    @Test( description = "Register user with under 6 character password", groups = { "register" },priority = 2)
     public void registerUserWithUnderSixChar(){
         signUpPage.clickGoToSignUpForm();
         signUpPage.inputUsernameField("asdad@mailsac.com");
@@ -102,7 +100,7 @@ public class RegisterUserSSO extends BaseTestVendor {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Register user with invalid email format")
-    @Test( description = "Register user with invalid email format", groups = { "register" })
+    @Test( description = "Register user with invalid email format", groups = { "register" },priority = 1)
     public void registerUserWithInvalidEmailFormat(){
         signUpPage.clickGoToSignUpForm();
         signUpPage.inputUsernameField("asdadasd");

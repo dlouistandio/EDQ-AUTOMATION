@@ -1,6 +1,6 @@
 package com.test.TestCases;
 
-import com.test.BaseTestVendor;
+import com.test.BaseTest;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -9,7 +9,7 @@ import org.testng.annotations.*;
 @Feature("Create Course")
 @Link(name = "allure", type = "mylink")
 @TmsLink("TMS Link")
-public class CreateCourse extends BaseTestVendor {
+public class CreateCourse extends BaseTest {
     @BeforeMethod(groups = { "create course" })
     public void loginUser() {
         loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
@@ -20,7 +20,7 @@ public class CreateCourse extends BaseTestVendor {
 
     @Story("Create Course Event")
     @Description("Create Course Webinar")
-    @Test( description = "Create Course Webinar", groups = { "create course" })
+    @Test( description = "Create Course Webinar", groups = { "create course" },priority = 1)
     public void createCourseEventWebinar() {
         dashboardSchool.chooseMenu("/manage/classes");
         dashboardSchool.clickNewProductButton();
@@ -39,7 +39,7 @@ public class CreateCourse extends BaseTestVendor {
 
     @Story("Create Course Event")
     @Description("Create Course Event Onsite")
-    @Test( description = "Create Course Event Onsite", groups = { "create course" })
+    @Test( description = "Create Course Event Onsite", groups = { "create course" },priority = 1)
     public void createCourseEventOnsite() {
         dashboardSchool.chooseMenu("/manage/classes");
         dashboardSchool.clickNewProductButton();
@@ -56,7 +56,7 @@ public class CreateCourse extends BaseTestVendor {
 
     @Story("Create Course Self Paced")
     @Description("Create Course Self Paced")
-    @Test( description = "Create Self Paced", groups = { "create course" })
+    @Test( description = "Create Self Paced", groups = { "create course" },priority = 1)
     public void createCourseSelfPaced() {
         dashboardSchool.chooseMenu("/manage/classes");
         dashboardSchool.clickNewProductButton();
@@ -74,7 +74,7 @@ public class CreateCourse extends BaseTestVendor {
 
     @Story("Create Course Cohort")
     @Description("Create Course Cohort")
-    @Test( description = "Create Cohort", groups = { "create course" })
+    @Test( description = "Create Cohort", groups = { "create course" },priority = 1)
     public void createCourseCohort() {
         dashboardSchool.chooseMenu("/manage/classes");
         dashboardSchool.clickNewProductButton();

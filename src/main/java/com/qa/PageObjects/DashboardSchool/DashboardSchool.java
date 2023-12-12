@@ -44,6 +44,15 @@ public class DashboardSchool extends GeneralObject {
     @FindBy(xpath = "//div[@class='addmaterial-content']/div[2]")
     private WebElement onsiteEventButton;
 
+    @FindBy(xpath = "//Div[contains(text(),'Invitation Sent!')]")
+    public WebElement invitationSentAlert;
+
+    @FindBy(xpath = "//button[@class='btn btn-outline-primary']")
+    public WebElement okModalButton;
+
+    @FindBy(xpath = "//h1[@class='title']")
+    public WebElement schoolNameText;
+
     @Step
     public String createNewProductText(){
         return createNewProductText.getText();
@@ -52,6 +61,11 @@ public class DashboardSchool extends GeneralObject {
     public String getUsernameDashboardText(){
         waitElementsDisplay(userText);
         return userText.getText();
+    }
+    @Step
+    public String getSchoolNameText(){
+        waitElementsDisplay(schoolNameText);
+        return schoolNameText.getText();
     }
     @Step
     public void chooseMenu(String menu) {

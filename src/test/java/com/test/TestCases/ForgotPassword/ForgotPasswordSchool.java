@@ -1,6 +1,6 @@
 package com.test.TestCases.ForgotPassword;
 
-import com.test.BaseTestSchool;
+import com.test.BaseTest;
 import io.qameta.allure.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
@@ -10,12 +10,12 @@ import java.util.ArrayList;
 
 @Epic("Forgot Password School")
 @Feature("Forgot Password")
-public class ForgotPasswordSchool extends BaseTestSchool {
+public class ForgotPasswordSchool extends BaseTest {
     @Story("Forgot Password School")
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password School")
-    @Test( description = "Forgot Password School", groups = { "forgot password" })
+    @Test( description = "Forgot Password School", groups = { "forgot password" },priority = 0)
     public void forgotPasswordSchool() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
@@ -50,7 +50,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password School with empty email")
-    @Test( description = "Forgot Password School with empty email", groups = { "forgot password" })
+    @Test( description = "Forgot Password School with empty email", groups = { "forgot password" },priority = 2)
     public void forgotPasswordUserSchoolEmptyEmail() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
@@ -63,7 +63,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password School with empty code field")
-    @Test( description = "Forgot Password School with empty code field", groups = { "forgot password" })
+    @Test( description = "Forgot Password School with empty code field", groups = { "forgot password" },priority = 2)
     public void forgotPasswordUserSchoolEmptyCodeField() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
@@ -80,7 +80,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password School with empty password field")
-    @Test( description = "Forgot Password School with empty password field", groups = { "forgot password" })
+    @Test( description = "Forgot Password School with empty password field", groups = { "forgot password" },priority = 2)
     public void forgotPasswordUserSchoolEmptyPasswordField() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
@@ -97,7 +97,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password School with empty re-enter password field")
-    @Test( description = "Forgot Password School with empty re-enter password field", groups = { "forgot password" })
+    @Test( description = "Forgot Password School with empty re-enter password field", groups = { "forgot password" },priority = 2)
     public void forgotPasswordUserSchoolEmptyReEnterPasswordField() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
@@ -114,7 +114,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password School with wrong code")
-    @Test( description = "Forgot Password School with wrong code", groups = { "forgot password" })
+    @Test( description = "Forgot Password School with wrong code", groups = { "forgot password" },priority = 2)
     public void forgotPasswordUserSchoolWithWrongCode() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
@@ -131,7 +131,7 @@ public class ForgotPasswordSchool extends BaseTestSchool {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password School with different password input")
-    @Test( description = "Forgot Password School with different password input", groups = { "forgot password" })
+    @Test( description = "Forgot Password School with different password input", groups = { "forgot password" },priority = 1)
     public void forgotPasswordUserSchoolWithDifferentPass() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();

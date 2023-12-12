@@ -1,6 +1,6 @@
 package com.test.TestCases.Register;
 
-import com.test.BaseTestSchool;
+import com.test.BaseTest;
 import io.qameta.allure.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
@@ -11,12 +11,12 @@ import java.util.ArrayList;
 
 @Epic("Register User School")
 @Feature("Register")
-public class RegisterUserSchool extends BaseTestSchool {
+public class RegisterUserSchool extends BaseTest {
     @Story("Register user school")
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Register user school with valid input")
-    @Test( description = "Register user school with valid input", groups = { "register" })
+    @Test( description = "Register user school with valid input", groups = { "register" },priority = 0)
     public void registerUserSchoolWithValidInput() throws IOException {
         String email = emailProperties();
         registerPage.clickGoToSignUpForm();
@@ -50,7 +50,7 @@ public class RegisterUserSchool extends BaseTestSchool {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Register user school with empty email")
-    @Test( description = "Register user school with empty email", groups = { "register" })
+    @Test( description = "Register user school with empty email", groups = { "register" },priority = 1)
     public void registerUserSchoolWithEmptyEmail() {
         registerPage.clickGoToSignUpForm();
         registerPage.inputNameField("Testing");
@@ -66,7 +66,7 @@ public class RegisterUserSchool extends BaseTestSchool {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Register user school with empty name")
-    @Test( description = "Register user school with empty name", groups = { "register" })
+    @Test( description = "Register user school with empty name", groups = { "register" },priority = 1)
     public void registerUserSchoolWithEmptyName()  {
         registerPage.clickGoToSignUpForm();
         registerPage.inputNameField("");
@@ -82,7 +82,7 @@ public class RegisterUserSchool extends BaseTestSchool {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Register user school with empty password")
-    @Test( description = "Register user school with empty password", groups = { "register" })
+    @Test( description = "Register user school with empty password", groups = { "register" },priority = 1)
     public void registerUserSchoolWithEmptyPassword()  {
         registerPage.clickGoToSignUpForm();
         registerPage.inputNameField("adsda");
@@ -98,7 +98,7 @@ public class RegisterUserSchool extends BaseTestSchool {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Register user school without tick agreement privacy")
-    @Test( description = "Register user school without tick agreement privacy", groups = { "register" })
+    @Test( description = "Register user school without tick agreement privacy", groups = { "register" },priority = 2)
     public void registerUserSchoolWithoutTickAgrementPrivacy()  {
         registerPage.clickGoToSignUpForm();
         registerPage.inputNameField("adsda");
@@ -113,7 +113,7 @@ public class RegisterUserSchool extends BaseTestSchool {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Register user school without tick agreement SaaS")
-    @Test( description = "Register user school without tick agreement SaaS", groups = { "register" })
+    @Test( description = "Register user school without tick agreement SaaS", groups = { "register" },priority = 2)
     public void registerUserSchoolWithoutTickAgrementSaas()  {
         registerPage.clickGoToSignUpForm();
         registerPage.inputNameField("adsda");
@@ -127,8 +127,8 @@ public class RegisterUserSchool extends BaseTestSchool {
     @Story("Register user school")
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
-    @Description("Register user school without tick agreement SaaS")
-    @Test( description = "Register user school without tick agreement SaaS", groups = { "register" })
+    @Description("Register user school with invalid email")
+    @Test( description = "Register user school with invalid email", groups = { "register" },priority = 2)
     public void registerUserSchoolWithWrongEmailFormat()  {
         registerPage.clickGoToSignUpForm();
         registerPage.inputNameField("adsda");

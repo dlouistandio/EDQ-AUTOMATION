@@ -56,6 +56,8 @@ public class RegisterPage extends GeneralObjectSchool{
     @FindBy(xpath = "//h1[@class='title']")
     private WebElement myCoursesText;
 
+    @FindBy(xpath = "//h2[@class='label']")
+    private WebElement registerPageText;
 
     @Step
     public String getOtpLabelText(){
@@ -115,6 +117,12 @@ public class RegisterPage extends GeneralObjectSchool{
     public void clickSignUpButton(){
         waitElementsDisplay(signUpButton);
         signUpButton.click();
+    }
+
+    @Step
+    public String getRegisterPageText(){
+        waitElementsDisplay(registerPageText);
+        return registerPageText.getText();
     }
 
     @Step

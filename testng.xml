@@ -7,6 +7,7 @@
     </listeners>
 
     <test name="Login SSO" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
         <groups>
             <run>
                 <include name="login"></include>
@@ -18,6 +19,7 @@
     </test>
 
     <test name="Create Course" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
         <groups>
             <run>
                 <include name="create course"></include>
@@ -29,6 +31,7 @@
     </test>
 
     <test name="Logout SSO" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
         <groups>
             <run>
                 <include name="logout"></include>
@@ -40,6 +43,7 @@
     </test>
 
     <test name="Create School" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
         <groups>
             <run>
                 <include name="create school"></include>
@@ -51,6 +55,7 @@
     </test>
 
     <test name="Login web school" >
+        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>
         <groups>
             <run>
                 <include name="login school"></include>
@@ -62,6 +67,7 @@
     </test>
 
     <test name="Logout web school" >
+        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>
         <groups>
             <run>
                 <include name="logout school"></include>
@@ -73,6 +79,7 @@
     </test>
 
     <test name="Register user school" >
+        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>
         <groups>
             <run>
                 <include name="register"></include>
@@ -83,6 +90,7 @@
         </classes>
     </test>
     <test name="Register user SSO" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
         <groups>
             <run>
                 <include name="register"></include>
@@ -93,6 +101,7 @@
         </classes>
     </test>
     <test name="Forgot password SSO" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
         <groups>
             <run>
                 <include name="forgot password"></include>
@@ -103,6 +112,7 @@
         </classes>
     </test>
     <test name="Forgot password School" >
+        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>
         <groups>
             <run>
                 <include name="forgot password"></include>
@@ -110,6 +120,32 @@
         </groups>
         <classes>
             <class name="com.test.TestCases.ForgotPassword.ForgotPasswordSchool"/>
+        </classes>
+    </test>
+    <test name="Invitation User" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <parameter name="emailAdm" value="ncaljsaoqw412@mailsac.com"/>
+        <parameter name="emailEdu" value="dnlapsuda0123@mailsac.com"/>
+        <groups>
+            <run>
+                <include name="invitation user"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
+        </classes>
+    </test>
+    <test name="Accept Invitation User" >
+        <parameter name="url" value="https://mailsac.com/"/>
+        <parameter name="emailAdm" value="ncaljsaoqw412@mailsac.com"/>
+        <parameter name="emailEdu" value="dnlapsuda0123@mailsac.com"/>
+        <groups>
+            <run>
+                <include name="accept invitation"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.AcceptInvitationUser"/>
         </classes>
     </test>
 </suite>

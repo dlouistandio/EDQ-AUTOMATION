@@ -37,6 +37,12 @@ public class EmailInbox extends GeneralObject {
     @FindBy(css = "tr:nth-of-type(4) h3")
     private WebElement codeVerifySignUpSchool;
 
+    @FindBy(xpath = "//a[.='Accept Invitation']")
+    private WebElement emailInvButton;
+
+    @FindBy(css = " .max-w-2xl")
+    private WebElement invitionPageText;
+
     @Step
     public String getCodeVerifyForgotPasswordText(){
         waitElementsDisplay(codeVerifyForgotPasswordText);
@@ -76,5 +82,17 @@ public class EmailInbox extends GeneralObject {
     public void clickUnblockLinkButton(){
         waitElementsDisplay(unblockLink);
         unblockLink.click();
+    }
+
+    @Step
+    public void clickAcceptInvButton(){
+        waitElementsDisplay(emailInvButton);
+        emailInvButton.click();
+    }
+
+    @Step
+    public String getInvitationPageText(){
+        waitElementsDisplay(invitionPageText);
+        return invitionPageText.getText();
     }
 }

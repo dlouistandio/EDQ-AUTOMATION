@@ -1,13 +1,16 @@
 package com.test.TestCases;
 
-import com.test.BaseTestVendor;
-import io.qameta.allure.Description;
-import io.qameta.allure.Story;
+import com.test.BaseTest;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class CreateNewSchool extends BaseTestVendor {
+@Epic("Create School")
+@Feature("Create School")
+@Link(name = "allure", type = "mylink")
+@TmsLink("TMS Link")
+public class CreateNewSchool extends BaseTest {
     @BeforeMethod(groups = { "create school" })
     public void loginUser() {
         loginPage.loginUser("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com","test123");
@@ -16,7 +19,7 @@ public class CreateNewSchool extends BaseTestVendor {
 
     @Story("Create School")
     @Description("Create School")
-    @Test( description = "Create School", groups = { "create school" })
+    @Test( description = "Create School", groups = { "create school" },priority = 0)
     public void createSchool() {
         dashboardVendor.clickCreateNewSchool();
         Assert.assertEquals(createSchoolPage.getStartedWithEduqatText(),"Get started with Eduqat");

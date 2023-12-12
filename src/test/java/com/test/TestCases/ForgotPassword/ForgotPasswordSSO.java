@@ -1,10 +1,8 @@
 package com.test.TestCases.ForgotPassword;
 
-import com.test.BaseTestVendor;
+import com.test.BaseTest;
 import io.qameta.allure.*;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,12 +10,12 @@ import java.util.ArrayList;
 
 @Epic("Forgot Password SSO")
 @Feature("Forgot Password")
-public class ForgotPasswordSSO extends BaseTestVendor {
+public class ForgotPasswordSSO extends BaseTest {
     @Story("Forgot Password SSO")
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password SSO")
-    @Test( description = "Forgot Password SSO", groups = { "forgot password" })
+    @Test( description = "Forgot Password SSO", groups = { "forgot password" },priority = 0)
     public void forgotPasswordUserSSO() {
         forgotPasswordPage.clickGoToForgotPassword();
         forgotPasswordPage.inputEmailField("adasdas@mailsac.com");
@@ -49,7 +47,7 @@ public class ForgotPasswordSSO extends BaseTestVendor {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password SSO with empty email")
-    @Test( description = "Forgot Password SSO with empty email", groups = { "forgot password" })
+    @Test( description = "Forgot Password SSO with empty email", groups = { "forgot password" },priority = 4)
     public void forgotPasswordUserSSOEmptyEmail() {
         forgotPasswordPage.clickGoToForgotPassword();
         forgotPasswordPage.inputEmailField("");
@@ -61,7 +59,7 @@ public class ForgotPasswordSSO extends BaseTestVendor {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password SSO with empty code")
-    @Test( description = "Forgot Password SSO with empty code", groups = { "forgot password" })
+    @Test( description = "Forgot Password SSO with empty code", groups = { "forgot password" },priority = 4)
     public void forgotPasswordUserSSOEmptyCode() {
         forgotPasswordPage.clickGoToForgotPassword();
         forgotPasswordPage.inputEmailField("adasdas@mailsac.com");
@@ -77,7 +75,7 @@ public class ForgotPasswordSSO extends BaseTestVendor {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password SSO with empty new password")
-    @Test( description = "Forgot Password SSO with empty new password", groups = { "forgot password" })
+    @Test( description = "Forgot Password SSO with empty new password", groups = { "forgot password" },priority = 3)
     public void forgotPasswordUserSSOEmptyNewPassword() {
         forgotPasswordPage.clickGoToForgotPassword();
         forgotPasswordPage.inputEmailField("adasdas@mailsac.com");
@@ -94,7 +92,7 @@ public class ForgotPasswordSSO extends BaseTestVendor {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password SSO with wrong code")
-    @Test( description = "Forgot Password SSO with wrong code", groups = { "forgot password" })
+    @Test( description = "Forgot Password SSO with wrong code", groups = { "forgot password" },priority = 1)
     public void forgotPasswordUserSSOWrongCode() {
         forgotPasswordPage.clickGoToForgotPassword();
         forgotPasswordPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
@@ -110,7 +108,7 @@ public class ForgotPasswordSSO extends BaseTestVendor {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password SSO with different password")
-    @Test( description = "Forgot Password SSO with different password", groups = { "forgot password" })
+    @Test( description = "Forgot Password SSO with different password", groups = { "forgot password" },priority = 3)
     public void forgotPasswordUserSSOWithDiffPass() {
         forgotPasswordPage.clickGoToForgotPassword();
         forgotPasswordPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
@@ -125,7 +123,7 @@ public class ForgotPasswordSSO extends BaseTestVendor {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password SSO with password under 6 character")
-    @Test( description = "Forgot Password SSO with password under 6 character", groups = { "forgot password" })
+    @Test( description = "Forgot Password SSO with password under 6 character", groups = { "forgot password" },priority = 3)
     public void forgotPasswordUserSSOWithUnderSixChar() {
         forgotPasswordPage.clickGoToForgotPassword();
         forgotPasswordPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");

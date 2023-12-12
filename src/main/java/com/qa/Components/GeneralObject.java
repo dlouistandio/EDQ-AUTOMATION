@@ -61,6 +61,11 @@ public class GeneralObject extends LogUtils {
         wait.until(ExpectedConditions.visibilityOf(findBy));
     }
 
+    public void waitElementsClickable(WebElement findBy){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        wait.until(ExpectedConditions.elementToBeClickable(findBy));
+    }
+
     public void waitElementsNotDisplay(WebElement findBy){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         wait.until(ExpectedConditions.invisibilityOf(findBy));

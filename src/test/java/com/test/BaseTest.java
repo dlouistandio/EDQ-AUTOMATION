@@ -4,6 +4,8 @@ import com.qa.PageObjects.DashboardSchool.DashboardSchool;
 import com.qa.PageObjects.DashboardVendor.CreateSchoolPage;
 import com.qa.PageObjects.EmailPage.EmailInbox;
 import com.qa.PageObjects.EmailPage.EmailLoginPage;
+import com.qa.PageObjects.InvitationUser.InvitationLearnerPage;
+import com.qa.PageObjects.InvitationUser.InvitationUserPage;
 import com.qa.PageObjects.ManageCourse.CohortPage;
 import com.qa.PageObjects.ManageCourse.EventPage;
 import com.qa.PageObjects.ManageCourse.ManageMaterialCoursePage;
@@ -12,7 +14,9 @@ import com.qa.PageObjects.DashboardVendor.DashboardVendor;
 import com.qa.PageObjects.SSOPage.ForgotPasswordPage;
 import com.qa.PageObjects.SSOPage.LoginPage;
 import com.qa.PageObjects.SSOPage.SignUpPage;
+import com.qa.PageObjects.SchoolWebPage.ForgotPasswordSchoolPage;
 import com.qa.PageObjects.SchoolWebPage.HomePage;
+import com.qa.PageObjects.SchoolWebPage.RegisterPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,6 +25,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -32,7 +37,7 @@ import java.util.Random;
 import java.util.Set;
 import java.util.UUID;
 
-public class BaseTestVendor {
+public class BaseTest {
     public WebDriver driver;
     public LoginPage loginPage;
     public DashboardVendor dashboardVendor;
@@ -47,8 +52,12 @@ public class BaseTestVendor {
     public EmailLoginPage emailLoginPage;
     public EmailInbox emailInbox;
     public ForgotPasswordPage forgotPasswordPage;
+    public InvitationUserPage invitationUserPage;
+    public InvitationLearnerPage invitationLearnerPage;
+    public ForgotPasswordSchoolPage forgotPasswordSchoolPage;
+    public RegisterPage registerPage;
 
-    public WebDriver initDriver() throws IOException {
+    public WebDriver initDriver(String url) throws IOException {
         Properties props = new Properties();
         DesiredCapabilities caps = new DesiredCapabilities();
         WebDriver driver = null;
@@ -56,7 +65,6 @@ public class BaseTestVendor {
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/main/resources/GlobalData.properties");
         props.load(fis);
         String browserName = props.getProperty("browser");
-        String webUrl = props.getProperty("url");
 
         if (browserName.equalsIgnoreCase("chrome")){
             caps.setCapability(CapabilityType.BROWSER_NAME, "chrome");
@@ -71,7 +79,7 @@ public class BaseTestVendor {
         driver = new RemoteWebDriver(new URL("http://localhost:4444"), caps);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        driver.get(webUrl);
+        driver.get(url);
         return driver;
     }
 
@@ -118,8 +126,9 @@ public class BaseTestVendor {
     }
 
     @BeforeMethod(alwaysRun = true)
-    public void launchApp() throws IOException {
-        driver = initDriver();
+    @Parameters({"url"})
+    public void launchApp(String url) throws IOException {
+        driver = initDriver(url);
         loginPage = new LoginPage(driver);
         dashboardVendor = new DashboardVendor(driver);
         dashboardSchool = new DashboardSchool(driver);
@@ -133,6 +142,10 @@ public class BaseTestVendor {
         emailLoginPage = new EmailLoginPage(driver);
         emailInbox = new EmailInbox(driver);
         forgotPasswordPage = new ForgotPasswordPage(driver);
+        invitationLearnerPage = new InvitationLearnerPage(driver);
+        invitationUserPage = new InvitationUserPage(driver);
+        forgotPasswordSchoolPage = new ForgotPasswordSchoolPage(driver);
+        registerPage = new RegisterPage(driver);
      }
 
     @AfterMethod(alwaysRun = true)
