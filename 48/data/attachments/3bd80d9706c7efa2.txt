@@ -1,1 +1,0 @@
-loginInvalidEmail success and screenshot taken!
