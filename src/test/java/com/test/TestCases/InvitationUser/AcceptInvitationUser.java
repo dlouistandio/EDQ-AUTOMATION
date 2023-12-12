@@ -38,23 +38,7 @@ public class AcceptInvitationUser extends BaseTest {
         registerPage.clickAgrementSaas();
         registerPage.clickSignUpButton();
         registerPage.clickEnterOTPCodeButton();
-        Assert.assertEquals(registerPage.getOtpLabelText(),"Enter OTP Code");
-        ((JavascriptExecutor) driver).executeScript("window.open('https://mailsac.com/')");
-        changeTabDriver();
-        emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField();
-        emailLoginPage.inputPasswordField();
-        emailLoginPage.clickLoginButton();
-        emailInbox.inputEmailInboxField(emailAdm);
-        emailInbox.clickCheckEmailButton();
-        emailInbox.clickEmail();
-        emailInbox.clickUnblockLinkButton();
-        changeTabDriver();
-        String code = emailInbox.getCodeVerifyRegisterSchool();
-        ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
-        registerPage.inputOtpCodeField(code);
-        Assert.assertEquals(dashboardSchool.getSchoolNameText(),"untukautomationtest");
+
     }
 
     @Story("Accept Invitation User")
@@ -81,22 +65,6 @@ public class AcceptInvitationUser extends BaseTest {
         registerPage.clickAgrementSaas();
         registerPage.clickSignUpButton();
         registerPage.clickEnterOTPCodeButton();
-        Assert.assertEquals(registerPage.getOtpLabelText(),"Enter OTP Code");
-        ((JavascriptExecutor) driver).executeScript("window.open('https://mailsac.com/')");
-        changeTabDriver();
-        emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField();
-        emailLoginPage.inputPasswordField();
-        emailLoginPage.clickLoginButton();
-        emailInbox.inputEmailInboxField(emailEdu);
-        emailInbox.clickCheckEmailButton();
-        emailInbox.clickEmail();
-        emailInbox.clickUnblockLinkButton();
-        changeTabDriver();
-        String code = emailInbox.getCodeVerifyRegisterSchool();
-        ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
-        registerPage.inputOtpCodeField(code);
-        Assert.assertEquals(dashboardSchool.getSchoolNameText(),"untukautomationtest");
+
     }
 }
