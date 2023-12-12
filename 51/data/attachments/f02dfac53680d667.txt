@@ -1,1 +1,0 @@
-forgotPasswordUserSchoolWithDifferentPass failed and screenshot taken!
