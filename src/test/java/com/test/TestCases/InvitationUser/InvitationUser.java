@@ -25,7 +25,7 @@ public class InvitationUser extends BaseTest {
     @Story("Invitation User")
     @Description("Invitation user Admin")
     @Parameters(value = "emailAdm")
-    @Test( description = "Invitation User Admin", groups = { "invitation user admin" },priority = -1)
+    @Test( description = "Invitation User Admin", groups = { "invitation user admin" },priority = 1)
     public void invitationUserAdmin(String emailAdm) {
         dashboardSchool.chooseMenu("/manage/user");
         Assert.assertEquals(invitationUserPage.getUserNavText(),"Users");
@@ -42,7 +42,7 @@ public class InvitationUser extends BaseTest {
     @Story("Invitation User")
     @Description("Invitation user Educator")
     @Parameters(value = "emailEdu")
-    @Test( description = "Invitation user Educator", groups = { "invitation user educator" },priority = -1)
+    @Test( description = "Invitation user Educator", groups = { "invitation user educator" },priority = 1)
     public void invitationUserEducator(String emailEdu) {
         dashboardSchool.chooseMenu("/manage/user");
         Assert.assertEquals(invitationUserPage.getUserNavText(),"Users");
@@ -56,7 +56,7 @@ public class InvitationUser extends BaseTest {
 
     @Story("Invitation User")
     @Description("Invitation user with invalid email")
-    @Test( description = "Invitation user with invalid email format", groups = { "invitation user" },priority = 2)
+    @Test( description = "Invitation user with invalid email format", groups = { "invitation user" },priority = 3)
     public void invitationUserWithInvalidEmailFormat() {
         dashboardSchool.chooseMenu("/manage/user");
         Assert.assertEquals(invitationUserPage.getUserNavText(),"Users");
@@ -68,7 +68,7 @@ public class InvitationUser extends BaseTest {
 
     @Story("Invitation User")
     @Description("Invitation user with email")
-    @Test( description = "Invitation user with empty format", groups = { "invitation user" },priority = 2)
+    @Test( description = "Invitation user with empty format", groups = { "invitation user" },priority = 3)
     public void invitationUserWithEmptyEmail() {
         dashboardSchool.chooseMenu("/manage/user");
         Assert.assertEquals(invitationUserPage.getUserNavText(),"Users");

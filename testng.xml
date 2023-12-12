@@ -6,30 +6,6 @@
         <listener class-name="com.test.Utils.Listeners.RetryListeners"/>
     </listeners>
 
-    <test name="Invitation User Educator" >
-        <parameter name="url" value="https://sso.eduqat.com"/>
-        <parameter name="emailEdu" value="5235as01rjfa@mailsac.com"/>
-        <groups>
-            <run>
-                <include name="invitation user educator"></include>
-            </run>
-        </groups>
-        <classes>
-            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
-        </classes>
-    </test>
-    <test name="Invitation User Admin" >
-        <parameter name="url" value="https://sso.eduqat.com"/>
-        <parameter name="emailAdm" value="4329fajs8fs3@mailsac.com"/>
-        <groups>
-            <run>
-                <include name="invitation user admin"></include>
-            </run>
-        </groups>
-        <classes>
-            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
-        </classes>
-    </test>
     <test name="Login SSO" >
         <parameter name="url" value="https://sso.eduqat.com"/>
         <groups>
@@ -150,6 +126,30 @@
         <groups>
             <run>
                 <include name="invitation user"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
+        </classes>
+    </test>
+    <test name="Invitation User Educator" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <parameter name="emailEdu" value="5235as01rjfa@mailsac.com"/>
+        <groups>
+            <run>
+                <include name="invitation user educator"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
+        </classes>
+    </test>
+    <test name="Invitation User Admin" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <parameter name="emailAdm" value="4329fajs8fs3@mailsac.com"/>
+        <groups>
+            <run>
+                <include name="invitation user admin"></include>
             </run>
         </groups>
         <classes>

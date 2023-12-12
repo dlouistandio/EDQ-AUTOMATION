@@ -12,7 +12,7 @@ public class LoginUserSchool extends BaseTest {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Login User with valid email and password")
-    @Test( description = "Login valid valid email and password", groups = { "login school" },priority = 0)
+    @Test( description = "Login valid valid email and password", groups = { "login school" },priority = 3)
     public void loginValidUserSchool() {
         homePage.clickLoginButton();
         Assert.assertEquals(homePage.getFormLoginText(),"Welcome back");
@@ -25,7 +25,7 @@ public class LoginUserSchool extends BaseTest {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Login User with invalid email and password")
-    @Test( description = "Login User with invalid email and password", groups = { "login school" },priority = 1)
+    @Test( description = "Login User with invalid email and password", groups = { "login school" },priority = 3)
     public void loginInvalidUserSchool() {
         homePage.clickLoginButton();
         Assert.assertEquals(homePage.getFormLoginText(),"Welcome back");
@@ -38,7 +38,7 @@ public class LoginUserSchool extends BaseTest {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Login User with invalid email")
-    @Test( description = "Login User with invalid email", groups = { "login school" },priority = 1)
+    @Test( description = "Login User with invalid email", groups = { "login school" },priority = 3)
     public void loginInvalidEmail() {
         homePage.clickLoginButton();
         Assert.assertEquals(homePage.getFormLoginText(),"Welcome back");
@@ -51,7 +51,7 @@ public class LoginUserSchool extends BaseTest {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Login User with invalid password")
-    @Test( description = "Login User with invalid password", groups = { "login school" },priority = 1)
+    @Test( description = "Login User with invalid password", groups = { "login school" },priority = 3)
     public void loginInvalidPassword() {
         homePage.clickLoginButton();
         Assert.assertEquals(homePage.getFormLoginText(),"Welcome back");
@@ -64,7 +64,7 @@ public class LoginUserSchool extends BaseTest {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Login User with empty email")
-    @Test( description = "Login User with empty email", groups = { "login school" },priority = 1)
+    @Test( description = "Login User with empty email", groups = { "login school" },priority = 3)
     public void loginWithEmptyEmail() {
         homePage.clickLoginButton();
         Assert.assertEquals(homePage.getFormLoginText(),"Welcome back");
@@ -77,7 +77,7 @@ public class LoginUserSchool extends BaseTest {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Login User with empty password")
-    @Test( description = "Login User with empty password", groups = { "login school" },priority = 1)
+    @Test( description = "Login User with empty password", groups = { "login school" },priority = 3)
     public void loginWithEmptyPassword() {
         homePage.clickLoginButton();
         Assert.assertEquals(homePage.getFormLoginText(),"Welcome back");
@@ -90,7 +90,7 @@ public class LoginUserSchool extends BaseTest {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Login User with invalid email format")
-    @Test( description = "Login with invalid email format", groups = { "login school" },priority = 1)
+    @Test( description = "Login with invalid email format", groups = { "login school" },priority = 3)
     public void loginWithInvalidEmailFormat() {
         homePage.clickLoginButton();
         Assert.assertEquals(homePage.getFormLoginText(),"Welcome back");

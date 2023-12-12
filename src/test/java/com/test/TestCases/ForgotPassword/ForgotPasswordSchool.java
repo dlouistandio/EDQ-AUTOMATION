@@ -23,12 +23,8 @@ public class ForgotPasswordSchool extends BaseTest {
         forgotPasswordSchoolPage.clickResetButton();
         ((JavascriptExecutor) driver).executeScript("window.open('https://mailsac.com/')");
         changeTabDriver();
-        emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField();
-        emailLoginPage.inputPasswordField();
-        emailLoginPage.clickLoginButton();
-        emailInbox.inputEmailInboxField("6cf50761-8146-406b-b01d-fb0ba16fbaf3");
-        emailInbox.clickCheckEmailButton();
+        emailInbox.inputEmailFieldOnHome("6cf50761-8146-406b-b01d-fb0ba16fbaf3");
+        emailInbox.clickCheckEmailOnHome();
         emailInbox.clickEmail();
         emailInbox.clickUnblockLinkButton();
         changeTabDriver();

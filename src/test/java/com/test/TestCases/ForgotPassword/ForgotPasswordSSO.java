@@ -15,7 +15,7 @@ public class ForgotPasswordSSO extends BaseTest {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password SSO")
-    @Test( description = "Forgot Password SSO", groups = { "forgot password" },priority = 0)
+    @Test( description = "Forgot Password SSO", groups = { "forgot password" },priority = 5)
     public void forgotPasswordUserSSO() {
         forgotPasswordPage.clickGoToForgotPassword();
         forgotPasswordPage.inputEmailField("adasdas@mailsac.com");
