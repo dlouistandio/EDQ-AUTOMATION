@@ -6,6 +6,30 @@
         <listener class-name="com.test.Utils.Listeners.RetryListeners"/>
     </listeners>
 
+    <test name="Invitation User Educator" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <parameter name="emailEdu" value="5235as01rjfa@mailsac.com"/>
+        <groups>
+            <run>
+                <include name="invitation user educator"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
+        </classes>
+    </test>
+    <test name="Invitation User Admin" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <parameter name="emailAdm" value="4329fajs8fs3@mailsac.com"/>
+        <groups>
+            <run>
+                <include name="invitation user admin"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
+        </classes>
+    </test>
     <test name="Login SSO" >
         <parameter name="url" value="https://sso.eduqat.com"/>
         <groups>
@@ -65,7 +89,17 @@
             <class name="com.test.TestCases.Login.LoginUserSchool"/>
         </classes>
     </test>
-
+    <test name="Forgot password School" >
+        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>
+        <groups>
+            <run>
+                <include name="forgot password"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.ForgotPassword.ForgotPasswordSchool"/>
+        </classes>
+    </test>
     <test name="Logout web school" >
         <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>
         <groups>
@@ -111,41 +145,6 @@
             <class name="com.test.TestCases.ForgotPassword.ForgotPasswordSSO"/>
         </classes>
     </test>
-    <test name="Forgot password School" >
-        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>
-        <groups>
-            <run>
-                <include name="forgot password"></include>
-            </run>
-        </groups>
-        <classes>
-            <class name="com.test.TestCases.ForgotPassword.ForgotPasswordSchool"/>
-        </classes>
-    </test>
-    <test name="Invitation User Admin" >
-        <parameter name="url" value="https://sso.eduqat.com"/>
-        <parameter name="emailAdm" value="086fjkur78rf@mailsac.com"/>
-        <groups>
-            <run>
-                <include name="invitation user admin"></include>
-            </run>
-        </groups>
-        <classes>
-            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
-        </classes>
-    </test>
-    <test name="Invitation User Educator" >
-        <parameter name="url" value="https://sso.eduqat.com"/>
-        <parameter name="emailEdu" value="adsda17kqen3213@mailsac.com"/>
-        <groups>
-            <run>
-                <include name="invitation user educator"></include>
-            </run>
-        </groups>
-        <classes>
-            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
-        </classes>
-    </test>
     <test name="Invitation User" >
         <parameter name="url" value="https://sso.eduqat.com"/>
         <groups>
@@ -159,8 +158,8 @@
     </test>
     <test name="Accept Invitation Admin" >
         <parameter name="url" value="https://mailsac.com/"/>
-        <parameter name="emailAdm" value="oeqh126zxcu@mailsac.com"/>
-        <parameter name="emailAdm2" value="oeqh126zxcu"/>
+        <parameter name="emailAdm" value="4329fajs8fs3@mailsac.com"/>
+        <parameter name="emailAdm2" value="4329fajs8fs3"/>
         <groups>
             <run>
                 <include name="accept invitation admin"></include>
@@ -172,8 +171,8 @@
     </test>
     <test name="Accept Invitation Educator" >
         <parameter name="url" value="https://mailsac.com/"/>
-        <parameter name="emailEdu" value="adsda17kqen3213@mailsac.com"/>
-        <parameter name="emailEdu2" value="adsda17kqen3213"/>
+        <parameter name="emailEdu" value="5235as01rjfa@mailsac.com"/>
+        <parameter name="emailEdu2" value="5235as01rjfa"/>
         <groups>
             <run>
                 <include name="accept invitation educator"></include>

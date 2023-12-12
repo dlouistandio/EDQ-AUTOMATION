@@ -118,6 +118,7 @@ public class CreateSchoolPage extends GeneralObject {
         WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
         waitElementsDisplay(selectedOption);
         selectedOption.click();
+        waitElementsNotDisplay(selectedOption);
     }
 
     @Step

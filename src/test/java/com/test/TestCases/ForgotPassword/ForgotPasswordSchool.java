@@ -15,7 +15,7 @@ public class ForgotPasswordSchool extends BaseTest {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password School")
-    @Test( description = "Forgot Password School", groups = { "forgot password" },priority = 0)
+    @Test( description = "Forgot Password School", groups = { "forgot password" },priority = 1)
     public void forgotPasswordSchool() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
