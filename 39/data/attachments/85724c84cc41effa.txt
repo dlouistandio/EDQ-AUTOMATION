@@ -1,1 +1,0 @@
-logoutUserWithButtonDashboard success and screenshot taken!
