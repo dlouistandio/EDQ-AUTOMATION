@@ -131,7 +131,7 @@ public class ForgotPasswordSchool extends BaseTest {
     @Link(name = "allure", type = "mylink")
     @TmsLink("TMS Link")
     @Description("Forgot Password School with different password input")
-    @Test( description = "Forgot Password School with different password input", groups = { "forgot password" },priority = 1)
+    @Test( description = "Forgot Password School with different password input", groups = { "forgot password" },priority = 5)
     public void forgotPasswordUserSchoolWithDifferentPass() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();

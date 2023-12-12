@@ -14,7 +14,7 @@ import java.io.IOException;
 @Link(name = "allure", type = "mylink")
 @TmsLink("TMS Link")
 public class InvitationUser extends BaseTest {
-    @BeforeMethod(groups = { "create course" })
+    @BeforeMethod(groups = { "invitation user"})
     public void loginUser() {
         loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
         loginPage.clickSignInButton();
