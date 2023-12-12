@@ -17,7 +17,7 @@ public class AcceptInvitationUser extends BaseTest {
     @Story("Accept Invitation User")
     @Description("Accept Invitation User Admin")
     @Parameters(value = "emailAdm")
-    @Test( description = "Accept Invitation User Admin", groups = { "accept invitation admin" },priority = 4)
+    @Test( description = "Accept Invitation User Admin", groups = { "accept invitation admin" },priority = 1)
     public void acceptUserAdmin(String emailAdm) {
         emailLoginPage.goToLoginPage();
         emailLoginPage.inputEmailField();
@@ -60,7 +60,7 @@ public class AcceptInvitationUser extends BaseTest {
     @Story("Accept Invitation User")
     @Description("Accept Invitation User Educator")
     @Parameters(value = "emailEdu")
-    @Test( description = "Accept Invitation User Educator", groups = { "accept invitation educator" },priority = 5)
+    @Test( description = "Accept Invitation User Educator", groups = { "accept invitation educator" },priority = 2)
     public void acceptUserEducator(String emailEdu) {
         emailLoginPage.goToLoginPage();
         emailLoginPage.inputEmailField();
