@@ -18,10 +18,10 @@ public class RegisterUserSchool extends BaseTest {
     @Description("Register user school with valid input")
     @Test( description = "Register user school with valid input", groups = { "register" },priority = 0)
     public void registerUserSchoolWithValidInput() throws IOException {
-        String email = emailProperties();
+        String emails = emailProperties();
         registerPage.clickGoToSignUpForm();
         registerPage.inputNameField("Testing");
-        registerPage.inputEmailField(email);
+        registerPage.inputEmailField(emails);
         registerPage.inputPasswordField("test123");
         registerPage.clickAgrementPrivacy();
         registerPage.clickAgrementSaas();
@@ -34,7 +34,7 @@ public class RegisterUserSchool extends BaseTest {
         emailLoginPage.inputEmailField();
         emailLoginPage.inputPasswordField();
         emailLoginPage.clickLoginButton();
-        emailInbox.inputEmailInboxField(email);
+        emailInbox.inputEmailInboxField(emails);
         emailInbox.clickCheckEmailButton();
         emailInbox.clickEmail();
         emailInbox.clickUnblockLinkButton();
