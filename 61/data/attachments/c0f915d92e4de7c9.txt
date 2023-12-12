@@ -1,0 +1,1 @@
+registerUserSchoolWithEmptyName success and screenshot taken!
