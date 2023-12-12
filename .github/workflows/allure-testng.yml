@@ -1,6 +1,8 @@
 name: allure-maven
 
 on:
+  push:
+    branches: [ main ]
   schedule:
     - cron: '0 17 * * *'
 
