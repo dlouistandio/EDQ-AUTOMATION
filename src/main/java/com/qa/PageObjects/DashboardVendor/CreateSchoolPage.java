@@ -114,7 +114,7 @@ public class CreateSchoolPage extends GeneralObject {
 
     @Step
     public void selectOption(String option){
-        String cssSelectedOption =  "[title='"+option+"'] > .ant-select-item-option-content";
+        String cssSelectedOption =  "[title='"+option+"']";
         WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
         waitElementsDisplay(selectedOption);
         selectedOption.click();

@@ -58,7 +58,7 @@ public class AcceptInvitationUser extends BaseTest {
     @Story("Accept Invitation User")
     @Description("Accept Invitation User Educator")
     @Parameters({ "emailEdu", "emailEdu2" })
-    @Test( description = "Accept Invitation User Educator", groups = { "accept invitation educator" },priority = 2)
+    @Test( description = "Accept Invitation User Educator", groups = { "accept invitation educator" },priority = 6)
     public void acceptUserEducator(String emailEdu, String emailEdu2) {
         emailLoginPage.goToLoginPage();
         emailLoginPage.inputEmailField();
