@@ -122,10 +122,32 @@
             <class name="com.test.TestCases.ForgotPassword.ForgotPasswordSchool"/>
         </classes>
     </test>
+    <test name="Invitation User Admin" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <parameter name="emailAdm" value="asdcan0134bkarr@mailsac.com"/>
+        <groups>
+            <run>
+                <include name="invitation user admin"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
+        </classes>
+    </test>
+    <test name="Invitation User Educator" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <parameter name="emailEdu" value="asdacasfd1234@mailsac.com"/>
+        <groups>
+            <run>
+                <include name="invitation user educator"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
+        </classes>
+    </test>
     <test name="Invitation User" >
         <parameter name="url" value="https://sso.eduqat.com"/>
-        <parameter name="emailAdm" value="ncaljsaoqw412@mailsac.com"/>
-        <parameter name="emailEdu" value="dnlapsuda0123@mailsac.com"/>
         <groups>
             <run>
                 <include name="invitation user"></include>
@@ -135,13 +157,24 @@
             <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
         </classes>
     </test>
-    <test name="Accept Invitation User" >
+    <test name="Accept Invitation Admin" >
         <parameter name="url" value="https://mailsac.com/"/>
-        <parameter name="emailAdm" value="ncaljsaoqw412@mailsac.com"/>
-        <parameter name="emailEdu" value="dnlapsuda0123@mailsac.com"/>
+        <parameter name="emailAdm" value="asdcan0134bkarr@mailsac.com"/>
         <groups>
             <run>
-                <include name="accept invitation"></include>
+                <include name="accept invitation admin"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.AcceptInvitationUser"/>
+        </classes>
+    </test>
+    <test name="Accept Invitation Educator" >
+        <parameter name="url" value="https://mailsac.com/"/>
+        <parameter name="emailEdu" value="asdacasfd1234@mailsac.com"/>
+        <groups>
+            <run>
+                <include name="accept invitation educator"></include>
             </run>
         </groups>
         <classes>

@@ -1,8 +1,7 @@
 package com.test.TestCases.InvitationUser;
 
 import com.test.BaseTest;
-import io.qameta.allure.Description;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
@@ -10,11 +9,15 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
+@Epic("Accept Invitation User")
+@Feature("Accept Invitation User")
+@Link(name = "allure", type = "mylink")
+@TmsLink("TMS Link")
 public class AcceptInvitationUser extends BaseTest {
     @Story("Accept Invitation User")
     @Description("Accept Invitation User Admin")
     @Parameters(value = "emailAdm")
-    @Test( description = "Accept Invitation User Admin", groups = { "accept invitation" },priority = 4)
+    @Test( description = "Accept Invitation User Admin", groups = { "accept invitation admin" },priority = 4)
     public void acceptUserAdmin(String emailAdm) {
         emailLoginPage.goToLoginPage();
         emailLoginPage.inputEmailField();
@@ -57,7 +60,7 @@ public class AcceptInvitationUser extends BaseTest {
     @Story("Accept Invitation User")
     @Description("Accept Invitation User Educator")
     @Parameters(value = "emailEdu")
-    @Test( description = "Accept Invitation User Educator", groups = { "accept invitation" },priority = 4)
+    @Test( description = "Accept Invitation User Educator", groups = { "accept invitation educator" },priority = 4)
     public void acceptUserEducator(String emailEdu) {
         emailLoginPage.goToLoginPage();
         emailLoginPage.inputEmailField();

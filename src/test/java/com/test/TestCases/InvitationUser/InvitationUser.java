@@ -14,7 +14,7 @@ import java.io.IOException;
 @Link(name = "allure", type = "mylink")
 @TmsLink("TMS Link")
 public class InvitationUser extends BaseTest {
-    @BeforeMethod(groups = { "invitation user"})
+    @BeforeMethod(groups = { "invitation user","invitation user admin","invitation user educator"})
     public void loginUser() {
         loginPage.loginUser("eduqatautomationtest@gmail.com","P@ss4eduqat");
         loginPage.clickSignInButton();
@@ -25,7 +25,7 @@ public class InvitationUser extends BaseTest {
     @Story("Invitation User")
     @Description("Invitation user Admin")
     @Parameters(value = "emailAdm")
-    @Test( description = "Invitation User Admin", groups = { "invitation user" },priority = -1)
+    @Test( description = "Invitation User Admin", groups = { "invitation user admin" },priority = -1)
     public void invitationUserAdmin(String emailAdm) {
         dashboardSchool.chooseMenu("/manage/user");
         Assert.assertEquals(invitationUserPage.getUserNavText(),"Users");
@@ -42,7 +42,7 @@ public class InvitationUser extends BaseTest {
     @Story("Invitation User")
     @Description("Invitation user Educator")
     @Parameters(value = "emailEdu")
-    @Test( description = "Invitation user Educator", groups = { "invitation user" },priority = -1)
+    @Test( description = "Invitation user Educator", groups = { "invitation user educator" },priority = -1)
     public void invitationUserEducator(String emailEdu) {
         dashboardSchool.chooseMenu("/manage/user");
         Assert.assertEquals(invitationUserPage.getUserNavText(),"Users");
