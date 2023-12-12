@@ -17,7 +17,7 @@ public class AcceptInvitationUser extends BaseTest {
     @Story("Accept Invitation User")
     @Description("Accept Invitation User Admin")
     @Parameters(value = "emailAdm")
-    @Test( description = "Accept Invitation User Admin", groups = { "accept invitation admin" },priority = 1)
+    @Test( description = "Accept Invitation User Admin", groups = { "accept invitation admin" },priority = 3)
     public void acceptUserAdmin(String emailAdm) {
         emailLoginPage.goToLoginPage();
         emailLoginPage.inputEmailField();
@@ -52,7 +52,7 @@ public class AcceptInvitationUser extends BaseTest {
         changeTabDriver();
         String code = emailInbox.getCodeVerifyRegisterSchool();
         ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(0));
+        driver.switchTo().window(tabs.get(1));
         registerPage.inputOtpCodeField(code);
         Assert.assertEquals(dashboardSchool.getSchoolNameText(),"untukautomationtest");
     }
@@ -95,7 +95,7 @@ public class AcceptInvitationUser extends BaseTest {
         changeTabDriver();
         String code = emailInbox.getCodeVerifyRegisterSchool();
         ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(0));
+        driver.switchTo().window(tabs.get(1));
         registerPage.inputOtpCodeField(code);
         Assert.assertEquals(dashboardSchool.getSchoolNameText(),"untukautomationtest");
     }
