@@ -1,0 +1,1 @@
+registerUserWithValidInput success and screenshot taken!
