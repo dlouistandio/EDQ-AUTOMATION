@@ -1,1 +1,0 @@
-registerUserSchoolWithEmptyPassword success and screenshot taken!
