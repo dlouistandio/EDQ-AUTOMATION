@@ -32,25 +32,25 @@ public class CreateSchoolPage extends GeneralObject {
     @FindBy(css = ".text-2xl")
     private WebElement getStartedWithEduqatText;
 
-    @FindBy(xpath = "//input[@id='basic_jobTitle']")
+    @FindBy(xpath = "//div[@class='section-body']//div[@class='ant-select ant-select-in-form-item ant-select-single ant-select-show-arrow']/div[.='Choose your occupation']")
     private WebElement jobOption;
 
-    @FindBy(xpath = "//input[@id='basic_haveTeach']")
+    @FindBy(xpath = "//div[@class='section-body']/div[2]//div[@class='ant-select-selector']")
     private WebElement haveTeachOption;
 
-    @FindBy(xpath = "//input[@id='basic_sellingCourseRevenue']")
+    @FindBy(xpath = "//div[3]//div[@class='ant-select-selector']")
     private WebElement courseRevenueOption;
 
-    @FindBy(xpath = "//input[@id='basic_audienceSize']")
+    @FindBy(xpath = "//div[4]//div[@class='ant-select-selector']")
     private WebElement audienceSizeOption;
 
     @FindBy(css = "#basic_countryCode")
     private WebElement countryOption;
 
-    @FindBy(xpath = "//input[@id='basic_currency']")
+    @FindBy(xpath = "//div[6]//div[@class='ant-select-selector']")
     private WebElement currencyOption;
 
-    @FindBy(xpath = "//input[@id='basic_timezone']")
+    @FindBy(xpath = "//div[8]//div[@class='ant-select-selector']")
     private WebElement timezoneOption;
 
 
@@ -116,6 +116,7 @@ public class CreateSchoolPage extends GeneralObject {
     public void selectOption(String option){
         String cssSelectedOption =  "[title='"+option+"']";
         WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
+        waitElementsDisplay(selectedOption);
         selectedOption.click();
         waitElementsNotDisplay(selectedOption);
     }
