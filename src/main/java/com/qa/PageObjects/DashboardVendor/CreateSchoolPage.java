@@ -116,7 +116,6 @@ public class CreateSchoolPage extends GeneralObject {
     public void selectOption(String option){
         String cssSelectedOption =  "[title='"+option+"']";
         WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
-        waitElementsDisplay(selectedOption);
         selectedOption.click();
         waitElementsNotDisplay(selectedOption);
     }
