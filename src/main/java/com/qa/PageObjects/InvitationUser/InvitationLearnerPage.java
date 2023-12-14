@@ -1,6 +1,8 @@
 package com.qa.PageObjects.InvitationUser;
 
 import com.qa.PageObjects.DashboardSchool.DashboardSchool;
+import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -44,5 +46,60 @@ public class InvitationLearnerPage extends DashboardSchool {
 
     @FindBy(css = "#course_type_help > .ant-form-item-explain-error")
     private WebElement courseTypeAlert;
+
+    @FindBy(xpath = "//img[@alt='ic_pending_invitation']")
+    private WebElement imgPendingInvitation;
+
+
+    @Step
+    public void clickLearnerMenuButton(){
+        waitElementsDisplay(learnersMenuButton);
+        learnersMenuButton.click();
+    }
+
+    @Step
+    public void clickNewLearnerButton(){
+        waitElementsDisplay(imgPendingInvitation);
+        newLearnersButton.click();
+    }
+
+    @Step
+    public void inputEmailLearnerField(String email){
+        waitElementsDisplay(emailLearnerField);
+        emailLearnerField.sendKeys(email);
+    }
+
+    @Step
+    public void clickSelectProductType(String option){
+        waitElementsDisplay(productTypeField);
+        productTypeField.click();
+        String cssSelectedOption =  "[title='"+option+"'] > .ant-select-item-option-content";
+        WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
+        waitElementsDisplay(selectedOption);
+        selectedOption.click();
+        waitElementsNotDisplay(selectedOption);
+    }
+
+    @Step
+    public void clickSelectCourseName(String option){
+        courseNameField.click();
+        courseNameField.sendKeys(option);
+        String cssSelectedOption =  "[title='"+option+"'] > .ant-select-item-option-content";
+        WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
+        waitElementsDisplay(selectedOption);
+        selectedOption.click();
+        waitElementsNotDisplay(selectedOption);
+    }
+
+    @Step
+    public void clickSendInviteLearner(){
+        sendInviteButton.click();
+    }
+
+    @Step
+    public String getSuccesInvitationText(){
+        waitElementsDisplay(invitationSentAlert);
+        return invitationSentAlert.getText();
+    }
 
 }

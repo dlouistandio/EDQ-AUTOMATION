@@ -42,17 +42,17 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="Create School" >
-        <parameter name="url" value="https://sso.eduqat.com"/>
-        <groups>
-            <run>
-                <include name="create school"></include>
-            </run>
-        </groups>
-        <classes>
-            <class name="com.test.TestCases.CreateNewSchool"/>
-        </classes>
-    </test>
+<!--    <test name="Create School" >-->
+<!--        <parameter name="url" value="https://sso.eduqat.com"/>-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="create school"></include>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="com.test.TestCases.CreateNewSchool"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 <!--    <test name="Login web school" >-->
 <!--        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>-->
@@ -182,4 +182,17 @@
 <!--            <class name="com.test.TestCases.InvitationUser.AcceptInvitationUser"/>-->
 <!--        </classes>-->
 <!--    </test>-->
+    <test name="Invitation Learner" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <parameter name="emailLearner" value="dasc21d1d1da@mailsac.com"/>
+        <groups>
+            <run>
+                <include name="invitation new leaner"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.InvitationLearner"/>
+        </classes>
+    </test>
+
 </suite>

@@ -35,6 +35,9 @@ public class DashboardVendor extends GeneralObject {
     @FindBy(css = ".grid > a:nth-of-type(1)")
     private WebElement cardSchool;
 
+    @FindBy(css = ".grid > a:nth-of-type(2)")
+    private WebElement cardSchoolVendor;
+
     @FindBy(css = "[aria-haspopup='menu']")
     private WebElement userProfile;
 
@@ -51,6 +54,12 @@ public class DashboardVendor extends GeneralObject {
     public void goToSchool(){
         waitElementsDisplay(cardSchool);
         cardSchool.click();
+    }
+
+    @Step
+    public void goToSchoolVendor(){
+        waitElementsDisplay(cardSchoolVendor);
+        cardSchoolVendor.click();
     }
 
     @Step
