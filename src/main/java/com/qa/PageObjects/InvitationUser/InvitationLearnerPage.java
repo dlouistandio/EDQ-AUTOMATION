@@ -29,8 +29,11 @@ public class InvitationLearnerPage extends DashboardSchool {
     @FindBy(css = "[aria-owns='rc_select_0_list']")
     private WebElement emailLearnerField;
 
-    @FindBy(xpath = "//input[@id='course_type']")
+    @FindBy(xpath = "//div[@class='ant-select ant-select-in-form-item ant-select-single ant-select-show-arrow']/div[@class='ant-select-selector']")
     private WebElement productTypeField;
+
+    @FindBy(xpath = "//div[@class='ant-select ant-select-in-form-item ant-select-status-success ant-select-single ant-select-show-arrow ant-select-show-search']/div[@class='ant-select-selector']")
+    private WebElement courseNameSelect;
 
     @FindBy(xpath = "//input[@id='course_id']")
     private WebElement courseNameField;
@@ -82,7 +85,7 @@ public class InvitationLearnerPage extends DashboardSchool {
 
     @Step
     public void clickSelectCourseName(String option){
-        courseNameField.click();
+        courseNameSelect.click();
         courseNameField.sendKeys(option);
         String cssSelectedOption =  "[title='"+option+"'] > .ant-select-item-option-content";
         WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
