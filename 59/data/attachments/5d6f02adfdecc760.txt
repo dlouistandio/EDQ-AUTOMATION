@@ -1,1 +1,0 @@
-registerUserWithInvalidEmailFormat success and screenshot taken!

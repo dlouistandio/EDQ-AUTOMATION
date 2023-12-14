@@ -1,1 +1,0 @@
-invitationUserWithEmptyEmail failed and screenshot taken!

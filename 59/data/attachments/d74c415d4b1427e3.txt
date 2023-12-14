@@ -1,1 +1,0 @@
-invitationUserWithInvalidEmailFormat failed and screenshot taken!
