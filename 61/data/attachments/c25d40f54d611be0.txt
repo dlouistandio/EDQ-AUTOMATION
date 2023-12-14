@@ -1,1 +1,0 @@
-forgotPasswordUserSSOEmptyNewPassword success and screenshot taken!

@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Dec 14 17:18:12 GMT 2023","Thu Dec 14 17:18:57 GMT 2023","45039","Suite","Invitation Learner","com.test.TestCases.InvitationUser.InvitationLearner","com.test.TestCases.InvitationUser.InvitationLearner","invitationUserAdmin","Invitation New Learner","Invitation New Learner"
