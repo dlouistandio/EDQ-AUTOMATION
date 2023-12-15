@@ -63,7 +63,7 @@ public class InvitationLearner extends BaseTest {
         invitationLearnerPage.clickNewLearnerButton();
         invitationLearnerPage.inputEmailLearnerField(emailLearnerCohort);
         invitationLearnerPage.clickSelectProductType("Cohort");
-        invitationLearnerPage.clickSelectCourseName("COHORT: UHUYYY");
+        invitationLearnerPage.clickSelectCohortName("COHORT: UHUYYY");
         invitationLearnerPage.clickSelectCohortBatch("INI BATCH COHORTgratiss");
         invitationLearnerPage.clickSendInviteLearner();
         Assert.assertEquals(invitationLearnerPage.getSuccesInvitationText(),"Invitation Sent!");

@@ -17,7 +17,7 @@ public class AcceptInvitationNewLearner extends BaseTest {
     @Story("Accept Invitation User")
     @Description("Accept Invitation Learner Self-paced")
     @Parameters({ "emailSelfpaced", "emailSelfpaced2" })
-    @Test( description = "Accept Invitation Learner Self-paced", groups = { "accept invitation learner" },priority = 3)
+    @Test( description = "Accept Invitation Learner Self-paced", groups = { "accept invitation learner" },priority = 2)
     public void acceptLearnerSelfPaced(String emailSelfpaced, String emailSelfpaced2) {
         emailLoginPage.goToLoginPage();
         emailLoginPage.inputEmailField();
@@ -58,7 +58,7 @@ public class AcceptInvitationNewLearner extends BaseTest {
     @Story("Accept Invitation User")
     @Description("Accept Invitation Learner Event")
     @Parameters({ "emailEvent", "emailEvent2" })
-    @Test( description = "Accept Invitation Learner Event", groups = { "accept invitation learner" },priority = 4)
+    @Test( description = "Accept Invitation Learner Event", groups = { "accept invitation learner" },priority = 2)
     public void acceptLearnerEvent(String emailEvent, String emailEvent2) {
         emailLoginPage.goToLoginPage();
         emailLoginPage.inputEmailField();
@@ -99,7 +99,7 @@ public class AcceptInvitationNewLearner extends BaseTest {
     @Story("Accept Invitation User")
     @Description("Accept Invitation Learner Cohort")
     @Parameters({ "emailCohort", "emailCohort2" })
-    @Test( description = "Accept Invitation Learner Cohort", groups = { "accept invitation learner" },priority = 5)
+    @Test( description = "Accept Invitation Learner Cohort", groups = { "accept invitation learner" },priority = 2)
     public void acceptLearnerCohort(String emailCohort, String emailCohort2) {
         emailLoginPage.goToLoginPage();
         emailLoginPage.inputEmailField();
