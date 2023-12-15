@@ -41,6 +41,9 @@ public class InvitationLearnerPage extends DashboardSchool {
     @FindBy(xpath = "//button[.='Send Invite']")
     private WebElement sendInviteButton;
 
+    @FindBy(xpath = "//div[@class='ant-select ant-select-in-form-item ant-select-status-success ant-select-single ant-select-show-arrow ant-select-show-search']/div[@class='ant-select-selector']")
+    private WebElement batchSelect;
+
     @FindBy(css = "#course_id_help > .ant-form-item-explain-error")
     private WebElement courseNameAlert;
 
@@ -87,6 +90,17 @@ public class InvitationLearnerPage extends DashboardSchool {
     public void clickSelectCourseName(String option){
         courseNameSelect.click();
         courseNameField.sendKeys(option);
+        String cssSelectedOption =  "[title='"+option+"'] > .ant-select-item-option-content";
+        WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
+        waitElementsDisplay(selectedOption);
+        selectedOption.click();
+        waitElementsNotDisplay(selectedOption);
+    }
+
+    @Step
+    public void clickSelectCohortBatch(String option){
+        batchSelect.click();
+        batchSelect.sendKeys(option);
         String cssSelectedOption =  "[title='"+option+"'] > .ant-select-item-option-content";
         WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
         waitElementsDisplay(selectedOption);
