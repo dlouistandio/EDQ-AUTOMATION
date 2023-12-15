@@ -1,1 +1,0 @@
-loginUserEmptyPassword success and screenshot taken!
