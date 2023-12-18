@@ -20,7 +20,7 @@ public class AcceptInvitationUser extends BaseTest {
     @Test( description = "Accept Invitation User Admin", groups = { "accept invitation admin" },priority = 3)
     public void acceptUserAdmin(String emailAdm, String emailAdm2) {
         emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField();
+        emailLoginPage.inputEmailField("eduqatautomationtest@gmail.com");
         emailLoginPage.inputPasswordField();
         emailLoginPage.clickLoginButton();
         emailInbox.inputEmailInboxField(emailAdm);
@@ -61,7 +61,7 @@ public class AcceptInvitationUser extends BaseTest {
     @Test( description = "Accept Invitation User Educator", groups = { "accept invitation educator" },priority = 6)
     public void acceptUserEducator(String emailEdu, String emailEdu2) {
         emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField();
+        emailLoginPage.inputEmailField("eduqatautomationtesting@gmail.com");
         emailLoginPage.inputPasswordField();
         emailLoginPage.clickLoginButton();
         emailInbox.inputEmailInboxField(emailEdu);

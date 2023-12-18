@@ -19,15 +19,15 @@ public class ForgotPasswordSchool extends BaseTest {
     public void forgotPasswordSchool() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
-        forgotPasswordSchoolPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
+        forgotPasswordSchoolPage.inputEmailField("4794afb3-2b26-4a41-a995-8ccb543bcf08@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
         ((JavascriptExecutor) driver).executeScript("window.open('https://mailsac.com/')");
         changeTabDriver();
         emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField();
+        emailLoginPage.inputEmailField("eduqatautomationtesting@gmail.com");
         emailLoginPage.inputPasswordField();
         emailLoginPage.clickLoginButton();
-        emailInbox.inputEmailInboxField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
+        emailInbox.inputEmailInboxField("4794afb3-2b26-4a41-a995-8ccb543bcf08@mailsac.com");
         emailInbox.clickCheckEmailButton();
         emailInbox.clickEmail();
         emailInbox.clickUnblockLinkButton();
@@ -41,7 +41,7 @@ public class ForgotPasswordSchool extends BaseTest {
         forgotPasswordSchoolPage.clickConfirmReset();
         forgotPasswordSchoolPage.resetPasswordTextInvisible();
         Assert.assertEquals(homePage.getFormLoginText(),"Welcome back");
-        homePage.inputEmailNPassword("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com","testing123");
+        homePage.inputEmailNPassword("4794afb3-2b26-4a41-a995-8ccb543bcf08@mailsac.com","testing123");
         homePage.clickSigninButton();
         Assert.assertEquals(homePage.getHeaderWeb(),"untukautomationtest");
     }
@@ -135,15 +135,15 @@ public class ForgotPasswordSchool extends BaseTest {
     public void forgotPasswordUserSchoolWithDifferentPass() {
         forgotPasswordSchoolPage.clickLoginButton();
         forgotPasswordSchoolPage.clickGoToForgotPassword();
-        forgotPasswordSchoolPage.inputEmailField("6cf50761-8146-406b-b01d-fb0ba16fbaf3@mailsac.com");
+        forgotPasswordSchoolPage.inputEmailField("ec445eab-ab81-4468-b692-a545294fc089@mailsac.com");
         forgotPasswordSchoolPage.clickResetButton();
         ((JavascriptExecutor) driver).executeScript("window.open('https://mailsac.com/')");
         changeTabDriver();
         emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField();
+        emailLoginPage.inputEmailField("eduqatautomationtest@gmail.com");
         emailLoginPage.inputPasswordField();
         emailLoginPage.clickLoginButton();
-        emailInbox.inputEmailInboxField("adasdas");
+        emailInbox.inputEmailInboxField("ec445eab-ab81-4468-b692-a545294fc089@mailsac.com");
         emailInbox.clickCheckEmailButton();
         emailInbox.clickEmail();
         emailInbox.clickUnblockLinkButton();

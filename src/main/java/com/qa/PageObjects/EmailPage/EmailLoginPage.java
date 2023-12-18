@@ -29,9 +29,9 @@ public class EmailLoginPage extends GeneralObject {
     private WebElement signInButtonForm;
 
     @Step
-    public void inputEmailField (){
+    public void inputEmailField (String email){
         waitElementsDisplay(usernameField);
-        usernameField.sendKeys("eduqatautomationtest@gmail.com");
+        usernameField.sendKeys(email);
     }
 
     @Step

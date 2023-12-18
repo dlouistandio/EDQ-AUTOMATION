@@ -31,7 +31,7 @@ public class RegisterUserSchool extends BaseTest {
         ((JavascriptExecutor) driver).executeScript("window.open('https://mailsac.com/')");
         changeTabDriver();
         emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField();
+        emailLoginPage.inputEmailField("eduqatautomationtest@gmail.com");
         emailLoginPage.inputPasswordField();
         emailLoginPage.clickLoginButton();
         emailInbox.inputEmailInboxField(emails);
