@@ -20,10 +20,10 @@ public class AcceptInvitationNewLearner extends BaseTest {
     @Test( description = "Accept Invitation Learner Self-paced", groups = { "accept invitation learner" },priority = 2)
     public void acceptLearnerSelfPaced(String emailSelfpaced, String emailSelfpaced2) {
         emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField();
+        emailLoginPage.inputEmailField(emailSelfpaced);
         emailLoginPage.inputPasswordField();
         emailLoginPage.clickLoginButton();
-        emailInbox.inputEmailInboxField(emailSelfpaced);
+        emailInbox.inputEmailInboxField(emailSelfpaced2);
         emailInbox.clickCheckEmailButton();
         emailInbox.clickEmail();
         emailInbox.clickUnblockLinkButton();
@@ -61,10 +61,10 @@ public class AcceptInvitationNewLearner extends BaseTest {
     @Test( description = "Accept Invitation Learner Event", groups = { "accept invitation learner" },priority = 2)
     public void acceptLearnerEvent(String emailEvent, String emailEvent2) {
         emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField();
+        emailLoginPage.inputEmailField(emailEvent);
         emailLoginPage.inputPasswordField();
         emailLoginPage.clickLoginButton();
-        emailInbox.inputEmailInboxField(emailEvent);
+        emailInbox.inputEmailInboxField(emailEvent2);
         emailInbox.clickCheckEmailButton();
         emailInbox.clickEmail();
         emailInbox.clickUnblockLinkButton();
@@ -102,10 +102,10 @@ public class AcceptInvitationNewLearner extends BaseTest {
     @Test( description = "Accept Invitation Learner Cohort", groups = { "accept invitation learner" },priority = 2)
     public void acceptLearnerCohort(String emailCohort, String emailCohort2) {
         emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField();
+        emailLoginPage.inputEmailField(emailCohort);
         emailLoginPage.inputPasswordField();
         emailLoginPage.clickLoginButton();
-        emailInbox.inputEmailInboxField(emailCohort);
+        emailInbox.inputEmailInboxField(emailCohort2);
         emailInbox.clickCheckEmailButton();
         emailInbox.clickEmail();
         emailInbox.clickUnblockLinkButton();
