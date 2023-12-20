@@ -1,1 +1,0 @@
-{"total":2,"items":[{"uid":"356ea8756bd3eb686484487412a96e97","name":"Logout User SSO","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}},{"uid":"4fabb484f9dbc4a2c8d3ee388c6456dd","name":"Login User SSO","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
