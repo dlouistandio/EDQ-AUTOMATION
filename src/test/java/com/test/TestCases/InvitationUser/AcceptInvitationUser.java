@@ -17,7 +17,7 @@ public class AcceptInvitationUser extends BaseTest {
     @Story("Accept Invitation User")
     @Description("Accept Invitation User Admin")
     @Parameters({ "emailAdm", "emailAdm2" })
-    @Test( description = "Accept Invitation User Admin", groups = { "accept invitation admin" },priority = 3)
+    @Test( description = "Accept Invitation User Admin", groups = { "accept invitation admin" },priority = 5)
     public void acceptUserAdmin(String emailAdm, String emailAdm2) {
         emailLoginPage.goToLoginPage();
         emailLoginPage.inputEmailField("eduqatautomationtest@gmail.com");
