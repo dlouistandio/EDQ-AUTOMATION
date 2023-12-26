@@ -1,2 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Thu Dec 14 09:02:26 GMT 2023","Thu Dec 14 09:03:53 GMT 2023","87280","Suite","Invitation Learner","com.test.TestCases.InvitationUser.InvitationLearner","com.test.TestCases.InvitationUser.InvitationLearner","invitationUserAdmin","Invitation New Learner","Invitation New Learner"
