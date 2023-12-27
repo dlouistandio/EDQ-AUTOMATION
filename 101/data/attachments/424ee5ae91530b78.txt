@@ -1,0 +1,1 @@
+forgotPasswordUserSSOWithUnderSixChar success and screenshot taken!
