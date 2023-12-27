@@ -6,76 +6,76 @@
         <listener class-name="com.test.Utils.Listeners.RetryListeners"/>
     </listeners>
 
-<!--    <test name="Login SSO" >-->
-<!--        <parameter name="url" value="https://sso.eduqat.com"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="login"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.Login.LoginUserSSO"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Login SSO" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <groups>
+            <run>
+                <include name="login"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.Login.LoginUserSSO"/>
+        </classes>
+    </test>
 
-<!--    <test name="Create Course" >-->
-<!--        <parameter name="url" value="https://sso.eduqat.com"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="create course"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.CreateCourse"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Create Course" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <groups>
+            <run>
+                <include name="create course"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.CreateCourse"/>
+        </classes>
+    </test>
 
-<!--    <test name="Logout SSO" >-->
-<!--        <parameter name="url" value="https://sso.eduqat.com"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="logout"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.Logout.LogOutUserSSO"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Logout SSO" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <groups>
+            <run>
+                <include name="logout"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.Logout.LogOutUserSSO"/>
+        </classes>
+    </test>
 
-<!--    <test name="Create School" >-->
-<!--        <parameter name="url" value="https://sso.eduqat.com"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="create school"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.CreateNewSchool"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Create School" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <groups>
+            <run>
+                <include name="create school"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.CreateNewSchool"/>
+        </classes>
+    </test>
 
-<!--    <test name="Login web school" >-->
-<!--        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="login school"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.Login.LoginUserSchool"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Forgot password School" >-->
-<!--        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="forgot password"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.ForgotPassword.ForgotPasswordSchool"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Login web school" >
+        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>
+        <groups>
+            <run>
+                <include name="login school"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.Login.LoginUserSchool"/>
+        </classes>
+    </test>
+    <test name="Forgot password School" >
+        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>
+        <groups>
+            <run>
+                <include name="forgot password"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.ForgotPassword.ForgotPasswordSchool"/>
+        </classes>
+    </test>
     <test name="Forgot password Educator" >
         <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>
         <groups>
@@ -98,142 +98,142 @@
             <class name="com.test.TestCases.ForgotPassword.ForgotPasswordAdmin"/>
         </classes>
     </test>
-<!--    <test name="Logout web school" >-->
-<!--        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="logout school"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.Logout.LogOutUserSchool"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Logout web school" >
+        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>
+        <groups>
+            <run>
+                <include name="logout school"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.Logout.LogOutUserSchool"/>
+        </classes>
+    </test>
 
-<!--    <test name="Register user school" >-->
-<!--        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="register"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.Register.RegisterUserSchool"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Register user SSO" >-->
-<!--        <parameter name="url" value="https://sso.eduqat.com"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="register"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.Register.RegisterUserSSO"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Forgot password SSO" >-->
-<!--        <parameter name="url" value="https://sso.eduqat.com"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="forgot password"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.ForgotPassword.ForgotPasswordSSO"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Invitation User" >-->
-<!--        <parameter name="url" value="https://sso.eduqat.com"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="invitation user"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Invitation User Admin" >-->
-<!--        <parameter name="url" value="https://sso.eduqat.com"/>-->
-<!--        <parameter name="emailAdm" value="213sa0d1j1@mailsac.com"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="invitation user admin"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Invitation User Educator" >-->
-<!--        <parameter name="url" value="https://sso.eduqat.com"/>-->
-<!--        <parameter name="emailEdu" value="das313d1s12@mailsac.com"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="invitation user educator"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Accept Invitation Admin" >-->
-<!--        <parameter name="url" value="https://mailsac.com/"/>-->
-<!--        <parameter name="emailAdm" value="213sa0d1j1@mailsac.com"/>-->
-<!--        <parameter name="emailAdm2" value="213sa0d1j1"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="accept invitation admin"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.InvitationUser.AcceptInvitationUser"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Accept Invitation Educator" >-->
-<!--        <parameter name="url" value="https://mailsac.com/"/>-->
-<!--        <parameter name="emailEdu" value="das313d1s12@mailsac.com"/>-->
-<!--        <parameter name="emailEdu2" value="das313d1s12"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="accept invitation educator"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.InvitationUser.AcceptInvitationUser"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Invitation Learner" >-->
-<!--        <parameter name="url" value="https://sso.eduqat.com"/>-->
-<!--        <parameter name="emailLearnerEvent" value="asds231dads@mailsac.com"/>-->
-<!--        <parameter name="emailLearnerSelfpaced" value="dasca4232@mailsac.com"/>-->
-<!--        <parameter name="emailLearnerCohort" value="das4426gsd@mailsac.com"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="invitation new leaner"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.InvitationUser.InvitationLearner"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Accept Invitation Learner" >-->
-<!--        <parameter name="url" value="https://mailsac.com/"/>-->
-<!--        <parameter name="emailEvent" value="asds231dads@mailsac.com"/>-->
-<!--        <parameter name="emailEvent2" value="asds231dads"/>-->
-<!--        <parameter name="emailSelfpaced" value="dasca4232@mailsac.com"/>-->
-<!--        <parameter name="emailSelfpaced2" value="dasca4232"/>-->
-<!--        <parameter name="emailCohort" value="das4426gsd@mailsac.com"/>-->
-<!--        <parameter name="emailCohort2" value="das4426gsd"/>-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="accept invitation learner"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="com.test.TestCases.InvitationUser.AcceptInvitationNewLearner"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Register user school" >
+        <parameter name="url" value="https://untukautomationtest.eduqat.com/"/>
+        <groups>
+            <run>
+                <include name="register"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.Register.RegisterUserSchool"/>
+        </classes>
+    </test>
+    <test name="Register user SSO" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <groups>
+            <run>
+                <include name="register"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.Register.RegisterUserSSO"/>
+        </classes>
+    </test>
+    <test name="Forgot password SSO" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <groups>
+            <run>
+                <include name="forgot password"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.ForgotPassword.ForgotPasswordSSO"/>
+        </classes>
+    </test>
+    <test name="Invitation User" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <groups>
+            <run>
+                <include name="invitation user"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
+        </classes>
+    </test>
+    <test name="Invitation User Admin" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <parameter name="emailAdm" value="asd3125hd25@mailsac.com"/>
+        <groups>
+            <run>
+                <include name="invitation user admin"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
+        </classes>
+    </test>
+    <test name="Invitation User Educator" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <parameter name="emailEdu" value="1241bahert3@mailsac.com"/>
+        <groups>
+            <run>
+                <include name="invitation user educator"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.InvitationUser"/>
+        </classes>
+    </test>
+    <test name="Accept Invitation Admin" >
+        <parameter name="url" value="https://mailsac.com/"/>
+        <parameter name="emailAdm" value="asd3125hd25@mailsac.com"/>
+        <parameter name="emailAdm2" value="asd3125hd25"/>
+        <groups>
+            <run>
+                <include name="accept invitation admin"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.AcceptInvitationUser"/>
+        </classes>
+    </test>
+    <test name="Accept Invitation Educator" >
+        <parameter name="url" value="https://mailsac.com/"/>
+        <parameter name="emailEdu" value="1241bahert3@mailsac.com"/>
+        <parameter name="emailEdu2" value="1241bahert3"/>
+        <groups>
+            <run>
+                <include name="accept invitation educator"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.AcceptInvitationUser"/>
+        </classes>
+    </test>
+    <test name="Invitation Learner" >
+        <parameter name="url" value="https://sso.eduqat.com"/>
+        <parameter name="emailLearnerEvent" value="12m2193ns@mailsac.com"/>
+        <parameter name="emailLearnerSelfpaced" value="124asd9@mailsac.com"/>
+        <parameter name="emailLearnerCohort" value="09713hase821@mailsac.com"/>
+        <groups>
+            <run>
+                <include name="invitation new leaner"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.InvitationLearner"/>
+        </classes>
+    </test>
+    <test name="Accept Invitation Learner" >
+        <parameter name="url" value="https://mailsac.com/"/>
+        <parameter name="emailEvent" value="12m2193ns@mailsac.com"/>
+        <parameter name="emailEvent2" value="12m2193ns"/>
+        <parameter name="emailSelfpaced" value="124asd9@mailsac.com"/>
+        <parameter name="emailSelfpaced2" value="124asd9"/>
+        <parameter name="emailCohort" value="09713hase821@mailsac.com"/>
+        <parameter name="emailCohort2" value="09713hase821"/>
+        <groups>
+            <run>
+                <include name="accept invitation learner"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.test.TestCases.InvitationUser.AcceptInvitationNewLearner"/>
+        </classes>
+    </test>
 
 </suite>
