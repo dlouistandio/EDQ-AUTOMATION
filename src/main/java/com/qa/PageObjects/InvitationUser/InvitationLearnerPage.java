@@ -105,7 +105,6 @@ public class InvitationLearnerPage extends DashboardSchool {
     @Step
     public void clickSelectCohortName(String option){
         cohortNameSelect.click();
-        cohortNameSelect.sendKeys(option);
         String cssSelectedOption =  "[title='"+option+"'] > .ant-select-item-option-content";
         WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
         waitElementsDisplay(selectedOption);
