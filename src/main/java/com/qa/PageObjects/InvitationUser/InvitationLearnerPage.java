@@ -3,6 +3,7 @@ package com.qa.PageObjects.InvitationUser;
 import com.qa.PageObjects.DashboardSchool.DashboardSchool;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -108,8 +109,9 @@ public class InvitationLearnerPage extends DashboardSchool {
         String cssSelectedOption =  "[title='"+option+"'] > .ant-select-item-option-content";
         WebElement selectedOption = driver.findElement(By.cssSelector(cssSelectedOption));
         waitElementsDisplay(selectedOption);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", selectedOption);
         selectedOption.click();
-        waitElementsNotDisplay(selectedOption);
     }
 
     @Step
