@@ -1,1 +1,0 @@
-loginValidUser success and screenshot taken!
