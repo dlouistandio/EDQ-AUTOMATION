@@ -20,10 +20,10 @@ public class AcceptInvitationNewLearner extends BaseTest {
     @Test( description = "Accept Invitation Learner Self-paced", groups = { "accept invitation learner" },priority = 2)
     public void acceptLearnerSelfPaced(String emailSelfpaced, String emailSelfpaced2) {
         emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField(emailSelfpaced);
+        emailLoginPage.inputEmailField("eduqatautomationtesting@gmail.com");
         emailLoginPage.inputPasswordField();
         emailLoginPage.clickLoginButton();
-        emailInbox.inputEmailInboxField(emailSelfpaced2);
+        emailInbox.inputEmailInboxField(emailSelfpaced);
         emailInbox.clickCheckEmailButton();
         emailInbox.clickEmail();
         emailInbox.clickUnblockLinkButton();
@@ -58,13 +58,13 @@ public class AcceptInvitationNewLearner extends BaseTest {
     @Story("Accept Invitation User")
     @Description("Accept Invitation Learner Event")
     @Parameters({ "emailEvent", "emailEvent2" })
-    @Test( description = "Accept Invitation Learner Event", groups = { "accept invitation learner" },priority = 2)
+    @Test( description = "Accept Invitation Learner Event", groups = { "accept invitation learner" },priority = 3)
     public void acceptLearnerEvent(String emailEvent, String emailEvent2) {
         emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField(emailEvent);
+        emailLoginPage.inputEmailField("eduqatautomationtest@gmail.com");
         emailLoginPage.inputPasswordField();
         emailLoginPage.clickLoginButton();
-        emailInbox.inputEmailInboxField(emailEvent2);
+        emailInbox.inputEmailInboxField(emailEvent);
         emailInbox.clickCheckEmailButton();
         emailInbox.clickEmail();
         emailInbox.clickUnblockLinkButton();
@@ -99,13 +99,13 @@ public class AcceptInvitationNewLearner extends BaseTest {
     @Story("Accept Invitation User")
     @Description("Accept Invitation Learner Cohort")
     @Parameters({ "emailCohort", "emailCohort2" })
-    @Test( description = "Accept Invitation Learner Cohort", groups = { "accept invitation learner" },priority = 2)
+    @Test( description = "Accept Invitation Learner Cohort", groups = { "accept invitation learner" },priority = 4)
     public void acceptLearnerCohort(String emailCohort, String emailCohort2) {
         emailLoginPage.goToLoginPage();
-        emailLoginPage.inputEmailField(emailCohort);
+        emailLoginPage.inputEmailField("eduqatautomationtesting@gmail.com");
         emailLoginPage.inputPasswordField();
         emailLoginPage.clickLoginButton();
-        emailInbox.inputEmailInboxField(emailCohort2);
+        emailInbox.inputEmailInboxField(emailCohort);
         emailInbox.clickCheckEmailButton();
         emailInbox.clickEmail();
         emailInbox.clickUnblockLinkButton();
