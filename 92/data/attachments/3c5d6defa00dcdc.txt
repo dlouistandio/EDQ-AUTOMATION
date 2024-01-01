@@ -1,1 +1,0 @@
-loginWithEmptyEmail success and screenshot taken!

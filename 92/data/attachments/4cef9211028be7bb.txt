@@ -1,1 +1,0 @@
-forgotPasswordUserSSOWrongCode success and screenshot taken!

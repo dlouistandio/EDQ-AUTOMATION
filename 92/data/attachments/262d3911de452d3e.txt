@@ -1,1 +1,0 @@
-forgotPasswordUserSSOEmptyEmail success and screenshot taken!
