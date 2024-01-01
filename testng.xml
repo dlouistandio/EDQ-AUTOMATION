@@ -206,9 +206,9 @@
 <!--    </test>-->
     <test name="Invitation Learner" >
         <parameter name="url" value="https://sso.eduqat.com"/>
-        <parameter name="emailLearnerEvent" value="n43rt672@mailsac.com"/>
-        <parameter name="emailLearnerSelfpaced" value="ay42sh27qa@mailsac.com"/>
-        <parameter name="emailLearnerCohort" value="52ahbq2543@mailsac.com"/>
+        <parameter name="emailLearnerEvent" value="98234f2d@mailsac.com"/>
+        <parameter name="emailLearnerSelfpaced" value="234d23@mailsac.com"/>
+        <parameter name="emailLearnerCohort" value="234d235@mailsac.com"/>
         <groups>
             <run>
                 <include name="invitation new leaner"></include>
