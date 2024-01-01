@@ -1,1 +1,0 @@
-createCourseCohort failed and screenshot taken!
