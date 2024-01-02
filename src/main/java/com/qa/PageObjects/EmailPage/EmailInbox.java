@@ -2,6 +2,7 @@ package com.qa.PageObjects.EmailPage;
 
 import com.qa.Components.GeneralObject;
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -49,6 +50,9 @@ public class EmailInbox extends GeneralObject {
     @FindBy(css = "button")
     private WebElement checkEmailInHome;
 
+    @FindBy(xpath = "//p[contains(.,'Accept Invitation')]")
+    private WebElement acceptInvitationText;
+
     @Step
     public String getCodeVerifyForgotPasswordText(){
         waitElementsDisplay(codeVerifyForgotPasswordText);
@@ -87,6 +91,29 @@ public class EmailInbox extends GeneralObject {
     public void clickEmail(){
         waitElementsDisplay(emailReceive);
         emailReceive.click();
+    }
+
+    @Step
+    public void clickEmailAcceptInvitation(){
+        waitElementsDisplay(emailReceive);
+        emailReceive.click();
+        String accInv = acceptInvitationText.getText();
+        if(accInv == "Accept Invitation"){
+            unblockLink.click();
+        }else{
+            String xPathSelectedMenu =  "//table[@class='table table-condensed inbox-table']//tr[3]/td[@class='col-xs-4']";
+            WebElement emailContent = driver.findElement(By.xpath(xPathSelectedMenu));
+            emailContent.click();
+            unblockLink.click();
+        }
+    }
+
+    @Step
+    public void clickEmailInvitation(String email){
+        waitElementsDisplay(emailReceive);
+        String xPathSelectedMenu =  "//table[@class='table table-condensed inbox-table']//td[@class='col-xs-5 inbox-subject-td']/div[.='"+email+"']";
+        WebElement emailContent = driver.findElement(By.xpath(xPathSelectedMenu));
+        emailContent.click();
     }
 
     @Step

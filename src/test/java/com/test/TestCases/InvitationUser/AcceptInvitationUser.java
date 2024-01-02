@@ -25,7 +25,7 @@ public class AcceptInvitationUser extends BaseTest {
         emailLoginPage.clickLoginButton();
         emailInbox.inputEmailInboxField(emailAdm);
         emailInbox.clickCheckEmailButton();
-        emailInbox.clickEmail();
+        emailInbox.clickEmailInvitation("Invitation to be an Admin at untukautomationtest");
         emailInbox.clickUnblockLinkButton();
         changeTabDriver();
         emailInbox.clickAcceptInvButton();
@@ -66,7 +66,7 @@ public class AcceptInvitationUser extends BaseTest {
         emailLoginPage.clickLoginButton();
         emailInbox.inputEmailInboxField(emailEdu);
         emailInbox.clickCheckEmailButton();
-        emailInbox.clickEmail();
+        emailInbox.clickEmailInvitation("Invitation to be an Educator at untukautomationtest");
         emailInbox.clickUnblockLinkButton();
         changeTabDriver();
         emailInbox.clickAcceptInvButton();

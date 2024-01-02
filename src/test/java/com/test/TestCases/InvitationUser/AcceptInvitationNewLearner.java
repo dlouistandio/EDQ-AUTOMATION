@@ -25,8 +25,7 @@ public class AcceptInvitationNewLearner extends BaseTest {
         emailLoginPage.clickLoginButton();
         emailInbox.inputEmailInboxField(emailSelfpaced);
         emailInbox.clickCheckEmailButton();
-        emailInbox.clickEmail();
-        emailInbox.clickUnblockLinkButton();
+        emailInbox.clickEmailAcceptInvitation();
         changeTabDriver();
         emailInbox.clickAcceptInvButton();
         Assert.assertEquals(emailInbox.getInvitationPageText(),"You have been personally invited to enroll in our course. To proceed and gain access to the course, please complete the registration process.");
@@ -66,8 +65,7 @@ public class AcceptInvitationNewLearner extends BaseTest {
         emailLoginPage.clickLoginButton();
         emailInbox.inputEmailInboxField(emailEvent);
         emailInbox.clickCheckEmailButton();
-        emailInbox.clickEmail();
-        emailInbox.clickUnblockLinkButton();
+        emailInbox.clickEmailAcceptInvitation();
         changeTabDriver();
         emailInbox.clickAcceptInvButton();
         Assert.assertEquals(emailInbox.getInvitationPageText(),"You have been personally invited to enroll in our course. To proceed and gain access to the course, please complete the registration process.");
@@ -107,8 +105,7 @@ public class AcceptInvitationNewLearner extends BaseTest {
         emailLoginPage.clickLoginButton();
         emailInbox.inputEmailInboxField(emailCohort);
         emailInbox.clickCheckEmailButton();
-        emailInbox.clickEmail();
-        emailInbox.clickUnblockLinkButton();
+        emailInbox.clickEmailAcceptInvitation();
         changeTabDriver();
         emailInbox.clickAcceptInvButton();
         Assert.assertEquals(emailInbox.getInvitationPageText(),"You have been personally invited to enroll in our course. To proceed and gain access to the course, please complete the registration process.");
