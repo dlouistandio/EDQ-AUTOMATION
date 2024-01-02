@@ -156,7 +156,7 @@
     </test>
     <test name="Invitation User Admin" >
         <parameter name="url" value="https://sso.eduqat.com"/>
-        <parameter name="emailAdm" value="hrt454retert@mailsac.com"/>
+        <parameter name="emailAdm" value="sv242s2@mailsac.com"/>
         <groups>
             <run>
                 <include name="invitation user admin"></include>
@@ -168,7 +168,7 @@
     </test>
     <test name="Invitation User Educator" >
         <parameter name="url" value="https://sso.eduqat.com"/>
-        <parameter name="emailEdu" value="3t35sg54@mailsac.com"/>
+        <parameter name="emailEdu" value="7j34w23@mailsac.com"/>
         <groups>
             <run>
                 <include name="invitation user educator"></include>
@@ -180,8 +180,8 @@
     </test>
     <test name="Accept Invitation Admin" >
         <parameter name="url" value="https://mailsac.com/"/>
-        <parameter name="emailAdm" value="hrt454retert@mailsac.com"/>
-        <parameter name="emailAdm2" value="hrt454retert"/>
+        <parameter name="emailAdm" value="sv242s2@mailsac.com"/>
+        <parameter name="emailAdm2" value="sv242s2"/>
         <groups>
             <run>
                 <include name="accept invitation admin"></include>
@@ -193,8 +193,8 @@
     </test>
     <test name="Accept Invitation Educator" >
         <parameter name="url" value="https://mailsac.com/"/>
-        <parameter name="emailEdu" value="3t35sg54@mailsac.com"/>
-        <parameter name="emailEdu2" value="3t35sg54"/>
+        <parameter name="emailEdu" value="7j34w23@mailsac.com"/>
+        <parameter name="emailEdu2" value="7j34w23"/>
         <groups>
             <run>
                 <include name="accept invitation educator"></include>
@@ -206,9 +206,9 @@
     </test>
     <test name="Invitation Learner" >
         <parameter name="url" value="https://sso.eduqat.com"/>
-        <parameter name="emailLearnerEvent" value="bae25rwh7@mailsac.com"/>
-        <parameter name="emailLearnerSelfpaced" value="ana33wgsg@mailsac.com"/>
-        <parameter name="emailLearnerCohort" value="asv3swrg3g@mailsac.com"/>
+        <parameter name="emailLearnerEvent" value="nw3rb2wwtwr@mailsac.com"/>
+        <parameter name="emailLearnerSelfpaced" value="424ffsf24f@mailsac.com"/>
+        <parameter name="emailLearnerCohort" value="53f343535@mailsac.com"/>
         <groups>
             <run>
                 <include name="invitation new leaner"></include>
@@ -220,12 +220,12 @@
     </test>
     <test name="Accept Invitation Learner" >
         <parameter name="url" value="https://mailsac.com/"/>
-        <parameter name="emailEvent" value="bae25rwh7@mailsac.com"/>
-        <parameter name="emailEvent2" value="bae25rwh7"/>
-        <parameter name="emailSelfpaced" value="ana33wgsg@mailsac.com"/>
-        <parameter name="emailSelfpaced2" value="ana33wgsg"/>
-        <parameter name="emailCohort" value="asv3swrg3g@mailsac.com"/>
-        <parameter name="emailCohort2" value="asv3swrg3g"/>
+        <parameter name="emailEvent" value="nw3rb2wwtwr@mailsac.com"/>
+        <parameter name="emailEvent2" value="nw3rb2wwtwr"/>
+        <parameter name="emailSelfpaced" value="424ffsf24f@mailsac.com"/>
+        <parameter name="emailSelfpaced2" value="424ffsf24f"/>
+        <parameter name="emailCohort" value="53f343535@mailsac.com"/>
+        <parameter name="emailCohort2" value="53f343535"/>
         <groups>
             <run>
                 <include name="accept invitation learner"></include>

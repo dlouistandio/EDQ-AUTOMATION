@@ -50,7 +50,7 @@ public class EmailInbox extends GeneralObject {
     @FindBy(css = "button")
     private WebElement checkEmailInHome;
 
-    @FindBy(xpath = "//a[.='Accept Invitation']")
+    @FindBy(xpath = "//p[contains(.,'Accept Invitation')]")
     private WebElement acceptInvitationText;
 
     @Step
@@ -124,7 +124,7 @@ public class EmailInbox extends GeneralObject {
 
     @Step
     public void clickUnblockLinkButton(){
-        waitElementsDisplay(unblockLink);
+//        waitElementsDisplay(unblockLink);
         unblockLink.click();
     }
 
