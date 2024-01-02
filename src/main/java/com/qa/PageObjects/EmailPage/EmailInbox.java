@@ -29,7 +29,7 @@ public class EmailInbox extends GeneralObject {
     @FindBy(xpath = "//a[.='Verify Email']")
     private WebElement verifyEmailButton;
 
-    @FindBy(xpath = "//a[.='Unblock links and images ↗']")
+    @FindBy(css = ".btn-info")
     private WebElement unblockLink;
 
     @FindBy(css = "h3")
@@ -50,7 +50,7 @@ public class EmailInbox extends GeneralObject {
     @FindBy(css = "button")
     private WebElement checkEmailInHome;
 
-    @FindBy(xpath = "//p[contains(.,'Accept Invitation')]")
+    @FindBy(xpath = "//a[.='Accept Invitation']")
     private WebElement acceptInvitationText;
 
     @Step
