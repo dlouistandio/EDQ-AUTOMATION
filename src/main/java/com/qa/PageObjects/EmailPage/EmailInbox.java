@@ -78,6 +78,7 @@ public class EmailInbox extends GeneralObject {
 
     @Step
     public void clickCheckEmailOnHome (){
+        waitElementsDisplay(checkEmailInHome);
         checkEmailInHome.click();
     }
 
@@ -91,21 +92,6 @@ public class EmailInbox extends GeneralObject {
     public void clickEmail(){
         waitElementsDisplay(emailReceive);
         emailReceive.click();
-    }
-
-    @Step
-    public void clickEmailAcceptInvitation(){
-        waitElementsDisplay(emailReceive);
-        emailReceive.click();
-        String accInv = acceptInvitationText.getText();
-        if(accInv == "Accept Invitation"){
-            unblockLink.click();
-        }else{
-            String xPathSelectedMenu =  "//table[@class='table table-condensed inbox-table']//tr[3]/td[@class='col-xs-4']";
-            WebElement emailContent = driver.findElement(By.xpath(xPathSelectedMenu));
-            emailContent.click();
-            unblockLink.click();
-        }
     }
 
     @Step
@@ -124,7 +110,7 @@ public class EmailInbox extends GeneralObject {
 
     @Step
     public void clickUnblockLinkButton(){
-//        waitElementsDisplay(unblockLink);
+        waitElementsDisplay(unblockLink);
         unblockLink.click();
     }
 
