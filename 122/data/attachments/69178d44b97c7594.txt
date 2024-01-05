@@ -1,0 +1,1 @@
+registerUserWithValidInput failed and screenshot taken!
